@@ -22,6 +22,10 @@
                 <behavior>Required</behavior>
                 <field>UnitPrice</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>IsDerived</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

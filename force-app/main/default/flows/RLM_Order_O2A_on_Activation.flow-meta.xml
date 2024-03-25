@@ -18,7 +18,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
         <versionSegment>1</versionSegment>
     </actionCalls>
-    <apiVersion>60.0</apiVersion>
+    <apiVersion>61.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>Order - O2A on Activation {!$Flow.CurrentDateTime}</interviewLabel>
     <label>RLM Order - O2A on Activation</label>
