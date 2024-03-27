@@ -273,16 +273,6 @@
                 <identifier>RecordForecastCategoryNameField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.CampaignId</fieldItem>
-                <identifier>RecordCampaignIdField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-7a9ead58-2f03-4a8b-8408-f393fd805ccb</name>
         <type>Facet</type>
     </flexiPageRegions>
