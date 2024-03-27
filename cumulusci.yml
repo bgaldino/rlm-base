@@ -76,6 +76,13 @@ tasks:
             path: force-app/main/default/settings
 
 flows:
+    insert_data:
+        group: Revenue Lifecycle Management
+        steps:
+            1:
+                task: dx
+                options:
+                    command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency'
     prepare_core:
         group: Revenue Lifecycle Management
         steps:
