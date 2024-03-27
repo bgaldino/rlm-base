@@ -1,8 +1,7 @@
 {
   "orgName": "Salesforce Revenue Lifecycle Management",
   "country": "US",
-  "edition": "Enterprise",
-  "features": ["EnableSetPasswordInApi","OrderSaveLogicEnabled","CoreCPQ"],
+  "template": "0TT1Q000002pxxY",
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
