@@ -10,7 +10,12 @@
     "EnablePRM",
     "PartnerCommunity",
     "StateAndCountryPicklist",
-    "AdvancedApproval"
+    "AdvancedApproval",
+    "ContractsAIClauseDesigner",
+    "DisclosureFramework",
+    "Copilot",
+    "InsightsPlatform",
+    "CGAnalytics"
   ],
   "settings": {
     "lightningExperienceSettings": {

@@ -50,6 +50,19 @@ project:
             - ProductCatalogManagementAdministrator
             - ProductCatalogManagementViewer
 
+        rlm_clm_ps_api_names: &rlm_clm_ps_api_names
+            - ClauseDesigner
+            - CGAnalyticsAdmin
+            - CLMAdminUser
+            - CLMAnalyticsAdmin
+            - ContractsAIClauseDesigner
+            - ContractsAIRuntimeUser
+            - DocGenDesigner
+            - Microsoft365WordDEUser
+            - Microsoft365WordDesigner
+            - NLPServicePsl
+            - ObligationManager
+
         rlm_psg_api_names: &rlm_psg_api_names
             - RLM_PSL
             - RLM_NGP
