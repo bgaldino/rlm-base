@@ -104,7 +104,7 @@
                     "excluded": false
                 },
                 {
-                    "query": "SELECT AttributeCategoryId, AttributeDefinitionId, AttributeNameOverride, DefaultValue, Description, DisplayType, ExcludedPicklistValues, HelpText, IsHidden, IsPriceImpacting, IsReadOnly, IsRequired, MaximumCharacterCount, MaximumValue, MinimumCharacterCount, MinimumValue, Name, OverrideContextId, OverriddenProductAttributeDefinitionId, ProductClassificationAttributeId, Product2Id, Sequence, Status FROM ProductAttributeDefinition",
+                    "query": "SELECT AttributeCategoryId, AttributeDefinitionId, AttributeNameOverride, DefaultValue, Description, DisplayType, ExcludedPicklistValues, HelpText, IsHidden, IsPriceImpacting, IsReadOnly, IsRequired, MaximumCharacterCount, MaximumValue, MinimumCharacterCount, MinimumValue, Name, OverrideContextId$Product2, OverriddenProductAttributeDefinitionId, ProductClassificationAttributeId, Product2Id, Sequence, Status FROM ProductAttributeDefinition",
                     "operation": "Upsert",
                     "externalId": "Name;AttributeCategory.Name;AttributeDefinition.Name;ProductClassificationAttribute.Name;Product2.Name;OverriddenProductAttributeDefinition.Name;ProductClassificationAttribute.Name;OverrideContext.Name",
                     "excluded": false
@@ -176,9 +176,9 @@
                     "excluded": false
                 },
                 {
-                    "query": "SELECT Name, ContractId, DiscountType, DiscountValue, EndDate, ItemId, Price, ProductSellingModelId, SellingModelType, StartDate, CurrencyIsoCode FROM ContractItemPrice ORDER BY Contract.Name ASC, CurrencyIsoCode DESC, Name ASC",
+                    "query": "SELECT Name, ContractId, DiscountType, DiscountValue, EndDate, ItemId$Product2, Price, ProductSellingModelId, SellingModelType, StartDate, CurrencyIsoCode FROM ContractItemPrice ORDER BY Contract.ContractNumber ASC, CurrencyIsoCode DESC, Name ASC",
                     "operation": "Upsert",
-                    "externalId": "Name;Contract.Name;Product.Name;ProductSellingModel.Name;CurrencyIsoCode",
+                    "externalId": "Name;Contract.ContractNumber;ProductSellingModel.Name;CurrencyIsoCode",
                     "excluded": false
                 }
             ]
