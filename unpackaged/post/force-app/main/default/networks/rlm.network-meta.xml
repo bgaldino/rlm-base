@@ -7,6 +7,7 @@
     <disableReputationRecordConversations>true</disableReputationRecordConversations>
     <emailSenderAddress>steelbrick_demo@salesforce.com</emailSenderAddress>
     <emailSenderName>rlm</emailSenderName>
+    <embeddedLoginEnabled>false</embeddedLoginEnabled>
     <enableApexCDNCaching>true</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>
