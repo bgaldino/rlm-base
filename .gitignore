@@ -52,10 +52,7 @@ $RECYCLE.BIN/
 
 jest.config.js
 
-deploy
-sfdx
-mdapi
-temp_folder
+
 
 **/.eslintrc.json
 sfdmu/logs
@@ -66,6 +63,7 @@ datasets/**/source/**
 datasets/**/target/**
 datasets/**/CSVIssuesReport.csv
 datasets/**/MissingParentRecordsReport.csv
+datasets/**/test/**
 
 # QBranch
 .qbrix
@@ -82,5 +80,10 @@ scripts/permsets.txt
 scripts/psl.csv
 
 force-app/main/default/connectedApps
-temp
 
+#temp
+deploy
+sfdx
+mdapi
+temp_folder
+temp
