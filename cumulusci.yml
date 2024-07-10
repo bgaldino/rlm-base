@@ -81,6 +81,9 @@ project:
         sleep_default: &sleep_default
             20
 
+        mydomain: &mydomain
+            250rlmqb2.my.salesforce.com
+
 tasks:
     robot:
         options:
@@ -233,20 +236,44 @@ tasks:
         options:
             command: 'sfdmu run -s csvfile -p datasets/sfdmu/pas'
 
+    create_price_adjustment_schedules_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/pas -u bgaldino@250.rlm.qb2 -c'
+            extra: *mydomain
+
     insert_quantumbit_data:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
             command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency'
+
+    insert_quantumbit_data_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency -u bgaldino@250.rlm.qb2 -c'
+            extra: *mydomain
 
     activate_expression_sets:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
             command: 'sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active'
 
+    activate_expression_sets_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active -u bgaldino@250.rlm.qb2 -c'
+            extra: *mydomain
+
     deactivate_expression_sets:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
             command: 'sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive'
+
+    deactivate_expression_sets_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive -u bgaldino@250.rlm.qb2 -c'
+            extra: *mydomain
 
     insert_scratch_data:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
