@@ -290,6 +290,11 @@ tasks:
         options:
             path: unpackaged/post_sharing
 
+    create_rule_library:
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/apex/createRuleLibrary.apex
+
 flows:
     insert_data:
         group: Revenue Lifecycle Management
@@ -384,3 +389,5 @@ flows:
             12:
                 task: deploy_sharing_rules
                 when: project_config.project__custom__create_partner_community == true
+            13:
+                task: create_rule_library
