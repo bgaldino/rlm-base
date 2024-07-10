@@ -164,21 +164,21 @@
                     "excluded": false
                 },
                 {
-                    "query": "SELECT Name, PricebookId, PricebookEntryId, ProductId, ContributingProductId, ProductSellingModelId, DerivedPricingScope, Formula, EffectiveFrom, EffectiveTo, PricingSource, CurrencyIsoCode FROM PricebookEntryDerivedPrice ORDER BY Pricebook.Name ASC, CurrencyIsoCode DESC, Name ASC, ProductSellingModel.Name ASC",
+                    "query": "SELECT PricebookId, PricebookEntryId, ProductId, ContributingProductId, ProductSellingModelId, DerivedPricingScope, Formula, EffectiveFrom, EffectiveTo, PricingSource, CurrencyIsoCode FROM PricebookEntryDerivedPrice ORDER BY Pricebook.Name ASC, CurrencyIsoCode DESC, Name ASC, ProductSellingModel.Name ASC",
                     "operation": "Upsert",
-                    "externalId": "Name;Pricebook.Name;PricebookEntry.Name;Product.Name;ContributingProduct.Name;ProductSellingModel.Name;CurrencyIsoCode",
+                    "externalId": "Pricebook.Name;PricebookEntry.Name;Product.Name;ContributingProduct.Name;ProductSellingModel.Name;CurrencyIsoCode",
                     "excluded": false
                 },
                 {
-                    "query": "SELECT Name, Cost, CostBookId, EffectiveFrom, EffectiveTo, ProductId, Description, CurrencyIsoCode FROM CostBookEntry ORDER BY CostBook.Name ASC, CurrencyIsoCode DESC, Name ASC",
+                    "query": "SELECT Cost, CostBookId, EffectiveFrom, EffectiveTo, ProductId, Description, CurrencyIsoCode FROM CostBookEntry ORDER BY CostBook.Name ASC, CurrencyIsoCode DESC, Name ASC",
                     "operation": "Upsert",
-                    "externalId": "Name;CostBook.Name;Product.Name;CurrencyIsoCode",
+                    "externalId": "CostBook.Name;Product.Name;CurrencyIsoCode",
                     "excluded": false
                 },
                 {
-                    "query": "SELECT Name, ContractId, DiscountType, DiscountValue, EndDate, ItemId, Price, ProductSellingModelId, SellingModelType, StartDate, CurrencyIsoCode FROM ContractItemPrice ORDER BY Contract.Name ASC, CurrencyIsoCode DESC, Name ASC",
+                    "query": "SELECT ContractId, DiscountType, DiscountValue, EndDate, ItemId$Product2, Price, ProductSellingModelId, SellingModelType, StartDate, CurrencyIsoCode FROM ContractItemPrice ORDER BY Contract.ContractNumber ASC, CurrencyIsoCode DESC, Name ASC",
                     "operation": "Upsert",
-                    "externalId": "Name;Contract.Name;Product.Name;ProductSellingModel.Name;CurrencyIsoCode",
+                    "externalId": "Contract.ContractNumber;ProductSellingModel.Name;CurrencyIsoCode",
                     "excluded": false
                 }
             ]
