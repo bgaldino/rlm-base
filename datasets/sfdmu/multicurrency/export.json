@@ -69,7 +69,7 @@
                     "excluded": false
                 },
                 {
-                    "query": "SELECT Name, IsActive, AvailabilityDate, BasedOnId, ConfigureDuringSale, IsAssetizable, ProductCode, Description, Family, StockKeepingUnit, Type, QuantityUnitOfMeasure, IsSoldOnlyWithOtherProds, CurrencyIsoCode, DisplayUrl FROM Product2",
+                    "query": "SELECT AvailabilityDate, BasedOnId, ConfigureDuringSale, CurrencyIsoCode, DecompositionScope, Description, DisplayUrl, Family, FulfillmentQtyCalcMethod, Id, IsActive, IsAssetizable, IsSoldOnlyWithOtherProds, Name, ProductCode, QuantityUnitOfMeasure, SpecificationType, StockKeepingUnit, TaxPolicyId, Type FROM Product2",
                     "operation": "Upsert",
                     "externalId": "Name",
                     "excluded": false

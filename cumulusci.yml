@@ -71,6 +71,10 @@ project:
             - RLM_PD
             - RLM_PSL
 
+        ps_quantumbit: &ps_quantumbit
+            - RLM_CALM_SObject_Access
+            - RLM_QuantumBit
+
         sales_transaction_context_name: &sales_transaction_context_name
             RLM_SalesTransactionContext
 
@@ -80,6 +84,8 @@ project:
         create_partner_community: true
 
         tso: false
+
+        qb: true
 
         sleep_default: &sleep_default
             20
@@ -254,6 +260,17 @@ tasks:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
             command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency -u bgaldino@bgaldino-240716-619.demo -c'
+            extra: *mydomain
+
+    insert_dro_data:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/dro'
+
+    insert_dro_data_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/dro -u bgaldino@bgaldino-240716-619.demo -c'
             extra: *mydomain
 
     activate_expression_sets:
@@ -433,4 +450,17 @@ flows:
                 task: deploy_sharing_rules
                 when: project_config.project__custom__create_partner_community == true
             13:
+                flow: prepare_quantumbit
+                when: project_config.project__custom__qb == true
+            14:
+                task: insert_dro_data
+        
+    prepare_quantumbit:
+        group: Revenue Lifecycle Management
+        steps:
+            1:
                 task: deploy_quantumbit
+            2:
+                task: assign_permission_sets
+                options:
+                    api_names: *ps_quantumbit
