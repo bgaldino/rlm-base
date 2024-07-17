@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <description>Calls the Order-to-Asset API when an order is activated.</description>
-        <name>Call_OrderToAsset</name>
-        <label>Call OrderToAsset</label>
+        <name>Submit_Order</name>
+        <label>Submit Order</label>
         <locationX>242</locationX>
         <locationY>492</locationY>
-        <actionName>createOrUpdateAssetFromOrder</actionName>
-        <actionType>createOrUpdateAssetFromOrder</actionType>
+        <actionName>submitOrder</actionName>
+        <actionType>submitOrder</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>orderId</name>
@@ -15,7 +14,7 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
-        <nameSegment>createOrUpdateAssetFromOrder</nameSegment>
+        <nameSegment>submitOrder</nameSegment>
         <storeOutputAutomatically>true</storeOutputAutomatically>
         <versionSegment>1</versionSegment>
     </actionCalls>
@@ -38,14 +37,14 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Call_OrderToAsset</targetReference>
+                <targetReference>Submit_Order</targetReference>
             </connector>
             <label>Record is RevenueLifecycleManagement</label>
         </rules>
     </decisions>
     <environments>Default</environments>
-    <interviewLabel>RLM Assetize Order {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>RLM Assetize Order</label>
+    <interviewLabel>RLM - Submit Order on Activation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>RLM - Submit Order on Activation</label>
     <overriddenFlow>revenue_o2aflows__o2aFlow</overriddenFlow>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -111,7 +110,7 @@
         </scheduledPaths>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <variables>
         <name>AppUsageAssignmentRecord</name>
         <dataType>SObject</dataType>
