@@ -1,12 +1,10 @@
 {
   "orgName": "Salesforce Revenue Lifecycle Management",
   "country": "US",
-  "template": "0TTa5000000qvAH",
+  "template": "0TTa5000000twRZ",
   "features": [
     "EnableSetPasswordInApi",
-    "OrderSaveLogicEnabled",
-    "StateAndCountryPicklist",
-    "AdvancedApproval"
+    "StateAndCountryPicklist"
   ],
   "settings": {
     "lightningExperienceSettings": {
@@ -22,35 +20,6 @@
       "enableEnhancedProfileMgmt": true,
       "enableEnhancedPermsetMgmt": true,
       "enableNewProfileUI": true
-    },
-    "orderSettings": {
-      "enableOrders": true,
-      "enableEnhancedCommerceOrders": true,
-      "enableOrderEvents": true,
-      "enableZeroQuantity": true,
-      "enableNegativeQuantity": true
-    },
-    "quoteSettings": {
-      "enableQuote": true,
-      "enableQuotesWithoutOppEnabled": true
-    },
-    "revenueManagementSettings": {
-      "enableCoreCPQ": true
-    },
-    "industriesContextSettings": {
-      "enableContextDefinitions": true
-    },
-    "industriesPricingSettings": {
-      "enableSalesforcePricing": true,
-      "enablePricingWaterfall": true,
-      "enablePricingWaterfallPersistence": true,
-      "enableHighAvailability": true
-    },
-    "productConfiguratorSettings": {
-      "enableProductConfigurator": true
-    },
-    "dynamicFulfillmentOrchestratorSettings": {
-      "enableDFOPref": true
     },
     "securitySettings": {
       "enableAdminLoginAsAnyUser": true,
