@@ -219,7 +219,12 @@
         </steps>
         <steps>
             <actionType>MapProduct</actionType>
-            <customElement/>
+            <customElement>
+                <parameters>
+                    <name></name>
+                    <value></value>
+                </parameters>
+            </customElement>
             <description>Map Product</description>
             <label>Map Product</label>
             <name>MapProduct</name>

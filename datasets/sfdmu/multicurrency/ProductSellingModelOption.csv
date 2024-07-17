@@ -65,3 +65,4 @@ Additional Messages - QB Starter;Term Monthly,false,Additional Messages - QB Sta
 Additional Automation QB Credits;Term Monthly,false,Additional Automation QB Credits,Term Monthly;TermDefined,Default Proration Policy
 Subscription;Term Annual,true,Subscription,Term Annual;TermDefined,Default Proration Policy
 Subscription;Evergreen Annual,false,Subscription,Evergreen Annual;Evergreen,Default Proration Policy
+Software Maintenance;Term Annual,true,Software Maintenance,Term Annual;TermDefined,Default Proration Policy

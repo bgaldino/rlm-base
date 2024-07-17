@@ -2655,10 +2655,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>PaymentsAPIUser</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ProductCatalogMgmtApiPCAccess</name>
     </userPermissions>
     <userPermissions>

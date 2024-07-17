@@ -50,12 +50,30 @@ project:
             - ProductCatalogManagementAdministrator
             - ProductCatalogManagementViewer
 
+        rlm_clm_ps_api_names: &rlm_clm_ps_api_names
+            - ClauseDesigner
+            - CGAnalyticsAdmin
+            - CLMAdminUser
+            - CLMAnalyticsAdmin
+            - ContractsAIClauseDesigner
+            - ContractsAIRuntimeUser
+            - DocGenDesigner
+            - Microsoft365WordDEUser
+            - Microsoft365WordDesigner
+            - NLPServicePsl
+            - ObligationManager
+
         rlm_psg_api_names: &rlm_psg_api_names
-            - RLM_PSL
-            - RLM_NGP
-            - RLM_PD
             - RLM_CLM
             - RLM_DRO
+            - RLM_NGP
+            - RLM_PCM
+            - RLM_PD
+            - RLM_PSL
+
+        ps_quantumbit: &ps_quantumbit
+            - RLM_CALM_SObject_Access
+            - RLM_QuantumBit
 
         sales_transaction_context_name: &sales_transaction_context_name
             RLM_SalesTransactionContext
@@ -65,8 +83,15 @@ project:
 
         create_partner_community: true
 
+        tso: true
+
+        qb: true
+
         sleep_default: &sleep_default
             20
+
+        mydomain: &mydomain
+            quantumbit5.my.salesforce.com
 
 tasks:
     robot:
@@ -220,20 +245,55 @@ tasks:
         options:
             command: 'sfdmu run -s csvfile -p datasets/sfdmu/pas'
 
+    create_price_adjustment_schedules_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/pas -u bgaldino@250.rlm.qb3 -c'
+            extra: *mydomain
+
     insert_quantumbit_data:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
             command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency'
+
+    insert_quantumbit_data_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency -u bgaldino@250.rlm.qb3 -c'
+            extra: *mydomain
+
+    insert_dro_data_scratch:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/dro_scratch'
+
+    insert_dro_data_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/dro -u bgaldino@250.rlm.qb3 -c'
+            extra: *mydomain
 
     activate_expression_sets:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
             command: 'sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active'
 
+    activate_expression_sets_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active -u bgaldino@250.rlm.qb3 -c'
+            extra: *mydomain
+
     deactivate_expression_sets:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
             command: 'sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive'
+
+    deactivate_expression_sets_prod:
+        class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+        options:
+            command: 'sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive -u bgaldino@250.rlm.qb3 -c'
+            extra: *mydomain
 
     insert_scratch_data:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
@@ -249,6 +309,31 @@ tasks:
         class_path: cumulusci.tasks.salesforce.DeployBundles
         options:
             path: unpackaged/post_sharing
+
+    deploy_quantumbit:
+        class_path: cumulusci.tasks.salesforce.DeployBundles
+        options:
+            path: unpackaged/post_quantumbit
+
+    deploy_post_scratch:
+        class_path: cumulusci.tasks.salesforce.DeployBundles
+        options:
+            path: unpackaged/post_scratch
+
+    create_rule_library:
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/apex/createRuleLibrary.apex
+
+    create_docgen_library:
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/apex/createDocgenTemplateLibrary.apex
+
+    create_dro_rule_library:
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/apex/createDRORuleLibrary.apex
 
 flows:
     insert_data:
@@ -291,12 +376,20 @@ flows:
                 task: util_sleep
                 options:
                     seconds: *sleep_default
-            10:
+            10.1:
                 task: create_price_adjustment_schedules
+                when: org_config.scratch
+            10.2:
+                task: create_price_adjustment_schedules_prod
+                when: project_config.project__custom__tso == true
             11:
                 task: util_sleep
                 options:
                     seconds: *sleep_default
+            12:
+                task: create_rule_library
+            13:
+                task: create_dro_rule_library
 
     extend_context_definitions:
         group: Revenue Lifecycle Management
@@ -313,17 +406,31 @@ flows:
         steps:
             1:
                 flow: prepare_core
-            2:
+            2.1:
                 task: deactivate_expression_sets
+                when: org_config.scratch
+            2.2:
+                task: deactivate_expression_sets_prod
+                when: project_config.project__custom__tso == true
             3:    
                 task: createPartnerCentral
                 when: project_config.project__custom__create_partner_community == true
             4:
                 task: deploy_full
-            5:
+            5.1:
                 task: insert_quantumbit_data
-            6:
+                when: org_config.scratch
+            5.2:
+                task: insert_quantumbit_data_prod
+                when: project_config.project__custom__tso == true
+            6.1:
                 task: activate_expression_sets
+                when: org_config.scratch
+            6.2:
+                task: activate_expression_sets_prod
+                when: project_config.project__custom__tso == true
+            6.5:
+                task: create_docgen_library
             7:
                 task: sync_pricing_data
             8:
@@ -337,10 +444,27 @@ flows:
                 task: insert_scratch_data
                 when: org_config.scratch
             11:
-                task: deploy_post
+                task: deploy_post_scratch
                 when: org_config.scratch
-                options:
-                    path: unpackaged/post_scratch
             12:
                 task: deploy_sharing_rules
                 when: project_config.project__custom__create_partner_community == true
+            13:
+                flow: prepare_quantumbit
+                when: project_config.project__custom__qb == true
+            14.1:
+                task: insert_dro_data_scratch
+                when: org_config.scratch
+            14.2:
+                task: insert_dro_data_prod
+                when: project_config.project__custom__tso == true
+        
+    prepare_quantumbit:
+        group: Revenue Lifecycle Management
+        steps:
+            1:
+                task: deploy_quantumbit
+            2:
+                task: assign_permission_sets
+                options:
+                    api_names: *ps_quantumbit
