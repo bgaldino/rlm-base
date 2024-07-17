@@ -12,7 +12,7 @@
     <enableIndustriesAssessmentPrefill>false</enableIndustriesAssessmentPrefill>
     <enableIndustriesIntegrationOrchestratorPref>false</enableIndustriesIntegrationOrchestratorPref>
     <enableMicrosoftWordAddInEnabled>true</enableMicrosoftWordAddInEnabled>
-    <enablePCMConfigRules>false</enablePCMConfigRules>
+    <enablePCMConfigRules>true</enablePCMConfigRules>
     <enableScoringFrameworkCRMAPref>false</enableScoringFrameworkCRMAPref>
     <enableScoringFrameworkOrgPref>false</enableScoringFrameworkOrgPref>
     <enableTurnOffDsclsReprtPbsrName>false</enableTurnOffDsclsReprtPbsrName>

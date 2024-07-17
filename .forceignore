@@ -26,6 +26,8 @@ force-app/main/default/permissionsetgroups/RLM_PCM.permissionsetgroup-meta.xml
 # unpackaged/pre
 unpackaged/pre/force-app/main/default/permissionsetgroups/RLM_PCM.permissionsetgroup-meta.xml
 
+force-app/main/default/connectedApps/RLM_Postman.connectedApp-meta.xml
+
 # unpackaged/post_sharing
 unpackaged/post_sharing/force-app/main/default/objects/AttributeBasedAdjRule/AttributeBasedAdjRule.object-meta.xml
 #unpackaged/post_sharing/force-app/main/default/objects/AttrPicklistExcludedValue/AttrPicklistExcludedValue.object-meta.xml
