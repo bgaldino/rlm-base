@@ -74,6 +74,7 @@ project:
         ps_quantumbit: &ps_quantumbit
             - RLM_CALM_SObject_Access
             - RLM_QuantumBit
+            - DocumentBuilderUser
 
         sales_transaction_context_name: &sales_transaction_context_name
             RLM_SalesTransactionContext
