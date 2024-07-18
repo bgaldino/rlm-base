@@ -74,6 +74,7 @@ project:
         ps_quantumbit: &ps_quantumbit
             - RLM_CALM_SObject_Access
             - RLM_QuantumBit
+            - DocumentBuilderUser
 
         sales_transaction_context_name: &sales_transaction_context_name
             RLM_SalesTransactionContext
@@ -83,7 +84,7 @@ project:
 
         create_partner_community: true
 
-        tso: true
+        tso: false
 
         qb: true
 
@@ -320,6 +321,11 @@ tasks:
         options:
             path: unpackaged/post_scratch
 
+    deploy_post_docgen:
+        class_path: cumulusci.tasks.salesforce.DeployBundles
+        options:
+            path: unpackaged/post_docgen
+
     create_rule_library:
         class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
         options:
@@ -457,6 +463,9 @@ flows:
                 when: org_config.scratch
             14.2:
                 task: insert_dro_data_prod
+                when: project_config.project__custom__tso == true
+            15:
+                task: deploy_post_docgen
                 when: project_config.project__custom__tso == true
         
     prepare_quantumbit:

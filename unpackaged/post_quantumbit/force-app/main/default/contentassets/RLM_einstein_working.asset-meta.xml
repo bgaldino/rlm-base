@@ -4,9 +4,11 @@
     <language>en_US</language>
     <masterLabel>RLM_einstein_working</masterLabel>
     <relationships>
-        <organization>
-            <access>VIEWER</access>
-        </organization>
+        <workspace>
+            <access>INFERRED</access>
+            <isManagingWorkspace>true</isManagingWorkspace>
+            <name>sfdc_asset_company_assets</name>
+        </workspace>
     </relationships>
     <versions>
         <version>
