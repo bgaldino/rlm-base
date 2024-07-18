@@ -5,8 +5,8 @@
     <oauthConfig>
         <callbackUrl>https://test.salesforce.com/services/oauth2/success
 https://login.salesforce.com/services/oauth2/success
-https://tahoe-rockyroad-7144.scratch.my.salesforce.com/services/oauth2/success
-https://tahoe-rockyroad-7144.scratch.my.salesforce.com/services/authcallback/Salesforce</callbackUrl>
+https://goldengate-butterpecan-2587.scratch.my.salesforce.com/services/oauth2/success
+https://goldengate-butterpecan-2587.scratch.my.salesforce.com/services/authcallback/Salesforce</callbackUrl>
         <isAdminApproved>false</isAdminApproved>
         <isClientCredentialEnabled>true</isClientCredentialEnabled>
         <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
