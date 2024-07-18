@@ -2,7 +2,7 @@
 <ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
     <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
     <language>en_US</language>
-    <masterLabel>RLM_quantumBit_rectangle</masterLabel>
+    <masterLabel>RLM_QuantumBit</masterLabel>
     <relationships>
         <workspace>
             <access>INFERRED</access>
@@ -13,7 +13,7 @@
     <versions>
         <version>
             <number>1</number>
-            <pathOnClient>RLM_quantumBit_rectangle.png</pathOnClient>
+            <pathOnClient>RLM_QuantumBit.png</pathOnClient>
         </version>
     </versions>
 </ContentAsset>
