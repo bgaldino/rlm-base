@@ -194,4 +194,8 @@
         <object>RLM_Tenant_Environment__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>DfoAdminUser</name>
+    </userPermissions>
 </PermissionSet>
