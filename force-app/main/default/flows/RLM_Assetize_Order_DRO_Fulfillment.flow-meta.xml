@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Assetize</name>
+        <label>Assetize</label>
+        <locationX>534</locationX>
+        <locationY>1598</locationY>
+        <actionName>createOrUpdateAssetFromOrderItem</actionName>
+        <actionType>createOrUpdateAssetFromOrderItem</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>orderItemIds</name>
+            <value>
+                <elementReference>Not_Components</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>createOrUpdateAssetFromOrderItem</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
         <name>Create_Assets_from_FOPs</name>
         <label>Create Assets from FOPs</label>
-        <locationX>930</locationX>
+        <locationX>1326</locationX>
         <locationY>866</locationY>
         <actionName>createOrUpdateAssetFromOrderItem</actionName>
         <actionType>createOrUpdateAssetFromOrderItem</actionType>
@@ -21,7 +39,7 @@
     <actionCalls>
         <name>Create_Assets_from_Order_Items</name>
         <label>Create Assets from Order Items</label>
-        <locationX>578</locationX>
+        <locationX>974</locationX>
         <locationY>350</locationY>
         <actionName>createOrUpdateAssetFromOrderItem</actionName>
         <actionType>createOrUpdateAssetFromOrderItem</actionType>
@@ -55,27 +73,9 @@
         <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
-        <name>Create_or_Update_Asset_from_Fulfillment_Order_Product</name>
-        <label>Create or Update Asset from Fulfillment Order Product</label>
-        <locationX>314</locationX>
-        <locationY>674</locationY>
-        <actionName>createOrUpdateAssetFromOrderItem</actionName>
-        <actionType>createOrUpdateAssetFromOrderItem</actionType>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>orderItemIds</name>
-            <value>
-                <elementReference>OrderProductIdsToConvert</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>createOrUpdateAssetFromOrderItem</nameSegment>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-        <versionSegment>1</versionSegment>
-    </actionCalls>
-    <actionCalls>
         <name>Determine_DRO_Source_Type</name>
         <label>Determine DRO Source Type</label>
-        <locationX>622</locationX>
+        <locationX>820</locationX>
         <locationY>134</locationY>
         <actionName>RLM_DetermineDROSourceType</actionName>
         <actionType>apex</actionType>
@@ -103,7 +103,7 @@
     <assignments>
         <name>Add_Order_Id_from_Current_FOP</name>
         <label>Add Order Id from Current FOP</label>
-        <locationX>1018</locationX>
+        <locationX>1414</locationX>
         <locationY>674</locationY>
         <assignmentItems>
             <assignToReference>OrderProductIdsToConvert</assignToReference>
@@ -119,7 +119,7 @@
     <assignments>
         <name>Add_Order_Item_Id_from_FOP</name>
         <label>Add Order Item Id from FOP</label>
-        <locationX>314</locationX>
+        <locationX>666</locationX>
         <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>OrderProductIdsToConvert</assignToReference>
@@ -129,7 +129,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Create_or_Update_Asset_from_Fulfillment_Order_Product</targetReference>
+            <targetReference>Get_Order_Product_and_Parent_Id</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -148,10 +148,63 @@
             <targetReference>Create_Assets_from_Singular_Order_Product</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Assignment_4</name>
+        <label>Assignment 4</label>
+        <locationX>666</locationX>
+        <locationY>890</locationY>
+        <assignmentItems>
+            <assignToReference>FilteredOrderProducts</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Collection_Filter_1</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_2</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assignment_6</name>
+        <label>Assignment 6</label>
+        <locationX>754</locationX>
+        <locationY>1214</locationY>
+        <assignmentItems>
+            <assignToReference>Not_Components</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Loop_2.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_2</targetReference>
+        </connector>
+    </assignments>
+    <collectionProcessors>
+        <name>Collection_Filter_1</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Collection Filter 1</label>
+        <locationX>666</locationX>
+        <locationY>782</locationY>
+        <assignNextValueToReference>currentItem_Collection_Filter_1</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Order_Product_and_Parent_Id</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Collection_Filter_1.ParentOrderItemId</leftValueReference>
+            <operator>IsNull</operator>
+            <rightValue>
+                <booleanValue>true</booleanValue>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Assignment_4</targetReference>
+        </connector>
+    </collectionProcessors>
     <decisions>
         <name>Check_Source_Data_Type</name>
         <label>Check Source Data Type</label>
-        <locationX>622</locationX>
+        <locationX>820</locationX>
         <locationY>242</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -215,13 +268,74 @@
             <label>Is Fulfillment Order Items (Collection)</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>exists</name>
+        <label>exists</label>
+        <locationX>666</locationX>
+        <locationY>1490</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_source_line_in_collection</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Not_Components</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <elementReference>Get_Source_Relationship.SourceLineItemId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assetize</targetReference>
+            </connector>
+            <label>Is source line in collection</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Has_Value</name>
+        <label>Has Value</label>
+        <locationX>886</locationX>
+        <locationY>1106</locationY>
+        <defaultConnector>
+            <targetReference>Loop_2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>OP_was_set</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_2.RelatedOrderItemId</leftValueReference>
+                <operator>WasSet</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assignment_6</targetReference>
+            </connector>
+            <label>OP was set</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel>RLM - Assetize Order - DRO Fulfillment {!$Flow.CurrentDateTime}</interviewLabel>
     <label>RLM - Assetize Order - DRO Fulfillment</label>
     <loops>
+        <name>Loop_2</name>
+        <label>Loop 2</label>
+        <locationX>666</locationX>
+        <locationY>998</locationY>
+        <collectionReference>FilteredOrderProducts</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Has_Value</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>exists</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
         <name>Loop_Over_FOPs</name>
         <label>Loop Over FOPs</label>
-        <locationX>930</locationX>
+        <locationX>1326</locationX>
         <locationY>458</locationY>
         <collectionReference>Get_Fulfillment_Order_Items</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -254,7 +368,7 @@
     <recordLookups>
         <name>Get_FOP_Source</name>
         <label>Get FOP Source</label>
-        <locationX>1018</locationX>
+        <locationX>1414</locationX>
         <locationY>566</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -275,7 +389,7 @@
     <recordLookups>
         <name>Get_Fulfillment_Order_Item</name>
         <label>Get Fulfillment Order Item</label>
-        <locationX>314</locationX>
+        <locationX>666</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -296,7 +410,7 @@
     <recordLookups>
         <name>Get_Fulfillment_Order_Items</name>
         <label>Get Fulfillment Order Items</label>
-        <locationX>930</locationX>
+        <locationX>1326</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -315,9 +429,30 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>Get_Order_Product_and_Parent_Id</name>
+        <label>Get Order Product and Parent Id</label>
+        <locationX>666</locationX>
+        <locationY>674</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Collection_Filter_1</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>OrderProductIdsToConvert</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>OrderItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_Source_Relationship</name>
         <label>Get Source Relationship</label>
-        <locationX>314</locationX>
+        <locationX>666</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -336,7 +471,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>496</locationX>
+        <locationX>694</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Determine_DRO_Source_Type</targetReference>
@@ -344,11 +479,65 @@
     </start>
     <status>Active</status>
     <variables>
+        <name>currentItem_Collection_Filter_1</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OrderItem</objectType>
+    </variables>
+    <variables>
+        <name>currentItem_NoComponentsFilter</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OrderItem</objectType>
+    </variables>
+    <variables>
+        <name>FilteredOrderProducts</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OrderItem</objectType>
+    </variables>
+    <variables>
+        <name>NoComponents</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OrderItem</objectType>
+    </variables>
+    <variables>
+        <name>Not_Components</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OrderIds</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
         <name>OrderProductIdsToConvert</name>
         <dataType>String</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>OrderProductsnotComponents</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>OrderItem</objectType>
     </variables>
     <variables>
         <name>planSourceIdentifierId</name>

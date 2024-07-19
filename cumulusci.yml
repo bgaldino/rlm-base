@@ -360,19 +360,19 @@ flows:
             2:
                 task: deploy_pre
             3:
-                task: deploy_decision_tables
-            4:
                 task: util_sleep
                 options:
                     seconds: *sleep_default
+            4:
+                task: deploy_decision_tables
             5:
+                task: util_sleep
+                options:
+                    seconds: *sleep_default
+            6:
                 task: assign_permission_set_groups
                 options:
                     api_names: *rlm_psg_api_names
-            6:
-                task: assign_permission_sets
-                options:
-                    api_names: *rlm_pcm_ps_api_names
             7:
                 task: activate_decision_tables
                 when: org_config.scratch

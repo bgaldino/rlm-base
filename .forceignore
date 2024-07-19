@@ -37,3 +37,5 @@ unpackaged/post_sharing/force-app/main/default/objects/PriceBookEntryDerivedPric
 unpackaged/post_sharing/force-app/main/default/objects/ProductConfigurationRule/ProductConfigurationRule.object-meta.xml
 unpackaged/post_sharing/force-app/main/default/objects/SalesTransactionType/SalesTransactionType.object-meta.xml
 unpackaged/post_sharing/force-app/main/default/objects
+
+force-app/main/default/flows/F1YG.flow-meta.xml
