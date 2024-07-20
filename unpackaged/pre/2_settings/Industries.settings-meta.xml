@@ -3,7 +3,7 @@
     <enableAIAccelerator>false</enableAIAccelerator>
     <enableAccountScoreEnabled>false</enableAccountScoreEnabled>
     <enableContractMgmtPref>true</enableContractMgmtPref>
-    <enableContractsAIPref>false</enableContractsAIPref>
+    <enableContractsAIPref>true</enableContractsAIPref>
     <enableDiscoveryFrameworkMetadata>false</enableDiscoveryFrameworkMetadata>
     <enableEnhancedQuestionCreation>true</enableEnhancedQuestionCreation>
     <enableEpcDeleteAccess>false</enableEpcDeleteAccess>
@@ -13,8 +13,8 @@
     <enableIndustriesIntegrationOrchestratorPref>false</enableIndustriesIntegrationOrchestratorPref>
     <enableMicrosoftWordAddInEnabled>true</enableMicrosoftWordAddInEnabled>
     <enablePCMConfigRules>false</enablePCMConfigRules>
-    <enableScoringFrameworkCRMAPref>false</enableScoringFrameworkCRMAPref>
-    <enableScoringFrameworkOrgPref>false</enableScoringFrameworkOrgPref>
+    <enableScoringFrameworkCRMAPref>true</enableScoringFrameworkCRMAPref>
+    <enableScoringFrameworkOrgPref>true</enableScoringFrameworkOrgPref>
     <enableTurnOffDsclsReprtPbsrName>false</enableTurnOffDsclsReprtPbsrName>
     <rlaEditIfAccHasEdit>false</rlaEditIfAccHasEdit>
 </IndustriesSettings>
