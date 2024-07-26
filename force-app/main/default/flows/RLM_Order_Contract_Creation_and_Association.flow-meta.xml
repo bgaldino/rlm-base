@@ -85,7 +85,7 @@
                 <stringValue>Draft</stringValue>
             </value>
         </assignmentItems>
-<assignmentItems>
+        <assignmentItems>
             <assignToReference>ContractToCreate.CurrencyIsoCode</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -136,7 +136,7 @@
                 <stringValue>Draft</stringValue>
             </value>
         </assignmentItems>
-<assignmentItems>
+        <assignmentItems>
             <assignToReference>ContractToCreate.CurrencyIsoCode</assignToReference>
             <operator>Assign</operator>
             <value>

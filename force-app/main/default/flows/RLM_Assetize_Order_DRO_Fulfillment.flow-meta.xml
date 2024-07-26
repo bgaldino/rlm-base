@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Assetize</name>
         <label>Assetize</label>
-        <locationX>534</locationX>
+        <locationX>622</locationX>
         <locationY>1598</locationY>
         <actionName>createOrUpdateAssetFromOrderItem</actionName>
         <actionType>createOrUpdateAssetFromOrderItem</actionType>
@@ -21,7 +21,7 @@
     <actionCalls>
         <name>Create_Assets_from_FOPs</name>
         <label>Create Assets from FOPs</label>
-        <locationX>1326</locationX>
+        <locationX>1502</locationX>
         <locationY>866</locationY>
         <actionName>createOrUpdateAssetFromOrderItem</actionName>
         <actionType>createOrUpdateAssetFromOrderItem</actionType>
@@ -39,7 +39,7 @@
     <actionCalls>
         <name>Create_Assets_from_Order_Items</name>
         <label>Create Assets from Order Items</label>
-        <locationX>974</locationX>
+        <locationX>1150</locationX>
         <locationY>350</locationY>
         <actionName>createOrUpdateAssetFromOrderItem</actionName>
         <actionType>createOrUpdateAssetFromOrderItem</actionType>
@@ -55,10 +55,10 @@
         <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
-        <name>Create_Assets_from_Singular_Order_Product</name>
-        <label>Create Assets from Singular Order Product</label>
-        <locationX>50</locationX>
-        <locationY>458</locationY>
+        <name>Create_Assets_from_Singular_Order_Item</name>
+        <label>Create Assets from Singular Order Item</label>
+        <locationX>138</locationX>
+        <locationY>674</locationY>
         <actionName>createOrUpdateAssetFromOrderItem</actionName>
         <actionType>createOrUpdateAssetFromOrderItem</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -75,7 +75,7 @@
     <actionCalls>
         <name>Determine_DRO_Source_Type</name>
         <label>Determine DRO Source Type</label>
-        <locationX>820</locationX>
+        <locationX>908</locationX>
         <locationY>134</locationY>
         <actionName>RLM_DetermineDROSourceType</actionName>
         <actionType>apex</actionType>
@@ -103,7 +103,7 @@
     <assignments>
         <name>Add_Order_Id_from_Current_FOP</name>
         <label>Add Order Id from Current FOP</label>
-        <locationX>1414</locationX>
+        <locationX>1590</locationX>
         <locationY>674</locationY>
         <assignmentItems>
             <assignToReference>OrderProductIdsToConvert</assignToReference>
@@ -119,7 +119,7 @@
     <assignments>
         <name>Add_Order_Item_Id_from_FOP</name>
         <label>Add Order Item Id from FOP</label>
-        <locationX>666</locationX>
+        <locationX>754</locationX>
         <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>OrderProductIdsToConvert</assignToReference>
@@ -133,25 +133,9 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Add_Order_Item_Id_to_Collection</name>
-        <label>Add Order Item Id to Collection</label>
-        <locationX>50</locationX>
-        <locationY>350</locationY>
-        <assignmentItems>
-            <assignToReference>OrderProductIdsToConvert</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Create_Assets_from_Singular_Order_Product</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Assignment_4</name>
         <label>Assignment 4</label>
-        <locationX>666</locationX>
+        <locationX>754</locationX>
         <locationY>890</locationY>
         <assignmentItems>
             <assignToReference>FilteredOrderProducts</assignToReference>
@@ -167,7 +151,7 @@
     <assignments>
         <name>Assignment_6</name>
         <label>Assignment 6</label>
-        <locationX>754</locationX>
+        <locationX>842</locationX>
         <locationY>1214</locationY>
         <assignmentItems>
             <assignToReference>Not_Components</assignToReference>
@@ -180,11 +164,27 @@
             <targetReference>Loop_2</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>OI_To_Assetize</name>
+        <label>OI To Assetize</label>
+        <locationX>138</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>OrderProductIdsToConvert</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Get_Order_Product.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Assets_from_Singular_Order_Item</targetReference>
+        </connector>
+    </assignments>
     <collectionProcessors>
         <name>Collection_Filter_1</name>
         <elementSubtype>FilterCollectionProcessor</elementSubtype>
         <label>Collection Filter 1</label>
-        <locationX>666</locationX>
+        <locationX>754</locationX>
         <locationY>782</locationY>
         <assignNextValueToReference>currentItem_Collection_Filter_1</assignNextValueToReference>
         <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
@@ -204,7 +204,7 @@
     <decisions>
         <name>Check_Source_Data_Type</name>
         <label>Check Source Data Type</label>
-        <locationX>820</locationX>
+        <locationX>908</locationX>
         <locationY>242</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -218,7 +218,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Add_Order_Item_Id_to_Collection</targetReference>
+                <targetReference>Get_Order_Product</targetReference>
             </connector>
             <label>Is Order Item</label>
         </rules>
@@ -271,7 +271,7 @@
     <decisions>
         <name>exists</name>
         <label>exists</label>
-        <locationX>666</locationX>
+        <locationX>754</locationX>
         <locationY>1490</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -291,9 +291,31 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Has_Parent_Id</name>
+        <label>Has Parent Id</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>OI_To_Assetize</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Parent_Exists</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Order_Product.ParentOrderItemId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Has Parent Id</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Has_Value</name>
         <label>Has Value</label>
-        <locationX>886</locationX>
+        <locationX>974</locationX>
         <locationY>1106</locationY>
         <defaultConnector>
             <targetReference>Loop_2</targetReference>
@@ -321,7 +343,7 @@
     <loops>
         <name>Loop_2</name>
         <label>Loop 2</label>
-        <locationX>666</locationX>
+        <locationX>754</locationX>
         <locationY>998</locationY>
         <collectionReference>FilteredOrderProducts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -335,7 +357,7 @@
     <loops>
         <name>Loop_Over_FOPs</name>
         <label>Loop Over FOPs</label>
-        <locationX>1326</locationX>
+        <locationX>1502</locationX>
         <locationY>458</locationY>
         <collectionReference>Get_Fulfillment_Order_Items</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -368,7 +390,7 @@
     <recordLookups>
         <name>Get_FOP_Source</name>
         <label>Get FOP Source</label>
-        <locationX>1414</locationX>
+        <locationX>1590</locationX>
         <locationY>566</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -389,7 +411,7 @@
     <recordLookups>
         <name>Get_Fulfillment_Order_Item</name>
         <label>Get Fulfillment Order Item</label>
-        <locationX>666</locationX>
+        <locationX>754</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -410,7 +432,7 @@
     <recordLookups>
         <name>Get_Fulfillment_Order_Items</name>
         <label>Get Fulfillment Order Items</label>
-        <locationX>1326</locationX>
+        <locationX>1502</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -429,9 +451,30 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>Get_Order_Product</name>
+        <label>Get Order Product</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Has_Parent_Id</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>OrderItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_Order_Product_and_Parent_Id</name>
         <label>Get Order Product and Parent Id</label>
-        <locationX>666</locationX>
+        <locationX>754</locationX>
         <locationY>674</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -452,7 +495,7 @@
     <recordLookups>
         <name>Get_Source_Relationship</name>
         <label>Get Source Relationship</label>
-        <locationX>666</locationX>
+        <locationX>754</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -471,7 +514,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>694</locationX>
+        <locationX>782</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Determine_DRO_Source_Type</targetReference>

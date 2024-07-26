@@ -99,6 +99,10 @@
                 <behavior>Edit</behavior>
                 <field>ExternalDataSourceId</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>DecompositionScope</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -112,6 +116,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>IsAssetizable</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>FulfillmentQtyCalcMethod</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

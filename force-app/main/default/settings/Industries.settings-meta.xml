@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <IndustriesSettings xmlns="http://soap.sforce.com/2006/04/metadata">
-    <enableAIAccelerator>false</enableAIAccelerator>
+    <enableAIAccelerator>true</enableAIAccelerator>
     <enableAccountScoreEnabled>false</enableAccountScoreEnabled>
     <enableContractMgmtPref>true</enableContractMgmtPref>
-    <enableContractsAIPref>false</enableContractsAIPref>
+    <enableContractsAIPref>true</enableContractsAIPref>
     <enableDiscoveryFrameworkMetadata>false</enableDiscoveryFrameworkMetadata>
     <enableEnhancedQuestionCreation>true</enableEnhancedQuestionCreation>
     <enableEpcDeleteAccess>false</enableEpcDeleteAccess>
@@ -13,8 +13,8 @@
     <enableIndustriesIntegrationOrchestratorPref>false</enableIndustriesIntegrationOrchestratorPref>
     <enableMicrosoftWordAddInEnabled>true</enableMicrosoftWordAddInEnabled>
     <enablePCMConfigRules>true</enablePCMConfigRules>
-    <enableScoringFrameworkCRMAPref>false</enableScoringFrameworkCRMAPref>
-    <enableScoringFrameworkOrgPref>false</enableScoringFrameworkOrgPref>
+    <enableScoringFrameworkCRMAPref>true</enableScoringFrameworkCRMAPref>
+    <enableScoringFrameworkOrgPref>true</enableScoringFrameworkOrgPref>
     <enableTurnOffDsclsReprtPbsrName>false</enableTurnOffDsclsReprtPbsrName>
     <rlaEditIfAccHasEdit>false</rlaEditIfAccHasEdit>
 </IndustriesSettings>
