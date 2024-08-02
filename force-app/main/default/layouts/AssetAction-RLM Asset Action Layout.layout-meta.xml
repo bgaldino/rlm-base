@@ -41,7 +41,7 @@
                 <field>AssetId</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>Category</field>
             </layoutItems>
             <layoutItems>

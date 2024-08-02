@@ -39,3 +39,7 @@ unpackaged/post_sharing/force-app/main/default/objects/SalesTransactionType/Sale
 unpackaged/post_sharing/force-app/main/default/objects
 
 force-app/main/default/flows/F1YG.flow-meta.xml
+
+**/tsconfig.json
+
+**/*.ts
