@@ -33,7 +33,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
         <versionSegment>1</versionSegment>
     </actionCalls>
-    <apiVersion>61.0</apiVersion>
+    <apiVersion>62.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>F1YG {!$Flow.CurrentDateTime}</interviewLabel>
     <label>F1YG</label>

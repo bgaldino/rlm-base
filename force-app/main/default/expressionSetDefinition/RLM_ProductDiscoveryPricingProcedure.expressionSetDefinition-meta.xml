@@ -12,8 +12,9 @@
         <interfaceSourceType>PricingProcedure</interfaceSourceType>
         <label>RLM_ProductDiscoveryPricingProcedure</label>
         <processType>DefaultPricing</processType>
+        <rank>1</rank>
         <shouldShowExplExternally>false</shouldShowExplExternally>
-        <startDate>2024-01-01T08:00:00.000Z</startDate>
+        <startDate>2023-01-01T08:00:00.000Z</startDate>
         <status>Inactive</status>
         <steps>
             <actionType>ListPrice</actionType>
@@ -83,10 +84,31 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
+                    <name>HideWaterfall</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>sectionCount</name>
                     <output>false</output>
                     <type>Literal</type>
                     <value>0</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>selectedFunction</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>Get</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
                 </parameters>
                 <parameters>
                     <input>false</input>
@@ -145,6 +167,13 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
+                    <name>IsDerived</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>IsDerived</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>ContractId</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -156,6 +185,20 @@
                     <output>false</output>
                     <type>Literal</type>
                     <value>0</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>selectedFunction</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>Get</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
                 </parameters>
                 <parameters>
                     <input>false</input>

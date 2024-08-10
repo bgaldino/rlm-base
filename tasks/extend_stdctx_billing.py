@@ -1,12 +1,22 @@
-import requests
-from cumulusci.tasks.sfdx import SFDXBaseTask
-from cumulusci.core.keychain import BaseProjectKeychain
 from abc import abstractmethod
 
+import requests
+from cumulusci.core.keychain import BaseProjectKeychain
+from cumulusci.tasks.sfdx import SFDXBaseTask
+
 # ExtendStandardContext is a custom task that extends the SFDXBaseTask provided by CumulusCI.
-class ExtendStandardContextPd(SFDXBaseTask):
-    
-    # Task options are used to set up configuration settings for this particular task.
+class ExtendStandardContextBilling(SFDXBaseTask):
+    """
+    A class that extends the functionality of the Standard Cart Context in a Salesforce org.
+
+    This class provides methods to extend an existing context definition, update context mappings,
+    and activate the extended context ID.
+
+    Attributes:
+        task_options (dict): Task options used to set up configuration settings for this task.
+            - 'access_token' (str): The access token for the org. Defaults to the project default.
+    """
+
     task_options = {
         'access_token': {
             'description': 'The access token for the org. Defaults to the project default',
@@ -42,10 +52,10 @@ class ExtendStandardContextPd(SFDXBaseTask):
     def _extend_context_definition(self):
         url, headers = self._build_url_and_headers("connect/context-definitions")
         payload = {
-            "name": "RLM_ProductDiscoveryContext",
-            "description": "Extension of Standard Product Discovery Context",
-            "developerName": "RLM_ProductDiscoveryContext",
-            "baseReference": "ProductDiscoveryContext__stdctx",
+            "name": "RLM_BillingContext",
+            "description": "Extension of Billing Context",
+            "developerName": "RLM_BillingContext",
+            "baseReference": "BillingContext__stdctx",
             "startDate": "2023-01-01T00:00:00.000Z",
             "contextTtl": 20
         }
@@ -69,9 +79,9 @@ class ExtendStandardContextPd(SFDXBaseTask):
     def _process_version_list(self, version_list):
         context_mappings = version_list[0].get('contextMappings', [])
         for mapping in context_mappings:
-            if mapping.get("name") == "ProductDiscoveryMapping":
+            if mapping.get("name") == "BSGEntitiesMapping":
                 self.context_mapping_id = mapping['contextMappingId']
-                self.logger.info(f"Product Discovery Context Mapping ID: {self.context_mapping_id}")
+                self.logger.info(f"Billing Context Mapping ID: {self.context_mapping_id}")
                 self._update_context_mappings()
                 break
 
@@ -79,7 +89,7 @@ class ExtendStandardContextPd(SFDXBaseTask):
     def _update_context_mappings(self):
         url, headers = self._build_url_and_headers(f"connect/context-definitions/{self.context_id}/context-mappings")
         payload = {
-            "contextMappings": [{"contextMappingId": self.context_mapping_id, "isDefault": "true", "name": "ProductDiscoveryMapping"}]
+            "contextMappings": [{"contextMappingId": self.context_mapping_id, "isDefault": "true", "name": "BSGEntitiesMapping"}]
         }
         self._make_request("patch", url, headers=headers, json=payload)
         self._activate_context_id()

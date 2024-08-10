@@ -21,7 +21,7 @@ project:
     name: rlm-base
     package:
         name: rlm-base
-        api_version: '61.0'
+        api_version: '62.0'
     git:
         default_branch: 'main'
     source_format: sfdx
@@ -29,6 +29,7 @@ project:
     custom:
         rlm_psl_api_names: &rlm_psl_api_names
             - RevenueLifecycleManagementUserPsl
+            - RevLifecycleMgmtBillingPsl
             - OmniStudioDesigner
             - CorePricingDesignTime
             - BREDesigner
@@ -36,6 +37,7 @@ project:
             - ClauseManagementUser
             - ProductCatalogManagementAdministratorPsl
             - ContractManagementUser
+            - ContractsAIUserPsl
             - ProductDiscoveryUserPsl
             - BRERuntime
             - IndustriesConfiguratorPsl
@@ -43,6 +45,8 @@ project:
             - Microsoft365WordPsl
             - DynamicRevenueOrchestratorUserPsl
             - DocumentBuilderUserPsl
+            - RatingRunTimePsl
+            - RatingDesignTimePsl
 
         rlm_pcm_ps_api_names: &rlm_pcm_ps_api_names
             - IndustriesConfiguratorPlatformApi
@@ -67,7 +71,6 @@ project:
             - RLM_CLM
             - RLM_DRO
             - RLM_NGP
-            - RLM_PCM
             - RLM_PD
             - RLM_PSL
 
@@ -75,6 +78,7 @@ project:
             - RLM_CALM_SObject_Access
             - RLM_QuantumBit
             - DocumentBuilderUser
+            - RevLifecycleManagementUsageDesignUser
 
         sales_transaction_context_name: &sales_transaction_context_name
             RLM_SalesTransactionContext
@@ -373,6 +377,10 @@ flows:
                 task: assign_permission_set_groups
                 options:
                     api_names: *rlm_psg_api_names
+            6.5:
+                task: assign_permission_sets
+                options:
+                    api_names: *rlm_pcm_ps_api_names
             7:
                 task: activate_decision_tables
                 when: org_config.scratch
@@ -429,13 +437,7 @@ flows:
             5.2:
                 task: insert_quantumbit_data_prod
                 when: project_config.project__custom__tso == true
-            6.1:
-                task: activate_expression_sets
-                when: org_config.scratch
-            6.2:
-                task: activate_expression_sets_prod
-                when: project_config.project__custom__tso == true
-            6.5:
+            6:
                 task: create_docgen_library
             7:
                 task: sync_pricing_data

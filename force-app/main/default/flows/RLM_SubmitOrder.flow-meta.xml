@@ -18,7 +18,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
         <versionSegment>1</versionSegment>
     </actionCalls>
-    <apiVersion>61.0</apiVersion>
+    <apiVersion>62.0</apiVersion>
     <environments>Default</environments>
     <interviewLabel>RLM_SubmitOrder {!$Flow.CurrentDateTime}</interviewLabel>
     <label>RLM_SubmitOrder</label>

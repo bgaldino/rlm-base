@@ -6,5 +6,6 @@
     <permissionSets>force__DFODesignerUser</permissionSets>
     <permissionSets>force__DFOManagerOperatorUser</permissionSets>
     <permissionSets>force__DROOrderSubmitInitiateUser</permissionSets>
+    <permissionSets>force__OrderSubmitUser</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>

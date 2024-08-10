@@ -13,18 +13,22 @@ package.xml
 
 # rlm-base specific entries
 # expressionSetDefinition
-force-app/main/default/expressionSetDefinition/RLM_DefaultPricingDiscoveryProcedure.expressionSetDefinition-meta.xml
+#force-app/main/default/expressionSetDefinition/RLM_DefaultPricingDiscoveryProcedure.expressionSetDefinition-meta.xml
 #force-app/main/default/expressionSetDefinition/RLM_DefaultPricingProcedure.expressionSetDefinition-meta.xml
 #force-app/main/default/expressionSetDefinition/RLM_ProductDiscoveryPricingProcedure.expressionSetDefinition-meta.xml
 #force-app/main/default/expressionSetDefinition/RLM_QualificationProcedure.expressionSetDefinition-meta.xml
+force-app/main/default/expressionSetDefinition/Salesforce_Pricing_Discovery_Procedure.expressionSetDefinition-meta.xml
+force-app/main/default/expressionSetDefinition/Rev_Mgmt_Default_Pricing_Procedure.expressionSetDefinition-meta.xml
 
 # contextDefinitions
-force-app/main/default/contextDefinitions
+#force-app/main/default/contextDefinitions
+force-app/main/default/contextDefinitions/ConsulateToContract_C.contextDefinition-meta.xml
+force-app/main/default/contextDefinitions/OpportunityToContract_C.contextDefinition-meta.xml
+force-app/main/default/contextDefinitions/OrderToContract_C.contextDefinition-meta.xml
+force-app/main/default/contextDefinitions/QuoteToContract_C.contextDefinition-meta.xml
 force-app/main/default/relationshipGraphDefinitions
-force-app/main/default/permissionsetgroups/RLM_PCM.permissionsetgroup-meta.xml
 
 # unpackaged/pre
-unpackaged/pre/force-app/main/default/permissionsetgroups/RLM_PCM.permissionsetgroup-meta.xml
 
 force-app/main/default/connectedApps/RLM_Postman.connectedApp-meta.xml
 

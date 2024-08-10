@@ -3,16 +3,16 @@
     <contextDefinitionVersions>
         <contextMappings>
             <contextMappingIntents>
-                <contextMappingIntentType>hydration</contextMappingIntentType>
+                <mappingIntent>hydration</mappingIntent>
             </contextMappingIntents>
             <contextMappingIntents>
-                <contextMappingIntentType>persistence</contextMappingIntentType>
+                <mappingIntent>persistence</mappingIntent>
             </contextMappingIntents>
             <contextMappingIntents>
-                <contextMappingIntentType>association</contextMappingIntentType>
+                <mappingIntent>association</mappingIntent>
             </contextMappingIntents>
             <contextMappingIntents>
-                <contextMappingIntentType>translation</contextMappingIntentType>
+                <mappingIntent>translation</mappingIntent>
             </contextMappingIntents>
             <contextNodeMappings>
                 <contextAttributeMappings>
@@ -34,6 +34,10 @@
                     <contextAttribute>ContactId</contextAttribute>
                     <contextInputAttributeName>ContactId</contextInputAttributeName>
                     <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/Account/ContactId</inheritedFrom>
+                </contextAttributeMappings>
+                <contextAttributeMappings>
+                    <contextAttribute>id</contextAttribute>
+                    <contextInputAttributeName>id</contextInputAttributeName>
                 </contextAttributeMappings>
                 <contextNode>Account</contextNode>
                 <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/Account</inheritedFrom>
@@ -69,6 +73,10 @@
                     <contextAttribute>CategoryDisqualifiedReason</contextAttribute>
                     <contextInputAttributeName>CategoryDisqualifiedReason</contextInputAttributeName>
                     <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/Category/CategoryDisqualifiedReason</inheritedFrom>
+                </contextAttributeMappings>
+                <contextAttributeMappings>
+                    <contextAttribute>ParentReference</contextAttribute>
+                    <contextInputAttributeName>ParentReference</contextInputAttributeName>
                 </contextAttributeMappings>
                 <contextNode>Category</contextNode>
                 <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/Category</inheritedFrom>
@@ -140,6 +148,15 @@
                     <contextInputAttributeName>Reason</contextInputAttributeName>
                     <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/CategoryProduct/Reason</inheritedFrom>
                 </contextAttributeMappings>
+                <contextAttributeMappings>
+                    <contextAttribute>AdditionalProductInformation</contextAttribute>
+                    <contextInputAttributeName>AdditionalProductInformation</contextInputAttributeName>
+                    <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/CategoryProduct/AdditionalProductInformation</inheritedFrom>
+                </contextAttributeMappings>
+                <contextAttributeMappings>
+                    <contextAttribute>ParentReference</contextAttribute>
+                    <contextInputAttributeName>ParentReference</contextInputAttributeName>
+                </contextAttributeMappings>
                 <contextNode>CategoryProduct</contextNode>
                 <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/CategoryProduct</inheritedFrom>
                 <object>CategoryProduct</object>
@@ -209,6 +226,15 @@
                     <contextAttribute>PricingErrorMessage</contextAttribute>
                     <contextInputAttributeName>PricingErrorMessage</contextInputAttributeName>
                     <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/PricingProduct/PricingErrorMessage</inheritedFrom>
+                </contextAttributeMappings>
+                <contextAttributeMappings>
+                    <contextAttribute>AdditionalPricingInformation</contextAttribute>
+                    <contextInputAttributeName>AdditionalPricingInformation</contextInputAttributeName>
+                    <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/PricingProduct/AdditionalPricingInformation</inheritedFrom>
+                </contextAttributeMappings>
+                <contextAttributeMappings>
+                    <contextAttribute>ParentReference</contextAttribute>
+                    <contextInputAttributeName>ParentReference</contextInputAttributeName>
                 </contextAttributeMappings>
                 <contextNode>PricingProduct</contextNode>
                 <inheritedFrom>ProductDiscoveryContext__stdctx/version/ProductDiscoveryMapping/PricingProduct</inheritedFrom>
@@ -493,6 +519,18 @@
                 <value>false</value>
             </contextAttributes>
             <contextAttributes>
+                <contextTags>
+                    <inheritedFrom>ProductDiscoveryContext__stdctx/version/Catalog/Category/CategoryProduct/AdditionalProductInformation/AdditionalProductInformation</inheritedFrom>
+                    <title>AdditionalProductInformation</title>
+                </contextTags>
+                <dataType>string</dataType>
+                <fieldType>inputoutput</fieldType>
+                <inheritedFrom>ProductDiscoveryContext__stdctx/version/Catalog/Category/CategoryProduct/AdditionalProductInformation</inheritedFrom>
+                <key>false</key>
+                <title>AdditionalProductInformation</title>
+                <value>false</value>
+            </contextAttributes>
+            <contextAttributes>
                 <dataType>reference</dataType>
                 <domainSet>Category</domainSet>
                 <fieldType>input</fieldType>
@@ -667,6 +705,18 @@
                 <value>false</value>
             </contextAttributes>
             <contextAttributes>
+                <contextTags>
+                    <inheritedFrom>ProductDiscoveryContext__stdctx/version/Catalog/Category/PricingProduct/AdditionalPricingInformation/AdditionalPricingInformation</inheritedFrom>
+                    <title>AdditionalPricingInformation</title>
+                </contextTags>
+                <dataType>string</dataType>
+                <fieldType>inputoutput</fieldType>
+                <inheritedFrom>ProductDiscoveryContext__stdctx/version/Catalog/Category/PricingProduct/AdditionalPricingInformation</inheritedFrom>
+                <key>false</key>
+                <title>AdditionalPricingInformation</title>
+                <value>false</value>
+            </contextAttributes>
+            <contextAttributes>
                 <dataType>reference</dataType>
                 <domainSet>Category</domainSet>
                 <fieldType>input</fieldType>
@@ -684,12 +734,13 @@
             <transposable>false</transposable>
         </contextNodes>
         <isActive>true</isActive>
-        <startDate>2024-01-01 00:00:00</startDate>
+        <startDate>2023-01-01 00:00:00</startDate>
         <versionNumber>3</versionNumber>
     </contextDefinitionVersions>
     <contextTtl>20</contextTtl>
     <description>Extension of Standard Product Discovery Context</description>
     <inheritedFrom>ProductDiscoveryContext__stdctx</inheritedFrom>
+    <inheritedFromVersion>0.5</inheritedFromVersion>
     <isProtected>false</isProtected>
     <masterLabel>RLM_ProductDiscoveryContext</masterLabel>
     <title>RLM_ProductDiscoveryContext</title>

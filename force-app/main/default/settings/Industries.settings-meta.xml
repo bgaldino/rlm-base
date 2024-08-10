@@ -5,16 +5,16 @@
     <enableContractMgmtPref>true</enableContractMgmtPref>
     <enableContractsAIPref>true</enableContractsAIPref>
     <enableDiscoveryFrameworkMetadata>false</enableDiscoveryFrameworkMetadata>
+    <enableDiscoveryFrwrkSampleTemplate>false</enableDiscoveryFrwrkSampleTemplate>
     <enableEnhancedQuestionCreation>true</enableEnhancedQuestionCreation>
     <enableEpcDeleteAccess>false</enableEpcDeleteAccess>
-    <enableGnrcDisclsFrmwrk>false</enableGnrcDisclsFrmwrk>
-    <enableIndustriesAssessment>false</enableIndustriesAssessment>
+    <enableIndustriesAssessment>true</enableIndustriesAssessment>
+    <enableIndustriesAssessmentGuestOrgPref>false</enableIndustriesAssessmentGuestOrgPref>
     <enableIndustriesAssessmentPrefill>false</enableIndustriesAssessmentPrefill>
     <enableIndustriesIntegrationOrchestratorPref>false</enableIndustriesIntegrationOrchestratorPref>
     <enableMicrosoftWordAddInEnabled>true</enableMicrosoftWordAddInEnabled>
-    <enablePCMConfigRules>true</enablePCMConfigRules>
+    <enablePCMConfigRules>false</enablePCMConfigRules>
     <enableScoringFrameworkCRMAPref>true</enableScoringFrameworkCRMAPref>
     <enableScoringFrameworkOrgPref>true</enableScoringFrameworkOrgPref>
-    <enableTurnOffDsclsReprtPbsrName>false</enableTurnOffDsclsReprtPbsrName>
     <rlaEditIfAccHasEdit>false</rlaEditIfAccHasEdit>
 </IndustriesSettings>
