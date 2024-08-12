@@ -72,9 +72,11 @@ project:
             - RLM_PSL
 
         ps_quantumbit: &ps_quantumbit
-            - RLM_CALM_SObject_Access
             - RLM_QuantumBit
             - DocumentBuilderUser
+
+        ps_calmdelete: &ps_calmdelete
+            - RLM_CALM_SObject_Access
 
         sales_transaction_context_name: &sales_transaction_context_name
             RLM_SalesTransactionContext
@@ -84,15 +86,17 @@ project:
 
         create_partner_community: true
 
-        tso: false
+        tso: true
 
         qb: true
+
+        calmdelete: true
 
         sleep_default: &sleep_default
             20
 
         mydomain: &mydomain
-            quantumbit5.my.salesforce.com
+            autocloud-240812-842-demo.my.salesforce.com
 
 tasks:
     robot:
@@ -249,7 +253,7 @@ tasks:
     create_price_adjustment_schedules_prod:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -s csvfile -p datasets/sfdmu/pas -u bgaldino@250.rlm.qb3 -c'
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/pas -u jrozsits@autocloud.rlm.demo -c'
             extra: *mydomain
 
     insert_quantumbit_data:
@@ -260,7 +264,7 @@ tasks:
     insert_quantumbit_data_prod:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency -u bgaldino@250.rlm.qb3 -c'
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency -u jrozsits@autocloud.rlm.demo -c'
             extra: *mydomain
 
     insert_dro_data_scratch:
@@ -271,7 +275,7 @@ tasks:
     insert_dro_data_prod:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -s csvfile -p datasets/sfdmu/dro -u bgaldino@250.rlm.qb3 -c'
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/dro -u jrozsits@autocloud.rlm.demo -c'
             extra: *mydomain
 
     activate_expression_sets:
@@ -282,7 +286,7 @@ tasks:
     activate_expression_sets_prod:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active -u bgaldino@250.rlm.qb3 -c'
+            command: 'sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active -u jrozsits@autocloud.rlm.demo -c'
             extra: *mydomain
 
     deactivate_expression_sets:
@@ -293,7 +297,7 @@ tasks:
     deactivate_expression_sets_prod:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive -u bgaldino@250.rlm.qb3 -c'
+            command: 'sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive -u jrozsits@autocloud.rlm.demo -c'
             extra: *mydomain
 
     insert_scratch_data:
@@ -320,6 +324,11 @@ tasks:
         class_path: cumulusci.tasks.salesforce.DeployBundles
         options:
             path: unpackaged/post_scratch
+    
+    deploy_post_prm:
+        class_path: cumulusci.tasks.salesforce.DeployBundles
+        options:
+            path: unpackaged/post_prm
 
     deploy_post_docgen:
         class_path: cumulusci.tasks.salesforce.DeployBundles
@@ -440,7 +449,8 @@ flows:
             7:
                 task: sync_pricing_data
             8:
-                task: deploy_post
+                task: deploy_post_prm
+                when: project_config.project__custom__create_partner_community == true
             9:
                 task: publish_community
                 when: project_config.project__custom__create_partner_community == true
@@ -475,5 +485,10 @@ flows:
                 task: deploy_quantumbit
             2:
                 task: assign_permission_sets
+                options:
+                    api_names: *ps_quantumbit
+            3:
+                task: assign_permission_sets
+                when: project_config.project__custom__calmdelete == true
                 options:
                     api_names: *ps_quantumbit
