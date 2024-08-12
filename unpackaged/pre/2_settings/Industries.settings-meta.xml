@@ -7,7 +7,6 @@
     <enableDiscoveryFrameworkMetadata>false</enableDiscoveryFrameworkMetadata>
     <enableEnhancedQuestionCreation>true</enableEnhancedQuestionCreation>
     <enableEpcDeleteAccess>false</enableEpcDeleteAccess>
-    <enableGnrcDisclsFrmwrk>false</enableGnrcDisclsFrmwrk>
     <enableIndustriesAssessment>false</enableIndustriesAssessment>
     <enableIndustriesAssessmentPrefill>false</enableIndustriesAssessmentPrefill>
     <enableIndustriesIntegrationOrchestratorPref>false</enableIndustriesIntegrationOrchestratorPref>
@@ -15,6 +14,5 @@
     <enablePCMConfigRules>false</enablePCMConfigRules>
     <enableScoringFrameworkCRMAPref>false</enableScoringFrameworkCRMAPref>
     <enableScoringFrameworkOrgPref>false</enableScoringFrameworkOrgPref>
-    <enableTurnOffDsclsReprtPbsrName>false</enableTurnOffDsclsReprtPbsrName>
     <rlaEditIfAccHasEdit>false</rlaEditIfAccHasEdit>
 </IndustriesSettings>
