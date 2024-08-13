@@ -3,8 +3,8 @@
     <batchDocGnrnPctLimitPerHour>0.6</batchDocGnrnPctLimitPerHour>
     <documentTemplateLibraryName>DocgenDocumentTemplateLibrary</documentTemplateLibraryName>
     <generationMechanism>ClientSide</generationMechanism>
-    <isBatchDocGnrnEnabled>false</isBatchDocGnrnEnabled>
-    <isServerSideDocGenEnabled>false</isServerSideDocGenEnabled>
-    <masterLabel>DocgenDocumentTemplateLibrary</masterLabel>
+    <isBatchDocGnrnEnabled>true</isBatchDocGnrnEnabled>
+    <isServerSideDocGenEnabled>true</isServerSideDocGenEnabled>
+    <masterLabel>DocGen</masterLabel>
     <previewType>PDF</previewType>
 </DocumentGenerationSetting>
