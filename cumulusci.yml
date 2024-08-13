@@ -76,10 +76,12 @@ project:
             - RLM_BLNG
 
         ps_quantumbit: &ps_quantumbit
-            - RLM_CALM_SObject_Access
             - RLM_QuantumBit
             - DocumentBuilderUser
             - RevLifecycleManagementUsageDesignUser
+
+        ps_calmdelete: &ps_calmdelete
+            - RLM_CALM_SObject_Access
 
         sales_transaction_context_name: &sales_transaction_context_name
             RLM_SalesTransactionContext
@@ -92,6 +94,8 @@ project:
         tso: false
 
         qb: true
+
+        calmdelete: true
 
         billing: true
 
@@ -357,6 +361,11 @@ tasks:
         options:
             path: unpackaged/post_scratch
 
+    deploy_post_prm:
+        class_path: cumulusci.tasks.salesforce.DeployBundles
+        options:
+            path: unpackaged/post_prm
+
     deploy_post_docgen:
         class_path: cumulusci.tasks.salesforce.DeployBundles
         options:
@@ -489,7 +498,8 @@ flows:
             7:
                 task: sync_pricing_data
             8:
-                task: deploy_post
+                task: deploy_post_prm
+                when: project_config.project__custom__create_partner_community == true
             9:
                 task: publish_community
                 when: project_config.project__custom__create_partner_community == true
@@ -524,5 +534,10 @@ flows:
                 task: deploy_quantumbit
             2:
                 task: assign_permission_sets
+                options:
+                    api_names: *ps_quantumbit
+            3:
+                task: assign_permission_sets
+                when: project_config.project__custom__calmdelete == true
                 options:
                     api_names: *ps_quantumbit
