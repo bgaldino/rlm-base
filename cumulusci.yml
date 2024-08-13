@@ -73,6 +73,7 @@ project:
             - RLM_NGP
             - RLM_PD
             - RLM_PSL
+            - RLM_BLNG
 
         ps_quantumbit: &ps_quantumbit
             - RLM_CALM_SObject_Access
@@ -91,6 +92,12 @@ project:
         tso: false
 
         qb: true
+
+        billing: true
+
+        clm: true
+
+        dro: true
 
         sleep_default: &sleep_default
             20
@@ -134,6 +141,60 @@ tasks:
         class_path: tasks.extend_stdctx_cart.ExtendStandardContextCart
         group: Revenue Lifecycle Management
 
+    extend_stdctx_billing:
+        description: Extend Standard Billing Context Definition
+        class_path: tasks.extend_stdctx_cart.ExtendStandardContextBilling
+        group: Revenue Lifecycle Management
+
+    extend_stdctx_contracts:
+        description: Extend Standard Contracts Context Definition
+        class_path: tasks.extend_stdctx_cart.ExtendStandardContextContracts
+        group: Revenue Lifecycle Management
+
+    extend_stdctx_contracts_extraction:
+        description: Extend Standard Contracts Extraction Context Definition
+        class_path: tasks.extend_stdctx_cart.ExtendStandardContextContractsExtraction
+        group: Revenue Lifecycle Management
+
+    extend_stdctx_fulfillment_asset:
+        description: Extend Standard Fulfillment Asset  Context Definition
+        class_path: tasks.extend_stdctx_cart.ExtendStandardContextFulfillmentAsset
+        group: Revenue Lifecycle Management
+
+    extend_stdctx_collection_plan_segment:
+        description: Extend Standard Collection Plan Segment Context Definition
+        class_path: tasks.extend_stdctx_cart.ExtendStandardContextCollectionPlanSegment
+        group: Revenue Lifecycle Management
+
+    extendSalesContext:
+        description: Extend Standard Sales Transaction Context
+        class_path: tasks.rlm_extend_stdctx.ExtendStandardContext
+        options:
+            name: *sales_transaction_context_name
+            description: "Extension of Standard Sales Transaction Context Definition"
+            developerName: *sales_transaction_context_name
+            baseReference: "SalesTransactionContext__stdctx"
+            startDate: "2024-01-01T00:00:00.000Z"
+            contextTtl: 20
+
+    extendProductDiscoveryContext:
+        description: Extend Standard Product Discovery Context
+        class_path: tasks.rlm_extend_stdctx.ExtendStandardContext
+        options:
+            name: *product_discovery_context_name
+            description: "Extension of Standard Product Discovery Context Definition"
+            developerName: *product_discovery_context_name
+            baseReference: "ProductDiscoveryContext__stdctx"
+            startDate: "2024-01-01T00:00:00.000Z"
+            contextTtl: 20
+
+    deploy_context_definitions:
+        description: Context Definitions need to be deployed and activated before other metadata -- this prioritizes this deployment first
+        class_path: cumulusci.tasks.salesforce.Deploy
+        group: Revenue Lifecycle Management
+        options:
+            path: force-app/main/default/contextDefinitions
+
     deploy_permissions:
         description: Runs deployment against the permission set group file for Revenue Cloud.
         class_path: cumulusci.tasks.salesforce.Deploy
@@ -147,13 +208,6 @@ tasks:
         group: Revenue Lifecycle Management
         options:
             path: force-app/main/default/decisionTables
-
-    deploy_context_definitions:
-        description: Context Definitions need to be deployed and activated before other metadata -- this prioritizes this deployment first
-        class_path: cumulusci.tasks.salesforce.Deploy
-        group: Revenue Lifecycle Management
-        options:
-            path: force-app/main/default/contextDefinitions
 
     deploy_expression_sets:
         description: Expression Sets need to be deployed and activated before other metadata -- this prioritizes this deployment first
@@ -214,28 +268,6 @@ tasks:
         group: Revenue Lifecycle Management
         options:
             path: force-app/main/default/settings
-
-    extendSalesContext:
-        description: Extend Standard Sales Transaction Context
-        class_path: tasks.rlm_extend_stdctx.ExtendStandardContext
-        options:
-            name: *sales_transaction_context_name
-            description: "Extension of Standard Sales Transaction Context Definition"
-            developerName: *sales_transaction_context_name
-            baseReference: "SalesTransactionContext__stdctx"
-            startDate: "2024-01-01T00:00:00.000Z"
-            contextTtl: 20
-
-    extendProductDiscoveryContext:
-        description: Extend Standard Product Discovery Context
-        class_path: tasks.rlm_extend_stdctx.ExtendStandardContext
-        options:
-            name: *product_discovery_context_name
-            description: "Extension of Standard Product Discovery Context Definition"
-            developerName: *product_discovery_context_name
-            baseReference: "ProductDiscoveryContext__stdctx"
-            startDate: "2024-01-01T00:00:00.000Z"
-            contextTtl: 20
 
     createPartnerCentral:
         class_path: cumulusci.tasks.salesforce.CreateCommunity
@@ -414,6 +446,21 @@ flows:
                 task: extend_stdctx_pd
             3:
                 task: extend_stdctx_cart
+            4:
+                task: extend_stdctx_billing
+                when: project_config.project__custom__billing == true
+            5:
+                task: extend_stdctx_collection_plan_segment
+                when: project_config.project__custom__billing == true
+            6:
+                task: extend_stdctx_fulfillment_asset
+                when: project_config.project__custom__dro == true
+            7:
+                task: extend_stdctx_contracts
+                when: project_config.project__custom__clm == true
+            8:   
+                task: extend_stdctx_contracts_extraction
+                when: project_config.project__custom__clm == true
 
     prepare_rlm_org:
         group: Revenue Lifecycle Management
@@ -462,10 +509,10 @@ flows:
                 when: project_config.project__custom__qb == true
             14.1:
                 task: insert_dro_data_scratch
-                when: org_config.scratch
+                when: org_config.scratch and project_config.project__custom__dro == true
             14.2:
                 task: insert_dro_data_prod
-                when: project_config.project__custom__tso == true
+                when: project_config.project__custom__tso == true and project_config.project__custom__dro == true
             15:
                 task: deploy_post_docgen
                 when: project_config.project__custom__tso == true

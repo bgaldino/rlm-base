@@ -3705,7 +3705,7 @@
             <title>BillingTransactionItemDetail</title>
             <transposable>false</transposable>
         </contextNodes>
-        <isActive>false</isActive>
+        <isActive>true</isActive>
         <startDate>2023-01-01 08:00:00</startDate>
         <versionNumber>2</versionNumber>
     </contextDefinitionVersions>

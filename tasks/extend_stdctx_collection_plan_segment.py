@@ -5,9 +5,9 @@ from cumulusci.core.keychain import BaseProjectKeychain
 from cumulusci.tasks.sfdx import SFDXBaseTask
 
 # ExtendStandardContext is a custom task that extends the SFDXBaseTask provided by CumulusCI.
-class ExtendStandardContextBilling(SFDXBaseTask):
+class ExtendStandardContextCollectionPlanSegment(SFDXBaseTask):
     """
-    A class that extends the functionality of the Standard Billing Context in a Salesforce org.
+    A class that extends the functionality of the Standard Collection Plan Segment Context in a Salesforce org.
 
     This class provides methods to extend an existing context definition, update context mappings,
     and activate the extended context ID.
@@ -52,10 +52,10 @@ class ExtendStandardContextBilling(SFDXBaseTask):
     def _extend_context_definition(self):
         url, headers = self._build_url_and_headers("connect/context-definitions")
         payload = {
-            "name": "RLM_BillingContext",
-            "description": "Extension of Billing Context",
-            "developerName": "RLM_BillingContext",
-            "baseReference": "BillingContext__stdctx",
+            "name": "RLM_CollectionPlanSegmentContext",
+            "description": "Extension of Collection Plan Segment Context",
+            "developerName": "RLM_CollectionPlanSegmentContext",
+            "baseReference": "CollectionPlanSegmentContext__stdctx",
             "startDate": "2023-01-01T00:00:00.000Z",
             "contextTtl": 20
         }
@@ -79,9 +79,9 @@ class ExtendStandardContextBilling(SFDXBaseTask):
     def _process_version_list(self, version_list):
         context_mappings = version_list[0].get('contextMappings', [])
         for mapping in context_mappings:
-            if mapping.get("name") == "BSGEntitiesMapping":
+            if mapping.get("name") == "CollectionPlanSegmentContextMapping":
                 self.context_mapping_id = mapping['contextMappingId']
-                self.logger.info(f"Billing Context Mapping ID: {self.context_mapping_id}")
+                self.logger.info(f"Collection Plan Segment Context Mapping ID: {self.context_mapping_id}")
                 self._update_context_mappings()
                 break
 
@@ -89,7 +89,7 @@ class ExtendStandardContextBilling(SFDXBaseTask):
     def _update_context_mappings(self):
         url, headers = self._build_url_and_headers(f"connect/context-definitions/{self.context_id}/context-mappings")
         payload = {
-            "contextMappings": [{"contextMappingId": self.context_mapping_id, "isDefault": "true", "name": "BSGEntitiesMapping"}]
+            "contextMappings": [{"contextMappingId": self.context_mapping_id, "isDefault": "true", "name": "CollectionPlanSegmentContextMapping"}]
         }
         self._make_request("patch", url, headers=headers, json=payload)
         self._activate_context_id()
