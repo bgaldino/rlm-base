@@ -79,7 +79,7 @@ class ExtendStandardContextCollectionPlanSegment(SFDXBaseTask):
     def _process_version_list(self, version_list):
         context_mappings = version_list[0].get('contextMappings', [])
         for mapping in context_mappings:
-            if mapping.get("name") == "CollectionPlanSegmentContextMapping":
+            if mapping.get("name") == "CollectionPlanContextMapping":
                 self.context_mapping_id = mapping['contextMappingId']
                 self.logger.info(f"Collection Plan Segment Context Mapping ID: {self.context_mapping_id}")
                 self._update_context_mappings()
@@ -89,7 +89,7 @@ class ExtendStandardContextCollectionPlanSegment(SFDXBaseTask):
     def _update_context_mappings(self):
         url, headers = self._build_url_and_headers(f"connect/context-definitions/{self.context_id}/context-mappings")
         payload = {
-            "contextMappings": [{"contextMappingId": self.context_mapping_id, "isDefault": "true", "name": "CollectionPlanSegmentContextMapping"}]
+            "contextMappings": [{"contextMappingId": self.context_mapping_id, "isDefault": "true", "name": "CollectionPlanContextMapping"}]
         }
         self._make_request("patch", url, headers=headers, json=payload)
         self._activate_context_id()

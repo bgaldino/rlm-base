@@ -69,9 +69,9 @@ class ExtendStandardContext(SFDXBaseTask):
     def _process_version_list(self, version_list):
         context_mappings = version_list[0].get('contextMappings', [])
         for mapping in context_mappings:
-            if mapping.get("name") == "SalesTransaction":
+            if mapping.get("name") == "QuoteEntitiesMapping":
                 self.sales_transaction_mapping_id = mapping['contextMappingId']
-                self.logger.info(f"Sales Transaction Context Mapping ID: {self.sales_transaction_mapping_id}")
+                self.logger.info(f"Sales Transaction Context QuoteEntitiesMapping ID: {self.sales_transaction_mapping_id}")
                 self._update_context_mappings()
                 break
 
@@ -79,10 +79,10 @@ class ExtendStandardContext(SFDXBaseTask):
     def _update_context_mappings(self):
         url, headers = self._build_url_and_headers(f"connect/context-definitions/{self.context_id}/context-mappings")
         payload = {
-            "contextMappings": [{"contextMappingId": self.sales_transaction_mapping_id, "isDefault": "true", "name": "SalesTransaction"}]
+            "contextMappings": [{"contextMappingId": self.sales_transaction_mapping_id, "isDefault": "true", "name": "QuoteEntitiesMapping"}]
         }
         self._make_request("patch", url, headers=headers, json=payload)
-        self._activate_context_id()
+        #self._activate_context_id()
 
     # Activate the context ID once all changes and updates have been made
     def _activate_context_id(self):
