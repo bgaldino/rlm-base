@@ -4,5 +4,5 @@
     <prodDiscPricingEnabledOrgValue>true</prodDiscPricingEnabledOrgValue>
     <prodDiscProcedureOrgValue>RLM_ProductDiscoveryPricingProcedure</prodDiscProcedureOrgValue>
     <prodDiscQualEnabledOrgValue>true</prodDiscQualEnabledOrgValue>
-    <prodDiscQualificationOrgValue>RLM_QualificationProcedure</prodDiscQualificationOrgValue>
+    <prodDiscQualificationOrgValue>RLM Qualification Procedure</prodDiscQualificationOrgValue>
 </ProductDiscoverySettings>

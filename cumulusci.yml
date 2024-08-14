@@ -147,27 +147,27 @@ tasks:
 
     extend_stdctx_billing:
         description: Extend Standard Billing Context Definition
-        class_path: tasks.extend_stdctx_cart.ExtendStandardContextBilling
+        class_path: tasks.extend_stdctx_billing.ExtendStandardContextBilling
         group: Revenue Lifecycle Management
 
     extend_stdctx_contracts:
         description: Extend Standard Contracts Context Definition
-        class_path: tasks.extend_stdctx_cart.ExtendStandardContextContracts
+        class_path: tasks.extend_stdctx_contracts.ExtendStandardContextContracts
         group: Revenue Lifecycle Management
 
     extend_stdctx_contracts_extraction:
         description: Extend Standard Contracts Extraction Context Definition
-        class_path: tasks.extend_stdctx_cart.ExtendStandardContextContractsExtraction
+        class_path: tasks.extend_stdctx_contracts_extraction.ExtendStandardContextContractsExtraction
         group: Revenue Lifecycle Management
 
     extend_stdctx_fulfillment_asset:
         description: Extend Standard Fulfillment Asset  Context Definition
-        class_path: tasks.extend_stdctx_cart.ExtendStandardContextFulfillmentAsset
+        class_path: tasks.extend_stdctx_fulfillment_asset.ExtendStandardContextFulfillmentAsset
         group: Revenue Lifecycle Management
 
     extend_stdctx_collection_plan_segment:
         description: Extend Standard Collection Plan Segment Context Definition
-        class_path: tasks.extend_stdctx_cart.ExtendStandardContextCollectionPlanSegment
+        class_path: tasks.extend_stdctx_collection_plan_segment.ExtendStandardContextCollectionPlanSegment
         group: Revenue Lifecycle Management
 
     extendSalesContext:

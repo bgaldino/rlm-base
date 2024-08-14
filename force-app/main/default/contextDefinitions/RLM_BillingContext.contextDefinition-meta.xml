@@ -3709,7 +3709,8 @@
         <startDate>2023-01-01 08:00:00</startDate>
         <versionNumber>2</versionNumber>
     </contextDefinitionVersions>
-    <contextTtl>10</contextTtl>
+    <contextTtl>20</contextTtl>
+    <description>Extension of Billing Context</description>
     <inheritedFrom>BillingContext__stdctx</inheritedFrom>
     <inheritedFromVersion>62.09</inheritedFromVersion>
     <isProtected>false</isProtected>
