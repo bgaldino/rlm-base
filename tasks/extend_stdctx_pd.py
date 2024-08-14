@@ -82,7 +82,7 @@ class ExtendStandardContextPd(SFDXBaseTask):
             "contextMappings": [{"contextMappingId": self.context_mapping_id, "isDefault": "true", "name": "ProductDiscoveryMapping"}]
         }
         self._make_request("patch", url, headers=headers, json=payload)
-        #self._activate_context_id()
+        self._activate_context_id()
 
     # Activate the context ID once all changes and updates have been made
     def _activate_context_id(self):

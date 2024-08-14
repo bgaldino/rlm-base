@@ -37,6 +37,10 @@ class ExtendStandardContext(SFDXBaseTask):
         "contextTtl": {
             "description": "The time-to-live (TTL) of the context definition",
             "required": True, 
+        },
+        "defaultMapping": {
+            "description": "The default mapping of the context definition",
+            "required": True,
         }
     }
 
@@ -89,7 +93,7 @@ class ExtendStandardContext(SFDXBaseTask):
                 self.logger.info(f"Context ID: {self.context_id}")
                 self._process_context_id()
 
-    # Post-process after getting the context ID - usually involves additional API calls to further define the context
+    # Post-process after getting the context ID - typically to process the version list
     def _process_context_id(self):
         url, headers = self._build_url_and_headers(
             f"connect/context-definitions/{self.context_id}"
@@ -100,19 +104,19 @@ class ExtendStandardContext(SFDXBaseTask):
             if version_list:
                 self._process_version_list(version_list)
 
-    # Process the version list obtained from context definitions to perform further operations
+    # Process the version list obtained from context definitions to obtain context mappings
     def _process_version_list(self, version_list):
         context_mappings = version_list[0].get("contextMappings", [])
         for mapping in context_mappings:
-            if mapping.get("name") == "SalesTransaction":
-                self.sales_transaction_mapping_id = mapping["contextMappingId"]
+            if mapping.get("name") == self.options.get("defaultMapping"):
+                self.default_context_mapping_id = mapping["contextMappingId"]
                 self.logger.info(
-                    f"Sales Transaction Context Mapping ID: {self.sales_transaction_mapping_id}"
+                    f"{self.options.get("defaultMapping")} Context Mapping ID: {self.default_context_mapping_id}"
                 )
                 self._update_context_mappings()
                 break
 
-    # Update context mappings, typically for marking certain contexts as the default context
+    # Update context mappings, typically for marking certain context mappings the default
     def _update_context_mappings(self):
         url, headers = self._build_url_and_headers(
             f"connect/context-definitions/{self.context_id}/context-mappings"
@@ -120,9 +124,9 @@ class ExtendStandardContext(SFDXBaseTask):
         payload = {
             "contextMappings": [
                 {
-                    "contextMappingId": self.sales_transaction_mapping_id,
+                    "contextMappingId": self.default_context_mapping_id,
                     "isDefault": "true",
-                    "name": "SalesTransaction",
+                    "name": self.options.get("defaultMapping"),
                 }
             ]
         }

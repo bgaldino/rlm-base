@@ -82,7 +82,7 @@ class ExtendStandardContext(SFDXBaseTask):
             "contextMappings": [{"contextMappingId": self.sales_transaction_mapping_id, "isDefault": "true", "name": "QuoteEntitiesMapping"}]
         }
         self._make_request("patch", url, headers=headers, json=payload)
-        #self._activate_context_id()
+        self._activate_context_id()
 
     # Activate the context ID once all changes and updates have been made
     def _activate_context_id(self):

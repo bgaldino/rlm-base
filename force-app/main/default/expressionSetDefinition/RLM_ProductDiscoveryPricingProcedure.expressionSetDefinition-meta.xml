@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExpressionSetDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
     <contextDefinitions>RLM_ProductDiscoveryContext</contextDefinitions>
+    <description>Creates pricing procedures that get the list price of products for Product Discovery.</description>
     <interfaceSourceType>PricingProcedure</interfaceSourceType>
-    <label>RLM_ProductDiscoveryPricingProcedure</label>
+    <label>RLM Product Discovery Pricing Procedure</label>
     <processType>DefaultPricing</processType>
     <template>false</template>
     <versions>
-        <fullName>RLM_ProductDiscoveryPricingProcedure</fullName>
-        <description>RLM Default Product Discovery Pricing Procedure</description>
+        <fullName>RLM_ProductDiscoveryPricingProcedure_V1</fullName>
+        <description>Creates pricing procedures that get the list price of products for Product Discovery.</description>
         <expressionSetDefinition>RLM_ProductDiscoveryPricingProcedure</expressionSetDefinition>
         <interfaceSourceType>PricingProcedure</interfaceSourceType>
-        <label>RLM_ProductDiscoveryPricingProcedure</label>
+        <label>RLM Product Discovery Pricing Procedure</label>
         <processType>DefaultPricing</processType>
         <rank>1</rank>
         <shouldShowExplExternally>false</shouldShowExplExternally>
         <startDate>2023-01-01T08:00:00.000Z</startDate>
-        <status>Inactive</status>
+        <status>Active</status>
         <steps>
             <actionType>ListPrice</actionType>
             <customElement>
@@ -28,38 +29,10 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>Pricebook2Id</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>PricebookId</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>ProductSellingModelId</name>
                     <output>false</output>
                     <type>Parameter</type>
                     <value>ProductSellingModelId</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>CurrencyIsoCode</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>PricingCurrencyCode</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>Quantity</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ProductQuantity</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>ListPriceField</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>Constant_UnitPrice_Price_Book_Entry_Decision_Table_v2_LP</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -70,10 +43,38 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
+                    <name>Pricebook2Id</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>PricebookId</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>Quantity</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>ProductQuantity</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>CurrencyIsoCode</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>PricingCurrencyCode</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>LookUpApiName</name>
                     <output>false</output>
                     <type>Literal</type>
                     <value>Price_Book_Entry_Decision_Table_v2</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>ListPriceField</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>Constant_UnitPrice_Price_Book_Entry_Decision_Table_v2_LP</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -112,17 +113,24 @@
                 </parameters>
                 <parameters>
                     <input>false</input>
-                    <name>Id</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>PriceBookEntryId</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
                     <name>IsDerived</name>
                     <output>true</output>
                     <type>Parameter</type>
                     <value>IsDerived</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>Subtotal</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>SubTotal</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>Id</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>PriceBookEntryId</value>
                 </parameters>
                 <parameters>
                     <input>false</input>
@@ -132,11 +140,11 @@
                     <value>UnitPrice</value>
                 </parameters>
                 <parameters>
-                    <input>false</input>
-                    <name>Subtotal</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>SubTotal</value>
+                    <input>true</input>
+                    <name>LookUpId</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>0lDIP00000001Yn2AI</value>
                 </parameters>
             </customElement>
             <label>Price Book Entries</label>
@@ -164,20 +172,6 @@
                     <output>false</output>
                     <type>Parameter</type>
                     <value>PricingCurrencyCode</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>IsDerived</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>IsDerived</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>ContractId</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ContactId</value>
                 </parameters>
                 <parameters>
                     <input>true</input>

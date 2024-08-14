@@ -170,7 +170,7 @@ tasks:
         class_path: tasks.extend_stdctx_collection_plan_segment.ExtendStandardContextCollectionPlanSegment
         group: Revenue Lifecycle Management
 
-    extendSalesContext:
+    extend_context_sales_transaction:
         description: Extend Standard Sales Transaction Context
         class_path: tasks.rlm_extend_stdctx.ExtendStandardContext
         options:
@@ -178,10 +178,11 @@ tasks:
             description: "Extension of Standard Sales Transaction Context Definition"
             developerName: *sales_transaction_context_name
             baseReference: "SalesTransactionContext__stdctx"
-            startDate: "2024-01-01T00:00:00.000Z"
+            startDate: "2023-01-01T00:00:00.000Z"
             contextTtl: 20
+            defaultMapping: "QuoteEntitiesMapping"
 
-    extendProductDiscoveryContext:
+    extend_context_product_discovery:
         description: Extend Standard Product Discovery Context
         class_path: tasks.rlm_extend_stdctx.ExtendStandardContext
         options:
@@ -189,8 +190,9 @@ tasks:
             description: "Extension of Standard Product Discovery Context Definition"
             developerName: *product_discovery_context_name
             baseReference: "ProductDiscoveryContext__stdctx"
-            startDate: "2024-01-01T00:00:00.000Z"
+            startDate: "2023-01-01T00:00:00.000Z"
             contextTtl: 20
+            defaultMapping: "ProductDiscoveryMapping"
 
     deploy_context_definitions:
         description: Context Definitions need to be deployed and activated before other metadata -- this prioritizes this deployment first
@@ -386,6 +388,11 @@ tasks:
         options:
             path: scripts/apex/createDRORuleLibrary.apex
 
+    create_tax_engine:
+        class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+        options:
+            path: scripts/apex/createTaxEngine.apex
+
 flows:
     insert_data:
         group: Revenue Lifecycle Management
@@ -443,16 +450,21 @@ flows:
                     seconds: *sleep_default
             12:
                 task: create_rule_library
+            11.5:
+                task: util_sleep
+                options:
+                    seconds: *sleep_default
             13:
                 task: create_dro_rule_library
+                when: project_config.project__custom__dro == true
 
     extend_context_definitions:
         group: Revenue Lifecycle Management
         steps:
             1:
-                task: extend_stdctx
+                task: extend_context_sales_transaction
             2:
-                task: extend_stdctx_pd
+                task: extend_context_product_discovery
             3:
                 task: extend_stdctx_cart
             4:
@@ -526,6 +538,9 @@ flows:
             15:
                 task: deploy_post_docgen
                 when: project_config.project__custom__tso == true
+
+            16:
+                task: create_tax_engine
         
     prepare_quantumbit:
         group: Revenue Lifecycle Management
