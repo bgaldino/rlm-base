@@ -92,4 +92,7 @@
     <layoutAssignments>
         <layout>Order-RLM Order Layout</layout>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>OrderItem-RLM Order Product Layout</layout>
+    </layoutAssignments>
 </Profile>

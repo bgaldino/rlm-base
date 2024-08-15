@@ -314,6 +314,16 @@
                 <identifier>RecordUsageModelTypeField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.BillingPolicyId</fieldItem>
+                <identifier>RecordBillingPolicyIdField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-cc877b7f-f688-4b0f-a7df-bc6dae97e268</name>
         <type>Facet</type>
     </flexiPageRegions>

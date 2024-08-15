@@ -2,5 +2,5 @@
 <RevenueManagementSettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <enableAutoAddDerivedAsset>true</enableAutoAddDerivedAsset>
     <enableCoreCPQ>true</enableCoreCPQ>
-    <enableRampDeal>true</enableRampDeal>
+    <enableRampDeal>false</enableRampDeal>
 </RevenueManagementSettings>

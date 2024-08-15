@@ -26,18 +26,6 @@
                 <behavior>Required</behavior>
                 <field>Mrr</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SegmentName</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SegmentType</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>RampIdentifier</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -63,10 +51,6 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>AssetStatePeriodNumber</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SegmentIdentifier</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>

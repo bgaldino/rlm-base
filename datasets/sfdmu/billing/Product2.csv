@@ -1,0 +1,95 @@
+$$Name$BillingPolicy.Name$StockKeepingUnit,BillingPolicy.Name,Name,StockKeepingUnit
+AEH Environment Runtime;Billing Policy - Advance;QB-AEH-ENV,Billing Policy - Advance,AEH Environment Runtime,QB-AEH-ENV
+AEH Compute Time Access;Billing Policy - Advance;QB-AEH-CPU,Billing Policy - Advance,AEH Compute Time Access,QB-AEH-CPU
+AEH Object Store - Restricted Use;Billing Policy - Advance;QB-AEH-OBJ,Billing Policy - Advance,AEH Object Store - Restricted Use,QB-AEH-OBJ
+QuantumShell 8U 600mmx1070mm;Billing Policy - Advance;QB-BMX-1050,Billing Policy - Advance,QuantumShell 8U 600mmx1070mm,QB-BMX-1050
+QuantumShell 10U 600mmx1200mm;Billing Policy - Advance;QB-BMX-1053,Billing Policy - Advance,QuantumShell 10U 600mmx1200mm,QB-BMX-1053
+QuantumBit Starter;Billing Policy - Advance;QB-BDL-STND,Billing Policy - Advance,QuantumBit Starter,QB-BDL-STND
+Intel Xeon E5-2660 v4 2.0GHz;Billing Policy - Advance;QB-INTEL E5-2660,Billing Policy - Advance,Intel Xeon E5-2660 v4 2.0GHz,QB-INTEL E5-2660
+Intel Xeon E5-2667 v4 3.2GHz;Billing Policy - Advance;QB-INTEL E5-2667,Billing Policy - Advance,Intel Xeon E5-2667 v4 3.2GHz,QB-INTEL E5-2667
+Intel Xeon E5-2683 v4 2.1GHz;Billing Policy - Advance;QB-INTEL E5-2683,Billing Policy - Advance,Intel Xeon E5-2683 v4 2.1GHz,QB-INTEL E5-2683
+32GB RDIMM;Billing Policy - Advance;QB-MEM 32GB,Billing Policy - Advance,32GB RDIMM,QB-MEM 32GB
+1TB 7.2k RPM NLSAS;Billing Policy - Advance;QB-HD 1TB,Billing Policy - Advance,1TB 7.2k RPM NLSAS,QB-HD 1TB
+Additional API;Billing Policy - Advance;QB-API,Billing Policy - Advance,Additional API,QB-API
+QuantumBit Complete Solution;Billing Policy - Advance;QB-COMPLETE,Billing Policy - Advance,QuantumBit Complete Solution,QB-COMPLETE
+4TB 7.2k RPM NLSAS;Billing Policy - Advance;QB-HD 4TB,Billing Policy - Advance,4TB 7.2k RPM NLSAS,QB-HD 4TB
+8GB RDIMM;Billing Policy - Advance;QB-MEM 8GB,Billing Policy - Advance,8GB RDIMM,QB-MEM 8GB
+Intel X710 Dual Port 10Gb Direct Attach;Billing Policy - Advance;QB-NET X710,Billing Policy - Advance,Intel X710 Dual Port 10Gb Direct Attach,QB-NET X710
+C13 to C14 Power Cable 3';Billing Policy - Advance;QB-CMPC-5887,Billing Policy - Advance,C13 to C14 Power Cable 3',QB-CMPC-5887
+C13 to C14 Power Cable 5';Billing Policy - Advance;QB-CMPC-5888,Billing Policy - Advance,C13 to C14 Power Cable 5',QB-CMPC-5888
+C19 to C20 Power Cable 3';Billing Policy - Advance;QB-CMPC-5889,Billing Policy - Advance,C19 to C20 Power Cable 3',QB-CMPC-5889
+C19 to C20 Power Cable 5';Billing Policy - Advance;QB-CMPC-5890,Billing Policy - Advance,C19 to C20 Power Cable 5',QB-CMPC-5890
+L5-20 Input Power Cable 12';Billing Policy - Advance;QB-CMPC-5891,Billing Policy - Advance,L5-20 Input Power Cable 12',QB-CMPC-5891
+L5-20 Input Power Cable 8';Billing Policy - Advance;QB-CMPC-5892,Billing Policy - Advance,L5-20 Input Power Cable 8',QB-CMPC-5892
+Gold Hardware Maintenance;Billing Policy - Advance;QB-SUPP-1005,Billing Policy - Advance,Gold Hardware Maintenance,QB-SUPP-1005
+Silver Hardware Maintenance;Billing Policy - Advance;QB-SUPP-1000,Billing Policy - Advance,Silver Hardware Maintenance,QB-SUPP-1000
+Additional Automation QB Credits;Billing Policy - Advance;QB-AUT-CRED,Billing Policy - Advance,Additional Automation QB Credits,QB-AUT-CRED
+Additional API Prod;Billing Policy - Advance;QB-API-PROD,Billing Policy - Advance,Additional API Prod,QB-API-PROD
+QuantumBit Enterprise;Billing Policy - Advance;QB-BDL-ENTR,Billing Policy - Advance,QuantumBit Enterprise,QB-BDL-ENTR
+QuantumBit Business Critical;Billing Policy - Advance;QB-BDL-CRTL,Billing Policy - Advance,QuantumBit Business Critical,QB-BDL-CRTL
+QuantumBit Fundamentals Training;Billing Policy - Advance;QB-TRN-FUND,Billing Policy - Advance,QuantumBit Fundamentals Training,QB-TRN-FUND
+QuantumBit Essentials Training;Billing Policy - Advance;QB-TRN-ESSNTLS,Billing Policy - Advance,QuantumBit Essentials Training,QB-TRN-ESSNTLS
+Professional Services Daily Rate;Billing Policy - Advance;QB-SRV-OG-PSH,Billing Policy - Advance,Professional Services Daily Rate,QB-SRV-OG-PSH
+Professional Services Scope of Work;Billing Policy - Advance;QB-SRV-SOW,Billing Policy - Advance,Professional Services Scope of Work,QB-SRV-SOW
+Intel Xeon E5-2609 v4 1.7GHz;Billing Policy - Advance;QB-INTEL E5-2609,Billing Policy - Advance,Intel Xeon E5-2609 v4 1.7GHz,QB-INTEL E5-2609
+PowerSwerve R750 Rack Server;Billing Policy - Advance;QB-BDL-R750,Billing Policy - Advance,PowerSwerve R750 Rack Server,QB-BDL-R750
+Subscription;Billing Policy - Advance;TEST-SUB,Billing Policy - Advance,Subscription,TEST-SUB
+16GB RDIMM;Billing Policy - Advance;QB-MEM 16GB,Billing Policy - Advance,16GB RDIMM,QB-MEM 16GB
+8TB 7.2k RPM NLSAS;Billing Policy - Advance;QB-HD 8TB,Billing Policy - Advance,8TB 7.2k RPM NLSAS,QB-HD 8TB
+8TB 7.2k RPM Self-Encrypting NLSAS;Billing Policy - Advance;QB-HD 8TBSE,Billing Policy - Advance,8TB 7.2k RPM Self-Encrypting NLSAS,QB-HD 8TBSE
+Intel X710 Dual Port 10Gb SFP;Billing Policy - Advance;QB-BET X710SFP,Billing Policy - Advance,Intel X710 Dual Port 10Gb SFP,QB-BET X710SFP
+QuantumBit Services Project;Billing Policy - Advance;QB-BDL-SRVC,Billing Policy - Advance,QuantumBit Services Project,QB-BDL-SRVC
+Configured Power Cable;Billing Policy - Advance;QB-CMPC-5882,Billing Policy - Advance,Configured Power Cable,QB-CMPC-5882
+TX 600mm/750mm Stabilizer Plate;Billing Policy - Advance;QB-BSSA-4303,Billing Policy - Advance,TX 600mm/750mm Stabilizer Plate,QB-BSSA-4303
+TX Bolt-Down Kit;Billing Policy - Advance;QB-BSSA-4304,Billing Policy - Advance,TX Bolt-Down Kit,QB-BSSA-4304
+"Rack PDU 30A, 120V L5-20;Billing Policy - Advance;QB-PDU-2023",Billing Policy - Advance,"Rack PDU 30A, 120V L5-20",QB-PDU-2023
+"Rack PDU 15A, 120V L5-20;Billing Policy - Advance;QB-PDU-2024",Billing Policy - Advance,"Rack PDU 15A, 120V L5-20",QB-PDU-2024
+"Rack PDU 20A, 230V C20 input C1;Billing Policy - Advance;QB-PDU-2025",Billing Policy - Advance,"Rack PDU 20A, 230V C20 input C1",QB-PDU-2025
+"Rack PDU 10A, 230V C20 input C19;Billing Policy - Advance;QB-PDU-2026",Billing Policy - Advance,"Rack PDU 10A, 230V C20 input C19",QB-PDU-2026
+"Rack PDU 16A, 230V, C13 output;Billing Policy - Advance;QB-PDU-2027",Billing Policy - Advance,"Rack PDU 16A, 230V, C13 output",QB-PDU-2027
+"Rack PDU 14.4kW, 208V, C13 output;Billing Policy - Advance;QB-PDU-2028",Billing Policy - Advance,"Rack PDU 14.4kW, 208V, C13 output",QB-PDU-2028
+"Rack PDU 5.7W, 208V, C13 output;Billing Policy - Advance;QB-PDU-2029",Billing Policy - Advance,"Rack PDU 5.7W, 208V, C13 output",QB-PDU-2029
+No Operating System;Billing Policy - Advance;QB-NO-OSYS,Billing Policy - Advance,No Operating System,QB-NO-OSYS
+vSphere Standard;Billing Policy - Advance;QB-VMW-S,Billing Policy - Advance,vSphere Standard,QB-VMW-S
+vSphere Enterprise;Billing Policy - Advance;QB-VMW-E,Billing Policy - Advance,vSphere Enterprise,QB-VMW-E
+Installation and Assembly;Billing Policy - Advance;QB-INST-1000,Billing Policy - Advance,Installation and Assembly,QB-INST-1000
+Professional Service Hours (Consumption);Billing Policy - Advance;QB-SRV-OG-PSHC,Billing Policy - Advance,Professional Service Hours (Consumption),QB-SRV-OG-PSHC
+Red Hat Enterprise Linux;Billing Policy - Advance;QB-REDHAT,Billing Policy - Advance,Red Hat Enterprise Linux,QB-REDHAT
+vSphere Desktop;Billing Policy - Advance;QB-VMW-D,Billing Policy - Advance,vSphere Desktop,QB-VMW-D
+Software Maintenance;Billing Policy - Advance;QB-SUPP-2000,Billing Policy - Advance,Software Maintenance,QB-SUPP-2000
+Additional Flows - QB Enterprise;Billing Policy - Advance;QB-FLO-ENTR,Billing Policy - Advance,Additional Flows - QB Enterprise,QB-FLO-ENTR
+Additional Messages - QB Enterprise;Billing Policy - Advance;QB-MSG-ENTR,Billing Policy - Advance,Additional Messages - QB Enterprise,QB-MSG-ENTR
+"Rack PDU 20A, 120V L5-20;Billing Policy - Advance;QB-PDU-2022",Billing Policy - Advance,"Rack PDU 20A, 120V L5-20",QB-PDU-2022
+Additional API Pre-Prod;Billing Policy - Advance;QB-API-PREP,Billing Policy - Advance,Additional API Pre-Prod,QB-API-PREP
+Additional API Gov;Billing Policy - Advance;QB-API-GOVT,Billing Policy - Advance,Additional API Gov,QB-API-GOVT
+Additional API Flex (100M);Billing Policy - Advance;QB-API-FLEX,Billing Policy - Advance,Additional API Flex (100M),QB-API-FLEX
+Additional QB DataGraph (500M);Billing Policy - Advance;QB-DAT-GRPH,Billing Policy - Advance,Additional QB DataGraph (500M),QB-DAT-GRPH
+Program Director;Billing Policy - Advance;QB-SRV-PD,Billing Policy - Advance,Program Director,QB-SRV-PD
+Solutions Architect;Billing Policy - Advance;QB-SRV-SAT,Billing Policy - Advance,Solutions Architect,QB-SRV-SAT
+Project Manager;Billing Policy - Advance;QB-SRV-PMN,Billing Policy - Advance,Project Manager,QB-SRV-PMN
+Implementation Engineer;Billing Policy - Advance;QB-SRV-IMP,Billing Policy - Advance,Implementation Engineer,QB-SRV-IMP
+Integration Specialist Engineer;Billing Policy - Advance;QB-SRV-ISE,Billing Policy - Advance,Integration Specialist Engineer,QB-SRV-ISE
+Module Extension Engineer;Billing Policy - Advance;QB-SRV-MEE,Billing Policy - Advance,Module Extension Engineer,QB-SRV-MEE
+Quality Assurance Engineer;Billing Policy - Advance;QB-SRV-QAE,Billing Policy - Advance,Quality Assurance Engineer,QB-SRV-QAE
+Data Normalization Expert;Billing Policy - Advance;QB-SRV-DNE,Billing Policy - Advance,Data Normalization Expert,QB-SRV-DNE
+QB API Management Solution;Billing Policy - Advance;QB-API-MGMT,Billing Policy - Advance,QB API Management Solution,QB-API-MGMT
+Additional Flows - QB Starter;Billing Policy - Advance;QB-FLO-STRT,Billing Policy - Advance,Additional Flows - QB Starter,QB-FLO-STRT
+Additional Messages - QB Starter;Billing Policy - Advance;QB-MSG-STRT,Billing Policy - Advance,Additional Messages - QB Starter,QB-MSG-STRT
+Additional Data Throughput (TB);Billing Policy - Advance;QB-DAT-THPT,Billing Policy - Advance,Additional Data Throughput (TB),QB-DAT-THPT
+Blanking Panel;Billing Policy - Advance;QB-BSSA-4298,Billing Policy - Advance,Blanking Panel,QB-BSSA-4298
+Sliding Shelf 200lbs;Billing Policy - Advance;QB-BSSA-4300,Billing Policy - Advance,Sliding Shelf 200lbs,QB-BSSA-4300
+Fixed Shelf 250lbs;Billing Policy - Advance;QB-BSSA-4302,Billing Policy - Advance,Fixed Shelf 250lbs,QB-BSSA-4302
+Roof Fan Tray 750mm - 120V;Billing Policy - Advance;QB-BSSA-4306,Billing Policy - Advance,Roof Fan Tray 750mm - 120V,QB-BSSA-4306
+Roof Fan Tray 750mm - 208V;Billing Policy - Advance;QB-BSSA-4308,Billing Policy - Advance,Roof Fan Tray 750mm - 208V,QB-BSSA-4308
+QuantumBit Rack Enclosure;Billing Policy - Advance;QB-BDL-RAXS,Billing Policy - Advance,QuantumBit Rack Enclosure,QB-BDL-RAXS
+Quick Start Enablement;Billing Policy - Advance;QB-SRV-QSE,Billing Policy - Advance,Quick Start Enablement,QB-SRV-QSE
+Professional Services - Associate Consultant Daily Rate;Billing Policy - Advance;QB-SRV-OG-AC-PSH,Billing Policy - Advance,Professional Services - Associate Consultant Daily Rate,QB-SRV-OG-AC-PSH
+"QuantumBit Advisory Services, CSM Premium;Billing Policy - Advance;QB-SRV-AS",Billing Policy - Advance,"QuantumBit Advisory Services, CSM Premium",QB-SRV-AS
+Standard Success Plan;Billing Policy - Advance;QB-STD-SP,Billing Policy - Advance,Standard Success Plan,QB-STD-SP
+Professional Services - Project Management Daily Rate;Billing Policy - Advance;QB-SRV-OG-PM-PSH,Billing Policy - Advance,Professional Services - Project Management Daily Rate,QB-SRV-OG-PM-PSH
+Premium Success Plan;Billing Policy - Advance;QB-SRV-PRM-SP,Billing Policy - Advance,Premium Success Plan,QB-SRV-PRM-SP
+API Access Requests (AEH);Billing Policy - Advance;QB-API-REQT,Billing Policy - Advance,API Access Requests (AEH),QB-API-REQT
+Cable Management Rings (Qty 10);Billing Policy - Advance;QB-CMPC-5881,Billing Policy - Advance,Cable Management Rings (Qty 10),QB-CMPC-5881
+"Vertical Cable Organizer, 8 Cable Rings;Billing Policy - Advance;QB-CMPC-5883",Billing Policy - Advance,"Vertical Cable Organizer, 8 Cable Rings",QB-CMPC-5883
+Cable Containment Brackets;Billing Policy - Advance;QB-CMPC-5884,Billing Policy - Advance,Cable Containment Brackets,QB-CMPC-5884
+QuantumShell 6U 600mmx870mm;Billing Policy - Advance;QB-BMX-1051,Billing Policy - Advance,QuantumShell 6U 600mmx870mm,QB-BMX-1051

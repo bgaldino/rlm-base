@@ -1,16 +1,16 @@
 {
-    "apiVersion": "62.0",
-    "excludeIdsFromCSVFiles": "true",
-    "objectSets": [
+  "apiVersion": "62.0",
+  "excludeIdsFromCSVFiles": "true",
+  "objectSets": [
+    {
+      "objects": [
         {
-            "objects": [
-                {
-                    "query": "SELECT DeveloperName, Status FROM DecisionTable",
-                    "operation": "Update",
-                    "excluded": false
-                }
-            ]
+          "query": "SELECT DeveloperName, Status FROM DecisionTable",
+          "operation": "Update",
+          "excluded": false
         }
-    ],
-    "orgs": []
+      ]
+    }
+  ],
+  "orgs": []
 }

@@ -3,8 +3,9 @@
     <enableAIAccelerator>true</enableAIAccelerator>
     <enableAccountScoreEnabled>false</enableAccountScoreEnabled>
     <enableContractMgmtPref>true</enableContractMgmtPref>
+    <enableContractSearchPref>false</enableContractSearchPref>
     <enableContractsAIPref>true</enableContractsAIPref>
-    <enableDiscoveryFrameworkMetadata>false</enableDiscoveryFrameworkMetadata>
+    <enableDiscoveryFrameworkMetadata>true</enableDiscoveryFrameworkMetadata>
     <enableDiscoveryFrwrkSampleTemplate>false</enableDiscoveryFrwrkSampleTemplate>
     <enableEnhancedQuestionCreation>true</enableEnhancedQuestionCreation>
     <enableEpcDeleteAccess>false</enableEpcDeleteAccess>

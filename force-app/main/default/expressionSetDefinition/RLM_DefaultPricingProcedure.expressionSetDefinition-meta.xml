@@ -14,7 +14,7 @@
         <rank>1</rank>
         <shouldShowExplExternally>false</shouldShowExplExternally>
         <startDate>2023-01-01T08:00:00.000Z</startDate>
-        <status>Active</status>
+        <status>Draft</status>
         <steps>
             <actionType>GroupingAndAggregatePricing</actionType>
             <customElement>
