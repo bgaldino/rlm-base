@@ -139,13 +139,6 @@
                     <type>Parameter</type>
                     <value>UnitPrice</value>
                 </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>LookUpId</name>
-                    <output>false</output>
-                    <type>Literal</type>
-                    <value>0lDIP00000001Yn2AI</value>
-                </parameters>
             </customElement>
             <label>Price Book Entries</label>
             <name>PriceBookEntries</name>
