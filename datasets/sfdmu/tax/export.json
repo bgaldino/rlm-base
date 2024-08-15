@@ -36,7 +36,7 @@
           "excluded": false
         },
         {
-          "query": "SELECT TaxPolicyId, Name, StockKeepingUnit FROM Product2",
+          "query": "SELECT TaxPolicyId, StockKeepingUnit FROM Product2",
           "operation": "Update",
           "externalId": "StockKeepingUnit",
           "excluded": false

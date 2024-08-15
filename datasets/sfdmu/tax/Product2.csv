@@ -1,95 +1,95 @@
-$$Name$TaxPolicy.Name$StockKeepingUnit,Name,StockKeepingUnit,TaxPolicy.Name
-AEH Environment Runtime;Default Tax Policy;QB-AEH-ENV,AEH Environment Runtime,QB-AEH-ENV,Default Tax Policy
-AEH Compute Time Access;Default Tax Policy;QB-AEH-CPU,AEH Compute Time Access,QB-AEH-CPU,Default Tax Policy
-AEH Object Store - Restricted Use;Default Tax Policy;QB-AEH-OBJ,AEH Object Store - Restricted Use,QB-AEH-OBJ,Default Tax Policy
-QuantumShell 8U 600mmx1070mm;Default Tax Policy;QB-BMX-1050,QuantumShell 8U 600mmx1070mm,QB-BMX-1050,Default Tax Policy
-QuantumShell 10U 600mmx1200mm;Default Tax Policy;QB-BMX-1053,QuantumShell 10U 600mmx1200mm,QB-BMX-1053,Default Tax Policy
-QuantumBit Starter;Default Tax Policy;QB-BDL-STND,QuantumBit Starter,QB-BDL-STND,Default Tax Policy
-Intel Xeon E5-2660 v4 2.0GHz;Default Tax Policy;QB-INTEL E5-2660,Intel Xeon E5-2660 v4 2.0GHz,QB-INTEL E5-2660,Default Tax Policy
-Intel Xeon E5-2667 v4 3.2GHz;Default Tax Policy;QB-INTEL E5-2667,Intel Xeon E5-2667 v4 3.2GHz,QB-INTEL E5-2667,Default Tax Policy
-Intel Xeon E5-2683 v4 2.1GHz;Default Tax Policy;QB-INTEL E5-2683,Intel Xeon E5-2683 v4 2.1GHz,QB-INTEL E5-2683,Default Tax Policy
-32GB RDIMM;Default Tax Policy;QB-MEM 32GB,32GB RDIMM,QB-MEM 32GB,Default Tax Policy
-1TB 7.2k RPM NLSAS;Default Tax Policy;QB-HD 1TB,1TB 7.2k RPM NLSAS,QB-HD 1TB,Default Tax Policy
-Additional API;Default Tax Policy;QB-API,Additional API,QB-API,Default Tax Policy
-QuantumBit Complete Solution;Default Tax Policy;QB-COMPLETE,QuantumBit Complete Solution,QB-COMPLETE,Default Tax Policy
-4TB 7.2k RPM NLSAS;Default Tax Policy;QB-HD 4TB,4TB 7.2k RPM NLSAS,QB-HD 4TB,Default Tax Policy
-8GB RDIMM;Default Tax Policy;QB-MEM 8GB,8GB RDIMM,QB-MEM 8GB,Default Tax Policy
-Intel X710 Dual Port 10Gb Direct Attach;Default Tax Policy;QB-NET X710,Intel X710 Dual Port 10Gb Direct Attach,QB-NET X710,Default Tax Policy
-C13 to C14 Power Cable 3';Default Tax Policy;QB-CMPC-5887,C13 to C14 Power Cable 3',QB-CMPC-5887,Default Tax Policy
-C13 to C14 Power Cable 5';Default Tax Policy;QB-CMPC-5888,C13 to C14 Power Cable 5',QB-CMPC-5888,Default Tax Policy
-C19 to C20 Power Cable 3';Default Tax Policy;QB-CMPC-5889,C19 to C20 Power Cable 3',QB-CMPC-5889,Default Tax Policy
-C19 to C20 Power Cable 5';Default Tax Policy;QB-CMPC-5890,C19 to C20 Power Cable 5',QB-CMPC-5890,Default Tax Policy
-L5-20 Input Power Cable 12';Default Tax Policy;QB-CMPC-5891,L5-20 Input Power Cable 12',QB-CMPC-5891,Default Tax Policy
-L5-20 Input Power Cable 8';Default Tax Policy;QB-CMPC-5892,L5-20 Input Power Cable 8',QB-CMPC-5892,Default Tax Policy
-Gold Hardware Maintenance;Default Tax Policy;QB-SUPP-1005,Gold Hardware Maintenance,QB-SUPP-1005,Default Tax Policy
-Silver Hardware Maintenance;Default Tax Policy;QB-SUPP-1000,Silver Hardware Maintenance,QB-SUPP-1000,Default Tax Policy
-Additional Automation QB Credits;Default Tax Policy;QB-AUT-CRED,Additional Automation QB Credits,QB-AUT-CRED,Default Tax Policy
-Additional API Prod;Default Tax Policy;QB-API-PROD,Additional API Prod,QB-API-PROD,Default Tax Policy
-QuantumBit Enterprise;Default Tax Policy;QB-BDL-ENTR,QuantumBit Enterprise,QB-BDL-ENTR,Default Tax Policy
-QuantumBit Business Critical;Default Tax Policy;QB-BDL-CRTL,QuantumBit Business Critical,QB-BDL-CRTL,Default Tax Policy
-QuantumBit Fundamentals Training;Default Tax Policy;QB-TRN-FUND,QuantumBit Fundamentals Training,QB-TRN-FUND,Default Tax Policy
-QuantumBit Essentials Training;Default Tax Policy;QB-TRN-ESSNTLS,QuantumBit Essentials Training,QB-TRN-ESSNTLS,Default Tax Policy
-Professional Services Daily Rate;Default Tax Policy;QB-SRV-OG-PSH,Professional Services Daily Rate,QB-SRV-OG-PSH,Default Tax Policy
-Professional Services Scope of Work;Default Tax Policy;QB-SRV-SOW,Professional Services Scope of Work,QB-SRV-SOW,Default Tax Policy
-Intel Xeon E5-2609 v4 1.7GHz;Default Tax Policy;QB-INTEL E5-2609,Intel Xeon E5-2609 v4 1.7GHz,QB-INTEL E5-2609,Default Tax Policy
-PowerSwerve R750 Rack Server;Default Tax Policy;QB-BDL-R750,PowerSwerve R750 Rack Server,QB-BDL-R750,Default Tax Policy
-Subscription;Default Tax Policy;TEST-SUB,Subscription,TEST-SUB,Default Tax Policy
-16GB RDIMM;Default Tax Policy;QB-MEM 16GB,16GB RDIMM,QB-MEM 16GB,Default Tax Policy
-8TB 7.2k RPM NLSAS;Default Tax Policy;QB-HD 8TB,8TB 7.2k RPM NLSAS,QB-HD 8TB,Default Tax Policy
-8TB 7.2k RPM Self-Encrypting NLSAS;Default Tax Policy;QB-HD 8TBSE,8TB 7.2k RPM Self-Encrypting NLSAS,QB-HD 8TBSE,Default Tax Policy
-Intel X710 Dual Port 10Gb SFP;Default Tax Policy;QB-BET X710SFP,Intel X710 Dual Port 10Gb SFP,QB-BET X710SFP,Default Tax Policy
-QuantumBit Services Project;Default Tax Policy;QB-BDL-SRVC,QuantumBit Services Project,QB-BDL-SRVC,Default Tax Policy
-Configured Power Cable;Default Tax Policy;QB-CMPC-5882,Configured Power Cable,QB-CMPC-5882,Default Tax Policy
-TX 600mm/750mm Stabilizer Plate;Default Tax Policy;QB-BSSA-4303,TX 600mm/750mm Stabilizer Plate,QB-BSSA-4303,Default Tax Policy
-TX Bolt-Down Kit;Default Tax Policy;QB-BSSA-4304,TX Bolt-Down Kit,QB-BSSA-4304,Default Tax Policy
-"Rack PDU 30A, 120V L5-20;Default Tax Policy;QB-PDU-2023","Rack PDU 30A, 120V L5-20",QB-PDU-2023,Default Tax Policy
-"Rack PDU 15A, 120V L5-20;Default Tax Policy;QB-PDU-2024","Rack PDU 15A, 120V L5-20",QB-PDU-2024,Default Tax Policy
-"Rack PDU 20A, 230V C20 input C1;Default Tax Policy;QB-PDU-2025","Rack PDU 20A, 230V C20 input C1",QB-PDU-2025,Default Tax Policy
-"Rack PDU 10A, 230V C20 input C19;Default Tax Policy;QB-PDU-2026","Rack PDU 10A, 230V C20 input C19",QB-PDU-2026,Default Tax Policy
-"Rack PDU 16A, 230V, C13 output;Default Tax Policy;QB-PDU-2027","Rack PDU 16A, 230V, C13 output",QB-PDU-2027,Default Tax Policy
-"Rack PDU 14.4kW, 208V, C13 output;Default Tax Policy;QB-PDU-2028","Rack PDU 14.4kW, 208V, C13 output",QB-PDU-2028,Default Tax Policy
-"Rack PDU 5.7W, 208V, C13 output;Default Tax Policy;QB-PDU-2029","Rack PDU 5.7W, 208V, C13 output",QB-PDU-2029,Default Tax Policy
-No Operating System;Default Tax Policy;QB-NO-OSYS,No Operating System,QB-NO-OSYS,Default Tax Policy
-vSphere Standard;Default Tax Policy;QB-VMW-S,vSphere Standard,QB-VMW-S,Default Tax Policy
-vSphere Enterprise;Default Tax Policy;QB-VMW-E,vSphere Enterprise,QB-VMW-E,Default Tax Policy
-Installation and Assembly;Default Tax Policy;QB-INST-1000,Installation and Assembly,QB-INST-1000,Default Tax Policy
-Professional Service Hours (Consumption);Default Tax Policy;QB-SRV-OG-PSHC,Professional Service Hours (Consumption),QB-SRV-OG-PSHC,Default Tax Policy
-Red Hat Enterprise Linux;Default Tax Policy;QB-REDHAT,Red Hat Enterprise Linux,QB-REDHAT,Default Tax Policy
-vSphere Desktop;Default Tax Policy;QB-VMW-D,vSphere Desktop,QB-VMW-D,Default Tax Policy
-Software Maintenance;Default Tax Policy;QB-SUPP-2000,Software Maintenance,QB-SUPP-2000,Default Tax Policy
-Additional Flows - QB Enterprise;Default Tax Policy;QB-FLO-ENTR,Additional Flows - QB Enterprise,QB-FLO-ENTR,Default Tax Policy
-Additional Messages - QB Enterprise;Default Tax Policy;QB-MSG-ENTR,Additional Messages - QB Enterprise,QB-MSG-ENTR,Default Tax Policy
-"Rack PDU 20A, 120V L5-20;Default Tax Policy;QB-PDU-2022","Rack PDU 20A, 120V L5-20",QB-PDU-2022,Default Tax Policy
-Additional API Pre-Prod;Default Tax Policy;QB-API-PREP,Additional API Pre-Prod,QB-API-PREP,Default Tax Policy
-Additional API Gov;Default Tax Policy;QB-API-GOVT,Additional API Gov,QB-API-GOVT,Default Tax Policy
-Additional API Flex (100M);Default Tax Policy;QB-API-FLEX,Additional API Flex (100M),QB-API-FLEX,Default Tax Policy
-Additional QB DataGraph (500M);Default Tax Policy;QB-DAT-GRPH,Additional QB DataGraph (500M),QB-DAT-GRPH,Default Tax Policy
-Program Director;Default Tax Policy;QB-SRV-PD,Program Director,QB-SRV-PD,Default Tax Policy
-Solutions Architect;Default Tax Policy;QB-SRV-SAT,Solutions Architect,QB-SRV-SAT,Default Tax Policy
-Project Manager;Default Tax Policy;QB-SRV-PMN,Project Manager,QB-SRV-PMN,Default Tax Policy
-Implementation Engineer;Default Tax Policy;QB-SRV-IMP,Implementation Engineer,QB-SRV-IMP,Default Tax Policy
-Integration Specialist Engineer;Default Tax Policy;QB-SRV-ISE,Integration Specialist Engineer,QB-SRV-ISE,Default Tax Policy
-Module Extension Engineer;Default Tax Policy;QB-SRV-MEE,Module Extension Engineer,QB-SRV-MEE,Default Tax Policy
-Quality Assurance Engineer;Default Tax Policy;QB-SRV-QAE,Quality Assurance Engineer,QB-SRV-QAE,Default Tax Policy
-Data Normalization Expert;Default Tax Policy;QB-SRV-DNE,Data Normalization Expert,QB-SRV-DNE,Default Tax Policy
-QB API Management Solution;Default Tax Policy;QB-API-MGMT,QB API Management Solution,QB-API-MGMT,Default Tax Policy
-Additional Flows - QB Starter;Default Tax Policy;QB-FLO-STRT,Additional Flows - QB Starter,QB-FLO-STRT,Default Tax Policy
-Additional Messages - QB Starter;Default Tax Policy;QB-MSG-STRT,Additional Messages - QB Starter,QB-MSG-STRT,Default Tax Policy
-Additional Data Throughput (TB);Default Tax Policy;QB-DAT-THPT,Additional Data Throughput (TB),QB-DAT-THPT,Default Tax Policy
-Blanking Panel;Default Tax Policy;QB-BSSA-4298,Blanking Panel,QB-BSSA-4298,Default Tax Policy
-Sliding Shelf 200lbs;Default Tax Policy;QB-BSSA-4300,Sliding Shelf 200lbs,QB-BSSA-4300,Default Tax Policy
-Fixed Shelf 250lbs;Default Tax Policy;QB-BSSA-4302,Fixed Shelf 250lbs,QB-BSSA-4302,Default Tax Policy
-Roof Fan Tray 750mm - 120V;Default Tax Policy;QB-BSSA-4306,Roof Fan Tray 750mm - 120V,QB-BSSA-4306,Default Tax Policy
-Roof Fan Tray 750mm - 208V;Default Tax Policy;QB-BSSA-4308,Roof Fan Tray 750mm - 208V,QB-BSSA-4308,Default Tax Policy
-QuantumBit Rack Enclosure;Default Tax Policy;QB-BDL-RAXS,QuantumBit Rack Enclosure,QB-BDL-RAXS,Default Tax Policy
-Quick Start Enablement;Default Tax Policy;QB-SRV-QSE,Quick Start Enablement,QB-SRV-QSE,Default Tax Policy
-Professional Services - Associate Consultant Daily Rate;Default Tax Policy;QB-SRV-OG-AC-PSH,Professional Services - Associate Consultant Daily Rate,QB-SRV-OG-AC-PSH,Default Tax Policy
-"QuantumBit Advisory Services, CSM Premium;Default Tax Policy;QB-SRV-AS","QuantumBit Advisory Services, CSM Premium",QB-SRV-AS,Default Tax Policy
-Standard Success Plan;Default Tax Policy;QB-STD-SP,Standard Success Plan,QB-STD-SP,Default Tax Policy
-Professional Services - Project Management Daily Rate;Default Tax Policy;QB-SRV-OG-PM-PSH,Professional Services - Project Management Daily Rate,QB-SRV-OG-PM-PSH,Default Tax Policy
-Premium Success Plan;Default Tax Policy;QB-SRV-PRM-SP,Premium Success Plan,QB-SRV-PRM-SP,Default Tax Policy
-API Access Requests (AEH);Default Tax Policy;QB-API-REQT,API Access Requests (AEH),QB-API-REQT,Default Tax Policy
-Cable Management Rings (Qty 10);Default Tax Policy;QB-CMPC-5881,Cable Management Rings (Qty 10),QB-CMPC-5881,Default Tax Policy
-"Vertical Cable Organizer, 8 Cable Rings;Default Tax Policy;QB-CMPC-5883","Vertical Cable Organizer, 8 Cable Rings",QB-CMPC-5883,Default Tax Policy
-Cable Containment Brackets;Default Tax Policy;QB-CMPC-5884,Cable Containment Brackets,QB-CMPC-5884,Default Tax Policy
-QuantumShell 6U 600mmx870mm;Default Tax Policy;QB-BMX-1051,QuantumShell 6U 600mmx870mm,QB-BMX-1051,Default Tax Policy
+StockKeepingUnit,TaxPolicy.$$Name$DefaultTaxTreatment.Name
+QB-AEH-ENV,Default Tax Policy;Default Tax Policy
+QB-AEH-CPU,Default Tax Policy;Default Tax Policy
+QB-AEH-OBJ,Default Tax Policy;Default Tax Policy
+QB-BMX-1050,Default Tax Policy;Default Tax Policy
+QB-BMX-1053,Default Tax Policy;Default Tax Policy
+QB-BDL-STND,Default Tax Policy;Default Tax Policy
+QB-INTEL E5-2660,Default Tax Policy;Default Tax Policy
+QB-INTEL E5-2667,Default Tax Policy;Default Tax Policy
+QB-INTEL E5-2683,Default Tax Policy;Default Tax Policy
+QB-MEM 32GB,Default Tax Policy;Default Tax Policy
+QB-HD 1TB,Default Tax Policy;Default Tax Policy
+QB-API,Default Tax Policy;Default Tax Policy
+QB-COMPLETE,Default Tax Policy;Default Tax Policy
+QB-HD 4TB,Default Tax Policy;Default Tax Policy
+QB-MEM 8GB,Default Tax Policy;Default Tax Policy
+QB-NET X710,Default Tax Policy;Default Tax Policy
+QB-CMPC-5887,Default Tax Policy;Default Tax Policy
+QB-CMPC-5888,Default Tax Policy;Default Tax Policy
+QB-CMPC-5889,Default Tax Policy;Default Tax Policy
+QB-CMPC-5890,Default Tax Policy;Default Tax Policy
+QB-CMPC-5891,Default Tax Policy;Default Tax Policy
+QB-CMPC-5892,Default Tax Policy;Default Tax Policy
+QB-SUPP-1005,Default Tax Policy;Default Tax Policy
+QB-SUPP-1000,Default Tax Policy;Default Tax Policy
+QB-AUT-CRED,Default Tax Policy;Default Tax Policy
+QB-API-PROD,Default Tax Policy;Default Tax Policy
+QB-BDL-ENTR,Default Tax Policy;Default Tax Policy
+QB-BDL-CRTL,Default Tax Policy;Default Tax Policy
+QB-TRN-FUND,Default Tax Policy;Default Tax Policy
+QB-TRN-ESSNTLS,Default Tax Policy;Default Tax Policy
+QB-SRV-OG-PSH,Default Tax Policy;Default Tax Policy
+QB-SRV-SOW,Default Tax Policy;Default Tax Policy
+QB-INTEL E5-2609,Default Tax Policy;Default Tax Policy
+QB-BDL-R750,Default Tax Policy;Default Tax Policy
+TEST-SUB,Default Tax Policy;Default Tax Policy
+QB-MEM 16GB,Default Tax Policy;Default Tax Policy
+QB-HD 8TB,Default Tax Policy;Default Tax Policy
+QB-HD 8TBSE,Default Tax Policy;Default Tax Policy
+QB-BET X710SFP,Default Tax Policy;Default Tax Policy
+QB-BDL-SRVC,Default Tax Policy;Default Tax Policy
+QB-CMPC-5882,Default Tax Policy;Default Tax Policy
+QB-BSSA-4303,Default Tax Policy;Default Tax Policy
+QB-BSSA-4304,Default Tax Policy;Default Tax Policy
+QB-PDU-2023,Default Tax Policy;Default Tax Policy
+QB-PDU-2024,Default Tax Policy;Default Tax Policy
+QB-PDU-2025,Default Tax Policy;Default Tax Policy
+QB-PDU-2026,Default Tax Policy;Default Tax Policy
+QB-PDU-2027,Default Tax Policy;Default Tax Policy
+QB-PDU-2028,Default Tax Policy;Default Tax Policy
+QB-PDU-2029,Default Tax Policy;Default Tax Policy
+QB-NO-OSYS,Default Tax Policy;Default Tax Policy
+QB-VMW-S,Default Tax Policy;Default Tax Policy
+QB-VMW-E,Default Tax Policy;Default Tax Policy
+QB-INST-1000,Default Tax Policy;Default Tax Policy
+QB-SRV-OG-PSHC,Default Tax Policy;Default Tax Policy
+QB-REDHAT,Default Tax Policy;Default Tax Policy
+QB-VMW-D,Default Tax Policy;Default Tax Policy
+QB-SUPP-2000,Default Tax Policy;Default Tax Policy
+QB-FLO-ENTR,Default Tax Policy;Default Tax Policy
+QB-MSG-ENTR,Default Tax Policy;Default Tax Policy
+QB-PDU-2022,Default Tax Policy;Default Tax Policy
+QB-API-PREP,Default Tax Policy;Default Tax Policy
+QB-API-GOVT,Default Tax Policy;Default Tax Policy
+QB-API-FLEX,Default Tax Policy;Default Tax Policy
+QB-DAT-GRPH,Default Tax Policy;Default Tax Policy
+QB-SRV-PD,Default Tax Policy;Default Tax Policy
+QB-SRV-SAT,Default Tax Policy;Default Tax Policy
+QB-SRV-PMN,Default Tax Policy;Default Tax Policy
+QB-SRV-IMP,Default Tax Policy;Default Tax Policy
+QB-SRV-ISE,Default Tax Policy;Default Tax Policy
+QB-SRV-MEE,Default Tax Policy;Default Tax Policy
+QB-SRV-QAE,Default Tax Policy;Default Tax Policy
+QB-SRV-DNE,Default Tax Policy;Default Tax Policy
+QB-API-MGMT,Default Tax Policy;Default Tax Policy
+QB-FLO-STRT,Default Tax Policy;Default Tax Policy
+QB-MSG-STRT,Default Tax Policy;Default Tax Policy
+QB-DAT-THPT,Default Tax Policy;Default Tax Policy
+QB-BSSA-4298,Default Tax Policy;Default Tax Policy
+QB-BSSA-4300,Default Tax Policy;Default Tax Policy
+QB-BSSA-4302,Default Tax Policy;Default Tax Policy
+QB-BSSA-4306,Default Tax Policy;Default Tax Policy
+QB-BSSA-4308,Default Tax Policy;Default Tax Policy
+QB-BDL-RAXS,Default Tax Policy;Default Tax Policy
+QB-SRV-QSE,Default Tax Policy;Default Tax Policy
+QB-SRV-OG-AC-PSH,Default Tax Policy;Default Tax Policy
+QB-SRV-AS,Default Tax Policy;Default Tax Policy
+QB-STD-SP,Default Tax Policy;Default Tax Policy
+QB-SRV-OG-PM-PSH,Default Tax Policy;Default Tax Policy
+QB-SRV-PRM-SP,Default Tax Policy;Default Tax Policy
+QB-API-REQT,Default Tax Policy;Default Tax Policy
+QB-CMPC-5881,Default Tax Policy;Default Tax Policy
+QB-CMPC-5883,Default Tax Policy;Default Tax Policy
+QB-CMPC-5884,Default Tax Policy;Default Tax Policy
+QB-BMX-1051,Default Tax Policy;Default Tax Policy

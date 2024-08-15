@@ -342,7 +342,7 @@ tasks:
   insert_quantumbit_data:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -s csvfile -p datasets/sfdmu/test-multicurrency"
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/multicurrency"
 
   insert_quantumbit_data_prod:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask

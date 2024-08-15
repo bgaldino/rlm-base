@@ -69,7 +69,7 @@
           "excluded": false
         },
         {
-          "query": "SELECT AvailabilityDate, BasedOnId, ConfigureDuringSale, CurrencyIsoCode, DecompositionScope, Description, DisplayUrl, Family, FulfillmentQtyCalcMethod, Id, IsActive, IsAssetizable, IsSoldOnlyWithOtherProds, Name, ProductCode, QuantityUnitOfMeasure, SpecificationType, StockKeepingUnit, TaxPolicyId, Type FROM Product2",
+          "query": "SELECT BasedOnId, ConfigureDuringSale, CurrencyIsoCode, Description, DisplayUrl, Family, IsActive, IsAssetizable, IsSoldOnlyWithOtherProds, Name, ProductCode, QuantityUnitOfMeasure, SpecificationType, StockKeepingUnit, Type FROM Product2",
           "operation": "Upsert",
           "externalId": "Name",
           "excluded": false
@@ -77,18 +77,18 @@
         {
           "query": "SELECT ProductCategoryId, ProductId, CatalogId, CurrencyIsoCode FROM ProductCategoryProduct",
           "operation": "Upsert",
-          "externalId": "ProductCategory.Name;Product.Name;Catalog.Name",
+          "externalId": "ProductCategory.Name;Product.StockKeepingUnit;Catalog.Name",
           "excluded": false
         },
         {
           "query": "SELECT IsDefault, Product2Id, ProductSellingModelId, ProrationPolicyId FROM ProductSellingModelOption",
           "operation": "Upsert",
-          "externalId": "Product2.Name;ProductSellingModel.Name"
+          "externalId": "Product2.StockKeepingUnit;ProductSellingModel.Name"
         },
         {
           "query": "SELECT Name, Code, ParentProductId, Sequence, MinBundleComponents, MaxBundleComponents, Description, CurrencyIsoCode FROM ProductComponentGroup",
           "operation": "Upsert",
-          "externalId": "Name;ParentProduct.Name",
+          "externalId": "Name;ParentProduct.StockKeepingUnit",
           "excluded": false
         },
         {
@@ -100,13 +100,13 @@
         {
           "query": "SELECT Name, ParentProductId, ProductComponentGroupId, ChildProductId, ProductRelationshipTypeId, IsQuantityEditable, IsDefaultComponent, MaxQuantity, MinQuantity, DoesBundlePriceIncludeChild, Quantity, QuantityScaleMethod, IsComponentRequired, Sequence, ParentSellingModelId, ChildSellingModelId, ParentProductRole, ChildProductRole FROM ProductRelatedComponent",
           "operation": "Upsert",
-          "externalId": "ChildProduct.Name;ParentProduct.Name;ProductComponentGroup.Name;ProductRelationshipType.Name",
+          "externalId": "ChildProduct.StockKeepingUnit;ParentProduct.StockKeepingUnit;ProductComponentGroup.Name;ProductRelationshipType.Name",
           "excluded": false
         },
         {
           "query": "SELECT AttributeCategoryId, AttributeDefinitionId, AttributeNameOverride, DefaultValue, Description, DisplayType, ExcludedPicklistValues, HelpText, IsHidden, IsPriceImpacting, IsReadOnly, IsRequired, MaximumCharacterCount, MaximumValue, MinimumCharacterCount, MinimumValue, Name, OverrideContextId, OverriddenProductAttributeDefinitionId, ProductClassificationAttributeId, Product2Id, Sequence, Status FROM ProductAttributeDefinition",
           "operation": "Upsert",
-          "externalId": "Name;AttributeCategory.Name;AttributeDefinition.Name;ProductClassificationAttribute.Name;Product2.Name;OverriddenProductAttributeDefinition.Name;ProductClassificationAttribute.Name;OverrideContext.Name",
+          "externalId": "Name;AttributeCategory.Name;AttributeDefinition.Name;ProductClassificationAttribute.Name;Product2.StockKeepingUnit;OverriddenProductAttributeDefinition.Name;ProductClassificationAttribute.Name;OverrideContext.Name",
           "excluded": false
         },
         {
@@ -124,7 +124,7 @@
         {
           "query": "SELECT IsActive, LowerBound, PriceAdjustmentScheduleId, Product2Id, ProductSellingModelId, ScheduleType, SellingModelType, TierType, TierValue, UpperBound, EffectiveFrom, EffectiveTo, CurrencyIsoCode FROM PriceAdjustmentTier",
           "operation": "Upsert",
-          "externalId": "PriceAdjustmentSchedule.Name;Product2.Name;ProductSellingModel.Name,TierType,TierValue,UpperBound,LowerBound,CurrencyIsoCode",
+          "externalId": "PriceAdjustmentSchedule.Name;Product2.StockKeepingUnit;ProductSellingModel.Name,TierType,TierValue,UpperBound,LowerBound,CurrencyIsoCode",
           "excluded": false
         },
         {
@@ -142,37 +142,37 @@
         {
           "query": "SELECT AttributeBasedAdjRuleId, AttributeDefinitionId, BooleanValue, DateValue, DateTimeValue, DoubleValue, IntegerValue, Operator, ProductId, StringValue FROM AttributeAdjustmentCondition",
           "operation": "Upsert",
-          "externalId": "AttributeBasedAdjRule.Name;AttributeDefinition.Name;Product.Name",
+          "externalId": "AttributeBasedAdjRule.Name;AttributeDefinition.Name;Product.StockKeepingUnit",
           "excluded": false
         },
         {
           "query": "SELECT AdjustmentType, AdjustmentValue, AttributeAdjConditionsHash, AttributeBasedAdjRuleId, EffectiveFrom, EffectiveTo, PriceAdjustmentScheduleId, PricingTerm, PricingTermUnit, ProductId, ProductSellingModelId, ScheduleType, SellingModelType, CurrencyIsoCode FROM AttributeBasedAdjustment",
           "operation": "Upsert",
-          "externalId": "AttributeBasedAdjRule.Name;PriceAdjustmentSchedule.Name;Product.Name;ProductSellingModel.Name;CurrencyIsoCode",
+          "externalId": "AttributeBasedAdjRule.Name;PriceAdjustmentSchedule.Name;Product.StockKeepingUnit;ProductSellingModel.Name;CurrencyIsoCode",
           "excluded": false
         },
         {
           "query": "SELECT AdjustmentType, AdjustmentValue, EffectiveFrom, EffectiveTo, Name, PriceAdjustmentScheduleId, ProductId, ParentProductId, RootBundleId, ProductSellingModelId, ParentProductSellingModelId, PricingTerm, PricingTermUnit, RootProductSellingModelId, ScheduleType, SellingModelType, CurrencyIsoCode FROM BundleBasedAdjustment",
           "operation": "Upsert",
-          "externalId": "PriceAdjustmentSchedule.Name;Product.Name;ParentProduct.Name;RootBundle.Name;ProductSellingModel.Name;ParentProductSellingModel.Name;RootProductSellingModel.Name;CurrencyIsoCode",
+          "externalId": "PriceAdjustmentSchedule.Name;Product.StockKeepingUnit;ParentProduct.StockKeepingUnit;RootBundle.StockKeepingUnit;ProductSellingModel.Name;ParentProductSellingModel.Name;RootProductSellingModel.Name;CurrencyIsoCode",
           "excluded": false
         },
         {
           "query": "SELECT Name, IsActive, IsDerived, Pricebook2Id, Product2Id, ProductSellingModelId, UnitPrice, CurrencyIsoCode FROM PricebookEntry ORDER BY Pricebook2.Name ASC, CurrencyIsoCode DESC, Name ASC, ProductSellingModel.Name ASC",
           "operation": "Upsert",
-          "externalId": "Name;Pricebook2.Name;Product2.Name;ProductSellingModel.Name;CurrencyIsoCode",
+          "externalId": "Name;Pricebook2.Name;Product2.StockKeepingUnit;ProductSellingModel.Name;CurrencyIsoCode",
           "excluded": false
         },
         {
           "query": "SELECT PricebookId, PricebookEntryId, ProductId, ContributingProductId, ProductSellingModelId, DerivedPricingScope, Formula, EffectiveFrom, EffectiveTo, PricingSource, CurrencyIsoCode FROM PricebookEntryDerivedPrice ORDER BY Pricebook.Name ASC, CurrencyIsoCode DESC, Name ASC, ProductSellingModel.Name ASC",
           "operation": "Upsert",
-          "externalId": "Pricebook.Name;PricebookEntry.Name;Product.Name;ContributingProduct.Name;ProductSellingModel.Name;CurrencyIsoCode",
+          "externalId": "Pricebook.Name;PricebookEntry.Name;Product.StockKeepingUnit;ContributingProduct.StockKeepingUnit;ProductSellingModel.Name;CurrencyIsoCode",
           "excluded": false
         },
         {
           "query": "SELECT Cost, CostBookId, EffectiveFrom, EffectiveTo, ProductId, Description, CurrencyIsoCode FROM CostBookEntry ORDER BY CostBook.Name ASC, CurrencyIsoCode DESC, Name ASC",
           "operation": "Upsert",
-          "externalId": "CostBook.Name;Product.Name;CurrencyIsoCode",
+          "externalId": "CostBook.Name;Product.StockKeepingUnit;CurrencyIsoCode",
           "excluded": false
         },
         {
