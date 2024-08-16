@@ -1,10 +1,11 @@
 {
   "orgName": "Salesforce Revenue Lifecycle Management",
   "country": "US",
-  "template": "0TTWs000000DMFd",
+  "template": "0TTWs000000F66j",
   "features": [
     "EnableSetPasswordInApi",
-    "StateAndCountryPicklist"
+    "StateAndCountryPicklist",
+    "OrderSaveLogicEnabled"
   ],
   "settings": {
     "lightningExperienceSettings": {
