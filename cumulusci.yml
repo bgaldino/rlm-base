@@ -32,12 +32,13 @@ project:
     prm: true
     tso: false
     qb: true
-    q3: true
+    qbdata: false
+    q3data: true
     calmdelete: true
     tax: true
     billing: true
     clm: true
-    dro: true
+    dro: false
     einstein: true
     product_dataset: qb
 
@@ -407,6 +408,11 @@ tasks:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
       command: "sfdmu run -s csvfile -p datasets/sfdmu/scratch_data"
+  
+  activate_decision_tables:
+    class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+    options:
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/decision_tables_active"
 
   activate_expression_sets:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
@@ -501,50 +507,39 @@ flows:
     steps:
       1:
         flow: prepare_core
-      2.1:
-        task: deactivate_expression_sets
-        when: org_config.scratch
-      2.2:
-        task: deactivate_expression_sets_prod
-        when: project_config.project__custom__tso == true
+      2:
+        flow: prepare_expression_sets
       3:
         task: createPartnerCentral
         when: project_config.project__custom__prm == true
       4:
-        task: deploy_expression_sets
+        task: activate_decision_tables
         when: org_config.scratch
       5:
+        task: deploy_expression_sets
+        when: org_config.scratch
+      6:
         task: deploy_full
-      6.1:
-        task: insert_quantumbit_data
-        when: org_config.scratch and project_config.project__custom__qb == true
-      6.2:
-        task: insert_quantumbit_data_prod
-        when: project_config.project__custom__tso == true and project_config.project__custom__qb == true
-      6.3:
-        task: insert_q3_data
-        when: org_config.scratch and project_config.project__custom__q3 == true
-      6.4:
-        task: insert_q3_data_prod
-        when: project_config.project__custom__q3 == true
-      6.5:
+      7:
+        flow: prepare_product_data
+      8:
         task: activate_price_adjustment_schedules
         when: org_config.scratch
-      7:
-        flow: prepare_scratch
-      8:
-        flow: prepare_quantumbit
       9:
-        flow: prepare_dro
+        flow: prepare_scratch
       10:
-        flow: prepare_docgen
+        flow: prepare_quantumbit
       11:
-        flow: prepare_tax
+        flow: prepare_dro
       12:
-        flow: prepare_billing
+        flow: prepare_docgen
       13:
-        task: sync_pricing_data
+        flow: prepare_tax
       14:
+        flow: prepare_billing
+      15:
+        task: sync_pricing_data
+      16:
         task: activate_and_deploy_expression_sets
          
   prepare_core:
@@ -554,57 +549,57 @@ flows:
         task: assign_permission_set_licenses
         options:
           api_names: *rlm_psl_api_names
-      3:
+      2:
         task: deploy_pre
-      4:
+      3:
         task: assign_permission_set_licenses
         when: project_config.project__custom__clm == true
         options:
           api_names: *rlm_clm_psl_api_names
-      5:
+      4:
         task: assign_permission_set_licenses
         when: project_config.project__custom__einstein == true
         options:
           api_names: *rlm_ai_psl_api_names  
+      5:
+        task: util_sleep
+        options:
+          seconds: *sleep_default
       6:
         task: util_sleep
         options:
           seconds: *sleep_default
       7:
-        task: util_sleep
-        options:
-          seconds: *sleep_default
-      8:
         task: assign_permission_set_groups
         options:
           api_names: *rlm_psg_api_names
-      9:
+      8:
         task: assign_permission_sets
         options:
           api_names: *rlm_pcm_ps_api_names
-      11:
+      9:
         flow: extend_context_definitions
-      12:
+      10:
         task: util_sleep
         options:
           seconds: *sleep_default
-      13:
+      11:
         task: create_price_adjustment_schedules
         when: org_config.scratch
-      14:
+      12:
         task: create_price_adjustment_schedules_prod
         when: project_config.project__custom__tso == true
+      13:
+        task: util_sleep
+        options:
+          seconds: *sleep_default
+      14:
+        task: create_rule_library
       15:
         task: util_sleep
         options:
           seconds: *sleep_default
-      17:
-        task: create_rule_library
-      18:
-        task: util_sleep
-        options:
-          seconds: *sleep_default
-      19:
+      16:
         task: create_dro_rule_library
         when: project_config.project__custom__dro == true
 
@@ -632,6 +627,32 @@ flows:
       8:
         task: extend_stdctx_contracts_extraction
         when: project_config.project__custom__clm == true
+
+  prepare_expression_sets:
+    group: Revenue Lifecycle Management
+    steps:
+      1:
+        task: deactivate_expression_sets
+        when: org_config.scratch
+      2:
+        task: deactivate_expression_sets_prod
+        when: project_config.project__custom__tso == true
+  
+  prepare_product_data:
+    group: Revenue Lifecycle Management
+    steps:
+      1:
+        task: insert_quantumbit_data
+        when: org_config.scratch and project_config.project__custom__qbdata == true
+      2:
+        task: insert_quantumbit_data_prod
+        when: project_config.project__custom__tso == true and project_config.project__custom__qbdata == true
+      3:
+        task: insert_q3_data
+        when: org_config.scratch and project_config.project__custom__q3data == true
+      4:
+        task: insert_q3_data_prod
+        when: project_config.project__custom__q3data == true
 
   prepare_scratch:
     group: Revenue Lifecycle Management
