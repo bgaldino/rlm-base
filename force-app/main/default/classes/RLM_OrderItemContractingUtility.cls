@@ -21,7 +21,7 @@ public with sharing class RLM_OrderItemContractingUtility {
             SELECT Id, EffectiveDate,
                 (SELECT Id, ServiceDate, EndDate, ProductSellingModel.SellingModelType
                  FROM OrderItems
-                 WHERE ProductSellingModel.SellingModelType != 'One Time' AND EndDate != null
+                 WHERE ProductSellingModel.SellingModelType != 'OneTime' AND EndDate != null
                  ORDER BY EndDate DESC LIMIT 1),
                 (SELECT Id, Type FROM OrderActions WHERE Type IN ('Add', 'Amend', 'Renew'))
             FROM Order
