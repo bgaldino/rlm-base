@@ -1,0 +1,14 @@
+Code,DataType,DefaultValue,Description,DeveloperName,IsActive,Label,Name,Picklist.Name
+,Picklist,1080p Built-in Display,,Display,true,Display,Display,Display Picklist
+,Picklist,RAM 32GB,,Memory,true,Memory,Memory,Memory Picklist
+,Picklist,,,Printer_Paper,true,Printer Paper,Paper Size,Paper Size Picklist
+,Picklist,,,Storage,true,Storage,Storage,Storage Picklist
+,Picklist,i5-CPU 4.4GHz,,Windows_Processor,true,Processor,Windows_Processor,Processor Picklist
+,Picklist,,,Printer,true,Printer,Printer,Printer Picklist
+,Picklist,,,Graphics,true,Graphics,Graphics,Graphics Picklist
+,Picklist,,,Training,true,Training,Training,Training Type Picklist
+,Picklist,,,Display_Size,true,Screen Size,Display_Size,Display Size Picklist
+,Picklist,Premium Support,,Support_Level,true,Support_Level,Support_Level,Support Level Picklist
+,Picklist,i5-CPU 4.4GHz,,Processor,true,Processor,Processor,Processor Picklist
+SUBTYPE001,Picklist,,Subscription Type - either Enterprise or Business,SubscriptionType,true,Subscription Type,Subscription Type,Subscription Type
+,Checkbox,false,,Wireless,true,Wireless,Wireless,

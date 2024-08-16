@@ -1,0 +1,15 @@
+$$Name$ParentProduct.StockKeepingUnit,Code,CurrencyIsoCode,Description,MaxBundleComponents,MinBundleComponents,Name,ParentProduct.Name,Sequence
+Laptop,,USD,,,,Laptop,Laptop Basic Bundle,1
+Computer Protection,,USD,,,,Computer Protection,Laptop Basic Bundle,2
+Laptop,,USD,,,,Laptop,Laptop Pro Bundle,1
+Accessories,,USD,,,,Accessories,Laptop Pro Bundle,2
+Printer,,USD,,,,Printer,Printer Bundle,1
+Printer Accessories,,USD,,,,Printer Accessories,Printer Bundle,2
+Laptop Accessories,,USD,,,,Laptop Accessories,Laptop Accessories,
+Skill Development,,USD,,,,Skill Development,Skill Development Package,
+Certifications,,USD,,,,Certifications,Professional Certifications,
+Trainings,,USD,,,,Trainings,Advanced Training,
+Training Group,,USD,,,,Training Group,Training Platform Package,
+Laptop Care,,USD,,,,Laptop Care,Laptop Care Package,
+Software,SFT001,USD,,,,Software,Laptop Pro Bundle,
+Mega Package,,USD,,,,Mega Package,Laptop Productivity Bundle,

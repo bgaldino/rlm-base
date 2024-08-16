@@ -1,0 +1,5 @@
+CatalogType,Code,Description,Name
+Sales,SF001,,Software Catalog
+Sales,HC001,,Hardware Catalog
+ServiceProcess,SC001,,Service Catalog
+Sales,MED001,Catalog for all Media,Media Catalog

@@ -32,12 +32,14 @@ project:
     prm: true
     tso: false
     qb: true
+    q3: false
     calmdelete: true
     tax: true
     billing: true
     clm: true
     dro: true
     einstein: true
+    product_dataset: qb
 
     rlm_psl_api_names: &rlm_psl_api_names
       - RevenueLifecycleManagementUserPsl
@@ -108,18 +110,25 @@ project:
       - RLM_CALM_SObject_Access
 
     sales_transaction_context_name: &sales_transaction_context_name RLM_SalesTransactionContext
+    sales_transaction_context_default_mapping: &sales_transaction_context_default_mapping SalesTransaction
 
     product_discovery_context_name: &product_discovery_context_name RLM_ProductDiscoveryContext
+    product_discovery_context_default_mapping: &product_discovery_context_default_mapping ProductDiscoveryMapping
 
     cart_context_name: &cart_context_name RLM_CartContext
+    cart_context_default_mapping: &cart_context_default_mapping CartOperation
 
     billing_context_name: &billing_context_name RLM_BillingContext
+    billing_context_default_mapping: &billing_context_default_mapping BSGEntitiesMapping
 
     fulfillment_asset_context_name: &fulfillment_asset_context_name RLM_FulfillmentAssetContext
+    fulfillment_asset_context_default_mapping: &fulfillment_asset_context_default_mapping FulfillAssetEntitiesMapping
 
     contracts_context_name: &contracts_context_name RLM_ContractsContext
+    contracts_context_default_mapping: &contracts_context_default_mapping ContractsMapping
 
     collection_plan_segment_context_name: &collection_plan_segment_context_name RLM_CollectionPlanSegmentCtx
+    collection_plan_segment_context_default_mapping: &collection_plan_segment_context_default_mapping CollectionPlanContextMapping
 
     sleep_default: &sleep_default 20
 
@@ -165,7 +174,7 @@ tasks:
       baseReference: "SalesTransactionContext__stdctx"
       startDate: "2023-01-01T00:00:00.000Z"
       contextTtl: 20
-      defaultMapping: "QuoteEntitiesMapping"
+      defaultMapping: *sales_transaction_context_default_mapping
 
   extend_context_product_discovery:
     description: Extend Standard Product Discovery Context
@@ -178,7 +187,7 @@ tasks:
       baseReference: "ProductDiscoveryContext__stdctx"
       startDate: "2023-01-01T00:00:00.000Z"
       contextTtl: 20
-      defaultMapping: "ProductDiscoveryMapping"
+      defaultMapping: *product_discovery_context_default_mapping
 
   extend_context_cart:
     description: Extend Standard Cart Context
@@ -191,7 +200,7 @@ tasks:
       baseReference: "CartContext__stdctx"
       startDate: "2023-01-01T00:00:00.000Z"
       contextTtl: 20
-      defaultMapping: "CartOperation"
+      defaultMapping: *cart_context_default_mapping  
 
   extend_context_billing:
     description: Extend Standard Billing Context
@@ -204,7 +213,7 @@ tasks:
       baseReference: "BillingContext__stdctx"
       startDate: "2023-01-01T00:00:00.000Z"
       contextTtl: 20
-      defaultMapping: "BSGEntitiesMapping"
+      defaultMapping: *billing_context_default_mapping
 
   extend_context_fulfillment_asset:
     description: Extend Standard Fulfillment Asset Context Definition
@@ -217,7 +226,7 @@ tasks:
       baseReference: "FulfillmentAssetContext__stdctx"
       startDate: "2023-01-01T00:00:00.000Z"
       contextTtl: 20
-      defaultMapping: "FulfillAssetEntitiesMapping"
+      defaultMapping: *fulfillment_asset_context_default_mapping
 
   extend_context_collection_plan_segment:
     description: Extend Standard Collection Plan Segment Context Definition
@@ -230,7 +239,7 @@ tasks:
       baseReference: "CollectionPlanSegmentContext__stdctx"
       startDate: "2023-01-01T00:00:00.000Z"
       contextTtl: 20
-      defaultMapping: "CollectionPlanContextMapping"
+      defaultMapping: *collection_plan_segment_context_default_mapping
 
   deploy_context_definitions:
     description: Context Definitions need to be deployed and activated before other metadata -- this prioritizes this deployment first
@@ -348,6 +357,17 @@ tasks:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
       command: "sfdmu run -s csvfile -p datasets/sfdmu/multicurrency -u <<: *user_alias -c"
+      extra: *mydomain
+
+  insert_q3_data:
+    class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+    options:
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/q3-multicurrency"
+
+  insert_q3_data_prod:
+    class_path: cumulusci.tasks.sfdx.SFDXOrgTask
+    options:
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/q3-multicurrency -u <<: *user_alias -c"
       extra: *mydomain
 
   insert_dro_data_scratch:
@@ -470,6 +490,11 @@ tasks:
     options:
       path: scripts/apex/activateTaxRecords.apex
 
+  activate_price_adjustment_schedules:
+    class_path: cumulusci.tasks.apex.anon.AnonymousApexTask
+    options:
+      path: scripts/apex/activatePriceAdjustmentSchedules.apex
+
 flows:
   prepare_rlm_org:
     group: Revenue Lifecycle Management
@@ -486,34 +511,43 @@ flows:
         task: createPartnerCentral
         when: project_config.project__custom__prm == true
       4:
-        task: deploy_full
-      5.1:
-        task: insert_quantumbit_data
+        task: deploy_expression_sets
         when: org_config.scratch
-      5.2:
+      5:
+        task: deploy_full
+      6.1:
+        task: insert_quantumbit_data
+        when: org_config.scratch and project_config.project__custom__product_dataset == qb
+      6.2:
         task: insert_quantumbit_data_prod
-        when: project_config.project__custom__tso == true
-      6:
+        when: project_config.project__custom__tso == true and project_config.project__custom__product_dataset == qb
+      6.3:
+        task: insert_q3_data
+        when: org_config.scratch and project_config.project__custom__product_dataset == q3
+      6.4:
+        task: insert_q3_data_prod
+        when: project_config.project__custom__product_dataset == q3
+      7:
         flow: prepare_scratch
         when: org_config.scratch
-      7:
+      8:
         flow: prepare_quantumbit
         when: project_config.project__custom__qb == true
-      8:
+      9:
         flow: prepare_dro
         when: project_config.project__custom__dro == true
-      9:
+      10:
         flow: prepare_docgen
         when: project_config.project__custom__tso == true
-      10:
+      11:
         flow: prepare_tax
         when: project_config.project__custom__tax == true
-      11:
+      12:
         flow: prepare_billing
         when: project_config.project__custom__billing == true
-      12:
-        task: sync_pricing_data
       13:
+        task: sync_pricing_data
+      14:
         task: activate_and_deploy_expression_sets
          
   prepare_core:
@@ -568,12 +602,14 @@ flows:
         options:
           seconds: *sleep_default
       16:
-        task: create_rule_library
+        task: activate_price_adjustment_schedules
       17:
+        task: create_rule_library
+      18:
         task: util_sleep
         options:
           seconds: *sleep_default
-      18:
+      19:
         task: create_dro_rule_library
         when: project_config.project__custom__dro == true
 

@@ -40,6 +40,8 @@ unpackaged/post_sharing/force-app/main/default/objects/ProductConfigurationRule/
 unpackaged/post_sharing/force-app/main/default/objects/SalesTransactionType/SalesTransactionType.object-meta.xml
 unpackaged/post_sharing/force-app/main/default/objects
 
+#unpackaged/pre/5_decisiontables
+
 # DRO Examples
 force-app/main/default/flows/F1YG.flow-meta.xml
 force-app/main/default/contextDefinitions/ConsulateToContract_C.contextDefinition-meta.xml

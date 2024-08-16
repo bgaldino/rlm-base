@@ -1,0 +1,11 @@
+$$Name$Catalog.Name$ParentCategory.Name,Catalog.Name,Code,Description,Name,ParentCategory.$$Name$Catalog.Name$ParentCategory.Name,SortOrder
+Laptops;Hardware Catalog,Hardware Catalog,,,Laptops,,
+Desktops;Hardware Catalog,Hardware Catalog,,,Desktops,,
+Accessories;Hardware Catalog,Hardware Catalog,,,Accessories,,
+Protection Software;Software Catalog,Software Catalog,,,Protection Software,,
+Support;Service Catalog,Service Catalog,,,Support,,
+Training;Service Catalog,Service Catalog,,,Training,,
+Warranty;Service Catalog,Service Catalog,,,Warranty,,
+Cloud Services;Service Catalog,Service Catalog,,,Cloud Services,,
+Productivity Software;Software Catalog,Software Catalog,,,Productivity Software,,
+Podcast;Media Catalog,Media Catalog,,,Podcast,,
