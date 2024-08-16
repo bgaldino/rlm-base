@@ -1,45 +1,45 @@
 $$ProductCategory.Name$Product.StockKeepingUnit$Catalog.Name,Catalog.Name,CurrencyIsoCode,Product.Name,ProductCategory.$$Name$Catalog.Name$ParentCategory.Name
-Protection Software;Software Catalog,Software Catalog,USD,Antivirus,Protection Software;Software Catalog
-Desktops;Hardware Catalog,Hardware Catalog,USD,Desktop,Desktops;Hardware Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,Keyboard,Accessories;Hardware Catalog
-Cloud Services;Service Catalog,Service Catalog,USD,Cloud Storage,Cloud Services;Service Catalog
-Laptops;Hardware Catalog,Hardware Catalog,USD,Laptop,Laptops;Hardware Catalog
-Laptops;Hardware Catalog,Hardware Catalog,USD,Laptop Basic Bundle,Laptops;Hardware Catalog
-Support;Service Catalog,Service Catalog,USD,Laptop Care Package,Support;Service Catalog
-Laptops;Hardware Catalog,Hardware Catalog,USD,Laptop Pro Bundle,Laptops;Hardware Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,Monitor,Accessories;Hardware Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,Mouse,Accessories;Hardware Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,Printer,Accessories;Hardware Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,Printer Bundle,Accessories;Hardware Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,Printer Paper,Accessories;Hardware Catalog
-Support;Service Catalog,Service Catalog,USD,Support,Support;Service Catalog
-Training;Service Catalog,Service Catalog,USD,Basic Training,Training;Service Catalog
-Warranty;Service Catalog,Service Catalog,USD,Warranty,Warranty;Service Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,USB C multiport adapter hub with 4K HDMI,Accessories;Hardware Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,Headset,Accessories;Hardware Catalog
-Training;Service Catalog,Service Catalog,USD,Training Platform Package,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,Machine Learning Model Training,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,Udemy Access,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,Skill Development Package,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,AI Specialist Certification,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,Advanced Training,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,AI Specialist Training,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,Admin Certification,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,Developer Certification,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,Specialized Certifications,Training;Service Catalog
-Training;Service Catalog,Service Catalog,USD,LLM Certification,Training;Service Catalog
+Protection Software;AV001;Software Catalog,Software Catalog,USD,Antivirus,Protection Software;Software Catalog
+Desktops;DS001;Hardware Catalog,Hardware Catalog,USD,Desktop,Desktops;Hardware Catalog
+Accessories;KB001;Hardware Catalog,Hardware Catalog,USD,Keyboard,Accessories;Hardware Catalog
+Cloud Services;CS001;Service Catalog,Service Catalog,USD,Cloud Storage,Cloud Services;Service Catalog
+Laptops;LP001;Hardware Catalog,Hardware Catalog,USD,Laptop,Laptops;Hardware Catalog
+Laptops;LB001;Hardware Catalog,Hardware Catalog,USD,Laptop Basic Bundle,Laptops;Hardware Catalog
+Support;LCP001;Service Catalog,Service Catalog,USD,Laptop Care Package,Support;Service Catalog
+Laptops;LPB001;Hardware Catalog,Hardware Catalog,USD,Laptop Pro Bundle,Laptops;Hardware Catalog
+Accessories;MO001;Hardware Catalog,Hardware Catalog,USD,Monitor,Accessories;Hardware Catalog
+Accessories;MOU001;Hardware Catalog,Hardware Catalog,USD,Mouse,Accessories;Hardware Catalog
+Accessories;PRN001;Hardware Catalog,Hardware Catalog,USD,Printer,Accessories;Hardware Catalog
+Accessories;PB001;Hardware Catalog,Hardware Catalog,USD,Printer Bundle,Accessories;Hardware Catalog
+Accessories;PP001;Hardware Catalog,Hardware Catalog,USD,Printer Paper,Accessories;Hardware Catalog
+Support;SP001;Service Catalog,Service Catalog,USD,Support,Support;Service Catalog
+Training;TRG001;Service Catalog,Service Catalog,USD,Basic Training,Training;Service Catalog
+Warranty;W001;Service Catalog,Service Catalog,USD,Warranty,Warranty;Service Catalog
+Accessories;USB01;Hardware Catalog,Hardware Catalog,USD,USB C multiport adapter hub with 4K HDMI,Accessories;Hardware Catalog
+Accessories;HDS001;Hardware Catalog,Hardware Catalog,USD,Headset,Accessories;Hardware Catalog
+Training;TPP01;Service Catalog,Service Catalog,USD,Training Platform Package,Training;Service Catalog
+Training;LLMTRG001;Service Catalog,Service Catalog,USD,Machine Learning Model Training,Training;Service Catalog
+Training;UA001;Service Catalog,Service Catalog,USD,Udemy Access,Training;Service Catalog
+Training;SDP001;Service Catalog,Service Catalog,USD,Skill Development Package,Training;Service Catalog
+Training;ASTCERT001;Service Catalog,Service Catalog,USD,AI Specialist Certification,Training;Service Catalog
+Training;ATRG001;Service Catalog,Service Catalog,USD,Advanced Training,Training;Service Catalog
+Training;APTRG001;Service Catalog,Service Catalog,USD,AI Specialist Training,Training;Service Catalog
+Training;ACERT001;Service Catalog,Service Catalog,USD,Admin Certification,Training;Service Catalog
+Training;DCERT001;Service Catalog,Service Catalog,USD,Developer Certification,Training;Service Catalog
+Training;CERT007;Service Catalog,Service Catalog,USD,Specialized Certifications,Training;Service Catalog
+Training;LLMCERT001;Service Catalog,Service Catalog,USD,LLM Certification,Training;Service Catalog
 Cloud Services;QP001;Service Catalog,Service Catalog,USD,Quip,Cloud Services;Service Catalog
 Productivity Software;GW001;Software Catalog,Software Catalog,USD,Google Workspace,Productivity Software;Software Catalog
 Productivity Software;GPTW001;Software Catalog,Software Catalog,USD,GPT for workspace,Productivity Software;Software Catalog
 Productivity Software;LCD001;Software Catalog,Software Catalog,USD,Lucidchart,Productivity Software;Software Catalog
-Support;Service Catalog,Service Catalog,USD,Hardware Maintenance,Support;Service Catalog
-Productivity Software;Software Catalog,Software Catalog,USD,Slack Support,Productivity Software;Software Catalog
-Productivity Software;Software Catalog,Software Catalog,USD,Slack Training,Productivity Software;Software Catalog
-Productivity Software;Software Catalog,Software Catalog,USD,Slack,Productivity Software;Software Catalog
-Productivity Software;Software Catalog,Software Catalog,USD,Slack Sandbox,Productivity Software;Software Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,External Hard Drive,Accessories;Hardware Catalog
-Productivity Software;Software Catalog,Software Catalog,USD,Figma Subscription,Productivity Software;Software Catalog
-Podcast;Media Catalog,Media Catalog,USD,Podcast Subscription,Podcast;Media Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,Noise-Canceling Headphones,Accessories;Hardware Catalog
-Accessories;Hardware Catalog,Hardware Catalog,USD,Laptop Stand,Accessories;Hardware Catalog
-Laptops;Hardware Catalog,Hardware Catalog,USD,Laptop Productivity Bundle,Laptops;Hardware Catalog
+Support;MAIN0098;Service Catalog,Service Catalog,USD,Hardware Maintenance,Support;Service Catalog
+Productivity Software;SLKDPP007;Software Catalog,Software Catalog,USD,Slack Support,Productivity Software;Software Catalog
+Productivity Software;SLKDPP008;Software Catalog,Software Catalog,USD,Slack Training,Productivity Software;Software Catalog
+Productivity Software;SLKSRC001;Software Catalog,Software Catalog,USD,Slack,Productivity Software;Software Catalog
+Productivity Software;SLKDPP009;Software Catalog,Software Catalog,USD,Slack Sandbox,Productivity Software;Software Catalog
+Accessories;EHD009;Hardware Catalog,Hardware Catalog,USD,External Hard Drive,Accessories;Hardware Catalog
+Productivity Software;FIG001;Software Catalog,Software Catalog,USD,Figma Subscription,Productivity Software;Software Catalog
+Podcast;PS001;Media Catalog,Media Catalog,USD,Podcast Subscription,Podcast;Media Catalog
+Accessories;NCH025;Hardware Catalog,Hardware Catalog,USD,Noise-Canceling Headphones,Accessories;Hardware Catalog
+Accessories;LPST001;Hardware Catalog,Hardware Catalog,USD,Laptop Stand,Accessories;Hardware Catalog
+Laptops;LPB001-1;Hardware Catalog,Hardware Catalog,USD,Laptop Productivity Bundle,Laptops;Hardware Catalog

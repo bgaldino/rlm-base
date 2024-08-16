@@ -32,7 +32,7 @@ project:
     prm: true
     tso: false
     qb: true
-    q3: false
+    q3: true
     calmdelete: true
     tax: true
     billing: true
@@ -532,22 +532,16 @@ flows:
         when: org_config.scratch
       7:
         flow: prepare_scratch
-        when: org_config.scratch
       8:
         flow: prepare_quantumbit
-        when: project_config.project__custom__qb == true
       9:
         flow: prepare_dro
-        when: project_config.project__custom__dro == true
       10:
         flow: prepare_docgen
-        when: project_config.project__custom__tso == true
       11:
         flow: prepare_tax
-        when: project_config.project__custom__tax == true
       12:
         flow: prepare_billing
-        when: project_config.project__custom__billing == true
       13:
         task: sync_pricing_data
       14:
@@ -644,21 +638,25 @@ flows:
     steps:
       1:
         task: insert_scratch_data
+        when: org_config.scratch
       2:
         task: deploy_post_scratch
+        when: org_config.scratch
 
   prepare_quantumbit:
     group: Revenue Lifecycle Management
     steps:
       1:
         task: deploy_quantumbit
+        when: project_config.project__custom__qb == true
       2:
         task: assign_permission_sets
+        when: project_config.project__custom__qb == true
         options:
           api_names: *ps_quantumbit
       3:
         task: assign_permission_sets
-        when: project_config.project__custom__calmdelete == true
+        when: project_config.project__custom__qb == true and project_config.project__custom__calmdelete == true
         options:
           api_names: *ps_quantumbit
 
