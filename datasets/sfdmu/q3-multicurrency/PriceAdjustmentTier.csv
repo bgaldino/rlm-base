@@ -1,6 +1,6 @@
 $$PriceAdjustmentSchedule.Name$Product2.StockKeepingUnit$ProductSellingModel.Name,CurrencyIsoCode,EffectiveFrom,EffectiveTo,LowerBound,PriceAdjustmentSchedule.Name,Product2.Name,ProductSellingModel.$$Name$SellingModelType,ScheduleType,SellingModelType,TierType,TierValue,UpperBound
-Standard Tier Based Adjustment;One Time,USD,2023-12-10T20:00:00.000+0000,,11,Standard Tier Based Adjustment,Headset,One Time;OneTime,Volume,OneTime,AdjustmentPercentage,15,15
-Standard Tier Based Adjustment;One Time,USD,2023-12-10T20:00:00.000+0000,,5,Standard Tier Based Adjustment,Headset,One Time;OneTime,Volume,OneTime,AdjustmentPercentage,10,10
-Standard Volume Based Adjustment;One Time,USD,2023-12-01T20:00:00.000+0000,,16,Standard Volume Based Adjustment,Monitor,One Time;OneTime,Volume,OneTime,AdjustmentPercentage,20,
-Standard Volume Based Adjustment;One Time,USD,2023-12-01T20:00:00.000+0000,,11,Standard Volume Based Adjustment,Monitor,One Time;OneTime,Volume,OneTime,AdjustmentPercentage,15,15
-Standard Volume Based Adjustment;One Time,USD,2023-12-01T20:00:00.000+0000,,5,Standard Volume Based Adjustment,Monitor,One Time;OneTime,Volume,OneTime,AdjustmentPercentage,10,10
+Standard Tier Based Adjustment;One-Time,USD,2023-12-10T20:00:00.000+0000,,11,Standard Tier Based Adjustment,Headset,One-Time;OneTime,Volume,OneTime,AdjustmentPercentage,15,15
+Standard Tier Based Adjustment;One-Time,USD,2023-12-10T20:00:00.000+0000,,5,Standard Tier Based Adjustment,Headset,One-Time;OneTime,Volume,OneTime,AdjustmentPercentage,10,10
+Standard Volume Based Adjustment;One-Time,USD,2023-12-01T20:00:00.000+0000,,16,Standard Volume Based Adjustment,Monitor,One-Time;OneTime,Volume,OneTime,AdjustmentPercentage,20,
+Standard Volume Based Adjustment;One-Time,USD,2023-12-01T20:00:00.000+0000,,11,Standard Volume Based Adjustment,Monitor,One-Time;OneTime,Volume,OneTime,AdjustmentPercentage,15,15
+Standard Volume Based Adjustment;One-Time,USD,2023-12-01T20:00:00.000+0000,,5,Standard Volume Based Adjustment,Monitor,One-Time;OneTime,Volume,OneTime,AdjustmentPercentage,10,10

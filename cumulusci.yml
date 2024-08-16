@@ -517,16 +517,19 @@ flows:
         task: deploy_full
       6.1:
         task: insert_quantumbit_data
-        when: org_config.scratch and project_config.project__custom__product_dataset == qb
+        when: org_config.scratch and project_config.project__custom__qb == true
       6.2:
         task: insert_quantumbit_data_prod
-        when: project_config.project__custom__tso == true and project_config.project__custom__product_dataset == qb
+        when: project_config.project__custom__tso == true and project_config.project__custom__qb == true
       6.3:
         task: insert_q3_data
-        when: org_config.scratch and project_config.project__custom__product_dataset == q3
+        when: org_config.scratch and project_config.project__custom__q3 == true
       6.4:
         task: insert_q3_data_prod
-        when: project_config.project__custom__product_dataset == q3
+        when: project_config.project__custom__q3 == true
+      6.5:
+        task: activate_price_adjustment_schedules
+        when: org_config.scratch
       7:
         flow: prepare_scratch
         when: org_config.scratch
@@ -601,8 +604,6 @@ flows:
         task: util_sleep
         options:
           seconds: *sleep_default
-      16:
-        task: activate_price_adjustment_schedules
       17:
         task: create_rule_library
       18:
