@@ -88,14 +88,17 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>runtime_revenue_foundation:progressIndicator</componentName>
+                <identifier>runtime_revenue_foundation_progressIndicator</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>displayFields</name>
                     <valueList>
                         <valueListItems>
                             <value>QuoteLineItem.Product2.Name[Product2]</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>QuoteLineItem.UnitPrice</value>
                         </valueListItems>
                         <valueListItems>
                             <value>QuoteLineItem.Quantity</value>
@@ -107,10 +110,16 @@
                             <value>QuoteLineItem.EndDate</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>QuoteLineItem.ListPrice</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>QuoteLineItem.Discount</value>
                         </valueListItems>
                         <valueListItems>
                             <value>QuoteLineItem.NetUnitPrice</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>QuoteLineItem.NetTotalPrice</value>
                         </valueListItems>
                         <valueListItems>
                             <value>QuoteLineItem.TotalPrice</value>
