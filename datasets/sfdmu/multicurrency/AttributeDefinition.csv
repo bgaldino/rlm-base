@@ -16,4 +16,4 @@ HDD_Storage,Picklist,1TB,,HDD_Storage,true,HDD_Storage,HDD_Storage,HDD_Storage
 Flows,Number,1000,,Flows,true,Flows,Flows,
 Messages_Million,Number,60,,Messages_Million,true,Messages (Million),Messages_Million,
 Data_Throughput_TB,Number,0,,Data_Throughput_TB,true,Data Throughput (TB),Data_Throughput_TB,
-Notes_and_Assumptions,Text,,,Notes_and_Assumptions,true,Notes_and_Assumptions,Notes_and_Assumptions,
+Notes_and_Assumptions,Text,Insert Notes Here,,Notes_and_Assumptions,true,Notes_and_Assumptions,Notes_and_Assumptions,

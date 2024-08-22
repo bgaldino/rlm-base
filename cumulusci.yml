@@ -27,8 +27,8 @@ project:
   source_format: sfdx
 
   custom:
-    mydomain: &mydomain quantumbit5.my.salesforce.com
-    user_alias: &user_alias bgaldino@250.rlm.qb3
+    mydomain: &mydomain quantumbit-b.my.salesforce.com
+    user_alias: &user_alias bgaldino@252.rlm.qb1.t1
     prm: true
     tso: false
     qb: true
@@ -346,7 +346,7 @@ tasks:
   create_price_adjustment_schedules_prod:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -s csvfile -p datasets/sfdmu/pas -u <<: *user_alias -c"
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/pas -u bgaldino@252.rlm.qb1.t1 -c"
       extra: *mydomain
 
   insert_quantumbit_data:
@@ -357,7 +357,7 @@ tasks:
   insert_quantumbit_data_prod:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -s csvfile -p datasets/sfdmu/multicurrency -u <<: *user_alias -c"
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/multicurrency -u bgaldino@252.rlm.qb1.t1 -c"
       extra: *mydomain
 
   insert_q3_data:
@@ -368,7 +368,7 @@ tasks:
   insert_q3_data_prod:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -s csvfile -p datasets/sfdmu/q3-multicurrency -u <<: *user_alias -c"
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/q3-multicurrency -u bgaldino@252.rlm.qb1.t1 -c"
       extra: *mydomain
 
   insert_dro_data_scratch:
@@ -379,18 +379,18 @@ tasks:
   insert_dro_data_prod:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -s csvfile -p datasets/sfdmu/dro -u <<: *user_alias -c"
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/dro_scratch -u bgaldino@252.rlm.qb1.t1 -c"
       extra: *mydomain
 
   insert_tax_data:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -n -s csvfile -p datasets/sfdmu/tax"
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/tax"
 
   insert_tax_data_prod:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -n -s csvfile -p datasets/sfdmu/tax -u <<: *user_alias -c"
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/tax -u bgaldino@252.rlm.qb1.t1 -c"
       extra: *mydomain
 
   insert_billing_data:
@@ -401,7 +401,7 @@ tasks:
   insert_billing_data_prod:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -n -s csvfile -p datasets/sfdmu/billing -u <<: *user_alias -c"
+      command: "sfdmu run -n -s csvfile -p datasets/sfdmu/billing -u bgaldino@252.rlm.qb1.t1 -c"
       extra: *mydomain
 
   insert_scratch_data:
@@ -422,7 +422,7 @@ tasks:
   activate_expression_sets_prod:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active -u <<: *user_alias -c"
+      command: "sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active -u bgaldino@252.rlm.qb1.t1 -c"
       extra: *mydomain
 
   deactivate_expression_sets:
@@ -433,7 +433,7 @@ tasks:
   deactivate_expression_sets_prod:
     class_path: cumulusci.tasks.sfdx.SFDXOrgTask
     options:
-      command: "sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive -u <<: *user_alias -c"
+      command: "sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive -u bgaldino@252.rlm.qb1.t1 -c"
       extra: *mydomain
 
   deploy_sharing_rules:
@@ -705,7 +705,7 @@ flows:
     steps:
       1:
         task: insert_billing_data
-        when: project_config.project__custom__billing == true
+        when: project_config.project__custom__billing == true and project_config.project__custom__tso == false
       2:
         task: insert_billing_data_prod
         when: project_config.project__custom__billing == true and project_config.project__custom__tso == true
@@ -742,7 +742,7 @@ flows:
         when: project_config.project__custom__tax == true
       2:
         task: insert_tax_data
-        when: project_config.project__custom__tax == true
+        when: project_config.project__custom__tax == true and project_config.project__custom__tso == false
       3:
         task: insert_tax_data_prod
         when: project_config.project__custom__tax == true and project_config.project__custom__tso == true
