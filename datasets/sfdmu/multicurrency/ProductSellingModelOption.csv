@@ -16,7 +16,7 @@ QB-API-MGMT;Term Annual,true,QB-API-MGMT,Term Annual;TermDefined,Default Prorati
 QB-BDL-STND;One-Time,true,QB-BDL-STND,One-Time;OneTime,
 QB-SUPP-1005;Term Annual,true,QB-SUPP-1005,Term Annual;TermDefined,Default Proration Policy
 QB-API;Term Annual,true,QB-API,Term Annual;TermDefined,Default Proration Policy
-QB-COMPLETE;Term Annual,false,QB-COMPLETE,Term Annual;TermDefined,Default Proration Policy
+QB-COMPLETE;Term Annual,true,QB-COMPLETE,Term Annual;TermDefined,Default Proration Policy
 QB-API;Term Monthly,false,QB-API,Term Monthly;TermDefined,Default Proration Policy
 QB-API;Evergreen Monthly,false,QB-API,Evergreen Monthly;Evergreen,Default Proration Policy
 QB-MEM 16GB;One-Time,true,QB-MEM 16GB,One-Time;OneTime,
@@ -51,7 +51,7 @@ QB-SRV-PMN;One-Time,true,QB-SRV-PMN,One-Time;OneTime,
 QB-API-MGMT;Evergreen Monthly,false,QB-API-MGMT,Evergreen Monthly;Evergreen,Default Proration Policy
 QB-COMPLETE;Evergreen Monthly,false,QB-COMPLETE,Evergreen Monthly;Evergreen,Default Proration Policy
 QB-API-REQT;Term Monthly,false,QB-API-REQT,Term Monthly;TermDefined,Default Proration Policy
-QB-COMPLETE;One-Time,true,QB-COMPLETE,One-Time;OneTime,
+QB-COMPLETE;One-Time,false,QB-COMPLETE,One-Time;OneTime,
 QB-MSG-STRT;Evergreen Monthly,false,QB-MSG-STRT,Evergreen Monthly;Evergreen,Default Proration Policy
 QB-DAT-THPT;Evergreen Monthly,false,QB-DAT-THPT,Evergreen Monthly;Evergreen,Default Proration Policy
 QB-FLO-STRT;Evergreen Monthly,false,QB-FLO-STRT,Evergreen Monthly;Evergreen,Default Proration Policy
