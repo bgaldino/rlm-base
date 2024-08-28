@@ -299,6 +299,18 @@ tasks:
               - xpath: //ExpressionSetDefinition/versions/status[text()="Draft"]
                 replace: Active
                 api: rest
+              - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__ATTRIBUTEPasID__"]
+                replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Attribute Based Adjustment' LIMIT 1
+                api: rest
+              - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__VOLUMEPasID__"]
+                replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Volume Based Adjustment' LIMIT 1
+                api: rest
+              - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__BUNDLEPasID__"]
+                replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Bundle Based Adjustment' LIMIT 1
+                api: rest
+              - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__TIERPasID__"]
+                replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Tier Based Adjustment' LIMIT 1
+                api: rest
 
   deploy_full:
     description: Deploy all metadata
