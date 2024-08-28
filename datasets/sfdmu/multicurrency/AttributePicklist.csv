@@ -1,15 +1,16 @@
-DataType,Description,Name,Status
-Number,,Base_Core_Count,Active
-Text,,API_Type,Active
-Text,,Connector_Type,Active
-Text,,Length,Active
-Text,,Operating_System,Active
-Text,,Server_Configuration,Active
-Text,,Resource_Location,Active
-Text,,Processor_Frequency,Active
-Text,,SubscriptionType,Active
-Text,,Engineering_Options,Active
-Text,,Memory_Config,Active
-Text,,Memory,Active
-Text,,NIC_Type,Active
-Text,,HDD_Storage,Active
+CurrencyIsoCode,DataType,Description,Name,Status
+USD,Number,,Data Utilization,Active
+USD,Number,,Base Core Count Picklist,Active
+USD,Text,,API Type Picklist,Active
+USD,Text,,Connector Type Picklist,Active
+USD,Text,,Cable Length Picklist,Active
+USD,Text,,Operating System Picklist,Active
+USD,Text,,Server Configuration Picklist,Active
+USD,Text,,Resource Location Picklist,Active
+USD,Text,,Processor Frequency Picklist,Active
+USD,Text,,Subscription Type Picklist,Active
+USD,Text,,Engineering Options Picklist,Active
+USD,Text,,RAM Config Picklist,Active
+USD,Text,,RAM Picklist,Active
+USD,Text,,Network Adapter Type Picklist,Active
+USD,Text,,Data Storage Picklist,Active

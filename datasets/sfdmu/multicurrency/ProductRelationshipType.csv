@@ -1,3 +1,4 @@
-Name
-Bundle to Bundle Component Relationship
-Bundle to Product Classification Component Relationship
+AssociatedProductRoleCat,MainProductRoleCat,Name
+ClassificationComponent,Bundle,Bundle to Product Classification Component Relationship
+BundleComponent,Bundle,Bundle to Bundle Component Relationship
+SetComponent,Set,Set to Set Component Relationship

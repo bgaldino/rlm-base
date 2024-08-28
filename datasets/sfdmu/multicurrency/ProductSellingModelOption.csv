@@ -1,68 +1,68 @@
-$$Product2.StockKeepingUnit$ProductSellingModel.Name,IsDefault,Product2.Name,ProductSellingModel.$$Name$SellingModelType,ProrationPolicy.Name
-QB-SUPP-1000;Term Annual,true,Silver Hardware Maintenance,Term Annual;TermDefined,Default Proration Policy
-QB-TRN-FUND;One-Time,true,QuantumBit Fundamentals Training,One-Time;OneTime,
-QB-CMPC-5887;One-Time,true,C13 to C14 Power Cable 3',One-Time;OneTime,
-QB-TRN-ESSNTLS;One-Time,true,QuantumBit Essentials Training,One-Time;OneTime,
-QB-API-FLEX;Term Annual,true,Additional API Flex (100M),Term Annual;TermDefined,Default Proration Policy
-QB-API-GOVT;Term Annual,true,Additional API Gov,Term Annual;TermDefined,Default Proration Policy
-QB-API-PREP;Term Annual,true,Additional API Pre-Prod,Term Annual;TermDefined,Default Proration Policy
-QB-API-PROD;Term Annual,true,Additional API Prod,Term Annual;TermDefined,Default Proration Policy
-QB-AUT-CRED;Term Annual,true,Additional Automation QB Credits,Term Annual;TermDefined,Default Proration Policy
-QB-DAT-GRPH;Term Annual,true,Additional QB DataGraph (500M),Term Annual;TermDefined,Default Proration Policy
-QB-API-REQT;Term Annual,true,API Access Requests (AEH),Term Annual;TermDefined,Default Proration Policy
-QB-FLO-STRT;Term Annual,true,Additional Flows - QB Starter,Term Annual;TermDefined,Default Proration Policy
-QB-MSG-STRT;Term Annual,true,Additional Messages - QB Starter,Term Annual;TermDefined,Default Proration Policy
-QB-DAT-THPT;Term Annual,true,Additional Data Throughput (TB),Term Annual;TermDefined,Default Proration Policy
-QB-API-MGMT;Term Annual,true,QB API Management Solution,Term Annual;TermDefined,Default Proration Policy
-QB-BDL-STND;One-Time,true,QuantumBit Starter,One-Time;OneTime,
-QB-SUPP-1005;Term Annual,true,Gold Hardware Maintenance,Term Annual;TermDefined,Default Proration Policy
-QB-API;Term Annual,true,Additional API,Term Annual;TermDefined,Default Proration Policy
-QB-COMPLETE;Term Annual,true,QuantumBit Complete Solution,Term Annual;TermDefined,Default Proration Policy
-QB-API;Term Monthly,false,Additional API,Term Monthly;TermDefined,Default Proration Policy
-QB-API;Evergreen Monthly,false,Additional API,Evergreen Monthly;Evergreen,Default Proration Policy
-QB-MEM 16GB;One-Time,true,16GB RDIMM,One-Time;OneTime,
-QB-HD 4TB;One-Time,true,4TB 7.2k RPM NLSAS,One-Time;OneTime,
-QB-HD 8TB;One-Time,true,8TB 7.2k RPM NLSAS,One-Time;OneTime,
-QB-HD 8TBSE;One-Time,true,8TB 7.2k RPM Self-Encrypting NLSAS,One-Time;OneTime,
-QB-BDL-SRVC;One-Time,true,QuantumBit Services Project,One-Time;OneTime,
-QB-SRV-MEE;One-Time,true,Module Extension Engineer,One-Time;OneTime,
-QB-SRV-PD;One-Time,true,Program Director,One-Time;OneTime,
-QB-INTEL E5-2660;One-Time,true,Intel Xeon E5-2660 v4 2.0GHz,One-Time;OneTime,
-QB-SRV-QAE;One-Time,true,Quality Assurance Engineer,One-Time;OneTime,
-QB-NET X710;One-Time,true,Intel X710 Dual Port 10Gb Direct Attach,One-Time;OneTime,
-QB-SRV-IMP;One-Time,true,Implementation Engineer,One-Time;OneTime,
-QB-INTEL E5-2683;One-Time,true,Intel Xeon E5-2683 v4 2.1GHz,One-Time;OneTime,
-QB-SRV-DNE;One-Time,true,Data Normalization Expert,One-Time;OneTime,
-QB-INTEL E5-2609;One-Time,true,Intel Xeon E5-2609 v4 1.7GHz,One-Time;OneTime,
-QB-BDL-R750;One-Time,true,PowerSwerve R750 Rack Server,One-Time;OneTime,
-QB-MEM 8GB;One-Time,true,8GB RDIMM,One-Time;OneTime,
-QB-MEM 32GB;One-Time,true,32GB RDIMM,One-Time;OneTime,
-QB-HD 1TB;One-Time,true,1TB 7.2k RPM NLSAS,One-Time;OneTime,
-QB-BET X710SFP;One-Time,true,Intel X710 Dual Port 10Gb SFP,One-Time;OneTime,
-QB-SRV-ISE;One-Time,true,Integration Specialist Engineer,One-Time;OneTime,
-QB-SRV-SAT;One-Time,true,Solutions Architect,One-Time;OneTime,
-QB-CMPC-5882;One-Time,true,Configured Power Cable,One-Time;OneTime,
-TEST-SUB;Evergreen Monthly,false,Subscription,Evergreen Monthly;Evergreen,Default Proration Policy
-QB-SRV-OG-PSH;One-Time,true,Professional Services Daily Rate,One-Time;OneTime,
-QB-SRV-SOW;One-Time,true,Professional Services Scope of Work,One-Time;OneTime,
-TEST-SUB;Term Monthly,false,Subscription,Term Monthly;TermDefined,Default Proration Policy
-QB-INTEL E5-2667;One-Time,true,Intel Xeon E5-2667 v4 3.2GHz,One-Time;OneTime,
-QB-SRV-PMN;One-Time,true,Project Manager,One-Time;OneTime,
-QB-API-MGMT;Evergreen Monthly,false,QB API Management Solution,Evergreen Monthly;Evergreen,Default Proration Policy
-QB-COMPLETE;Evergreen Monthly,false,QuantumBit Complete Solution,Evergreen Monthly;Evergreen,Default Proration Policy
-QB-API-REQT;Term Monthly,false,API Access Requests (AEH),Term Monthly;TermDefined,Default Proration Policy
-QB-COMPLETE;One-Time,false,QuantumBit Complete Solution,One-Time;OneTime,
-QB-MSG-STRT;Evergreen Monthly,false,Additional Messages - QB Starter,Evergreen Monthly;Evergreen,Default Proration Policy
-QB-DAT-THPT;Evergreen Monthly,false,Additional Data Throughput (TB),Evergreen Monthly;Evergreen,Default Proration Policy
-QB-FLO-STRT;Evergreen Monthly,false,Additional Flows - QB Starter,Evergreen Monthly;Evergreen,Default Proration Policy
-QB-API-REQT;Evergreen Monthly,false,API Access Requests (AEH),Evergreen Monthly;Evergreen,Default Proration Policy
-QB-AUT-CRED;Evergreen Monthly,false,Additional Automation QB Credits,Evergreen Monthly;Evergreen,Default Proration Policy
-QB-FLO-STRT;Term Monthly,false,Additional Flows - QB Starter,Term Monthly;TermDefined,Default Proration Policy
-QB-DAT-THPT;Term Monthly,false,Additional Data Throughput (TB),Term Monthly;TermDefined,Default Proration Policy
-QB-API-MGMT;Term Monthly,false,QB API Management Solution,Term Monthly;TermDefined,Default Proration Policy
-QB-COMPLETE;Term Monthly,false,QuantumBit Complete Solution,Term Monthly;TermDefined,Default Proration Policy
-QB-MSG-STRT;Term Monthly,false,Additional Messages - QB Starter,Term Monthly;TermDefined,Default Proration Policy
-QB-AUT-CRED;Term Monthly,false,Additional Automation QB Credits,Term Monthly;TermDefined,Default Proration Policy
-TEST-SUB;Term Annual,true,Subscription,Term Annual;TermDefined,Default Proration Policy
-TEST-SUB;Evergreen Annual,false,Subscription,Evergreen Annual;Evergreen,Default Proration Policy
-QB-SUPP-2000;Term Annual,true,Software Maintenance,Term Annual;TermDefined,Default Proration Policy
+$$Product2.StockKeepingUnit$ProductSellingModel.Name,IsDefault,Product2.StockKeepingUnit,ProductSellingModel.$$Name$SellingModelType,ProrationPolicy.Name
+QB-TRN-FUND;One-Time,true,QB-TRN-FUND,One-Time;OneTime,
+QB-CMPC-5887;One-Time,true,QB-CMPC-5887,One-Time;OneTime,
+QB-TRN-ESSNTLS;One-Time,true,QB-TRN-ESSNTLS,One-Time;OneTime,
+QB-API-FLEX;Term Annual,true,QB-API-FLEX,Term Annual;TermDefined,Default Proration Policy
+QB-API-GOVT;Term Annual,true,QB-API-GOVT,Term Annual;TermDefined,Default Proration Policy
+QB-API-PREP;Term Annual,true,QB-API-PREP,Term Annual;TermDefined,Default Proration Policy
+QB-API-PROD;Term Annual,true,QB-API-PROD,Term Annual;TermDefined,Default Proration Policy
+QB-AUT-CRED;Term Annual,true,QB-AUT-CRED,Term Annual;TermDefined,Default Proration Policy
+QB-DAT-GRPH;Term Annual,true,QB-DAT-GRPH,Term Annual;TermDefined,Default Proration Policy
+QB-API-REQT;Term Annual,true,QB-API-REQT,Term Annual;TermDefined,Default Proration Policy
+QB-FLO-STRT;Term Annual,true,QB-FLO-STRT,Term Annual;TermDefined,Default Proration Policy
+QB-MSG-STRT;Term Annual,true,QB-MSG-STRT,Term Annual;TermDefined,Default Proration Policy
+QB-DAT-THPT;Term Annual,true,QB-DAT-THPT,Term Annual;TermDefined,Default Proration Policy
+QB-API-MGMT;Term Annual,true,QB-API-MGMT,Term Annual;TermDefined,Default Proration Policy
+QB-BDL-STND;One-Time,true,QB-BDL-STND,One-Time;OneTime,
+QB-SUPP-1005;Term Annual,true,QB-SUPP-1005,Term Annual;TermDefined,Default Proration Policy
+QB-API;Term Annual,true,QB-API,Term Annual;TermDefined,Default Proration Policy
+QB-COMPLETE;Term Annual,false,QB-COMPLETE,Term Annual;TermDefined,Default Proration Policy
+QB-API;Term Monthly,false,QB-API,Term Monthly;TermDefined,Default Proration Policy
+QB-API;Evergreen Monthly,false,QB-API,Evergreen Monthly;Evergreen,Default Proration Policy
+QB-MEM 16GB;One-Time,true,QB-MEM 16GB,One-Time;OneTime,
+QB-HD 4TB;One-Time,true,QB-HD 4TB,One-Time;OneTime,
+QB-HD 8TB;One-Time,true,QB-HD 8TB,One-Time;OneTime,
+QB-HD 8TBSE;One-Time,true,QB-HD 8TBSE,One-Time;OneTime,
+QB-BDL-SRVC;One-Time,true,QB-BDL-SRVC,One-Time;OneTime,
+QB-SUPP-1000;Term Annual,true,QB-SUPP-1000,Term Annual;TermDefined,Default Proration Policy
+QB-SRV-MEE;One-Time,true,QB-SRV-MEE,One-Time;OneTime,
+QB-SRV-PD;One-Time,true,QB-SRV-PD,One-Time;OneTime,
+QB-INTEL E5-2660;One-Time,true,QB-INTEL E5-2660,One-Time;OneTime,
+QB-SRV-QAE;One-Time,true,QB-SRV-QAE,One-Time;OneTime,
+QB-NET X710;One-Time,true,QB-NET X710,One-Time;OneTime,
+QB-SRV-IMP;One-Time,true,QB-SRV-IMP,One-Time;OneTime,
+QB-INTEL E5-2683;One-Time,true,QB-INTEL E5-2683,One-Time;OneTime,
+QB-SRV-DNE;One-Time,true,QB-SRV-DNE,One-Time;OneTime,
+QB-INTEL E5-2609;One-Time,true,QB-INTEL E5-2609,One-Time;OneTime,
+QB-BDL-R750;One-Time,true,QB-BDL-R750,One-Time;OneTime,
+QB-MEM 8GB;One-Time,true,QB-MEM 8GB,One-Time;OneTime,
+QB-MEM 32GB;One-Time,true,QB-MEM 32GB,One-Time;OneTime,
+QB-HD 1TB;One-Time,true,QB-HD 1TB,One-Time;OneTime,
+QB-BET X710SFP;One-Time,true,QB-BET X710SFP,One-Time;OneTime,
+QB-SRV-ISE;One-Time,true,QB-SRV-ISE,One-Time;OneTime,
+QB-SRV-SAT;One-Time,true,QB-SRV-SAT,One-Time;OneTime,
+QB-CMPC-5882;One-Time,true,QB-CMPC-5882,One-Time;OneTime,
+TEST-SUB;Evergreen Monthly,false,TEST-SUB,Evergreen Monthly;Evergreen,Default Proration Policy
+QB-SRV-OG-PSH;One-Time,true,QB-SRV-OG-PSH,One-Time;OneTime,
+QB-SRV-SOW;One-Time,true,QB-SRV-SOW,One-Time;OneTime,
+TEST-SUB;Term Monthly,false,TEST-SUB,Term Monthly;TermDefined,Default Proration Policy
+QB-INTEL E5-2667;One-Time,true,QB-INTEL E5-2667,One-Time;OneTime,
+QB-SRV-PMN;One-Time,true,QB-SRV-PMN,One-Time;OneTime,
+QB-API-MGMT;Evergreen Monthly,false,QB-API-MGMT,Evergreen Monthly;Evergreen,Default Proration Policy
+QB-COMPLETE;Evergreen Monthly,false,QB-COMPLETE,Evergreen Monthly;Evergreen,Default Proration Policy
+QB-API-REQT;Term Monthly,false,QB-API-REQT,Term Monthly;TermDefined,Default Proration Policy
+QB-COMPLETE;One-Time,true,QB-COMPLETE,One-Time;OneTime,
+QB-MSG-STRT;Evergreen Monthly,false,QB-MSG-STRT,Evergreen Monthly;Evergreen,Default Proration Policy
+QB-DAT-THPT;Evergreen Monthly,false,QB-DAT-THPT,Evergreen Monthly;Evergreen,Default Proration Policy
+QB-FLO-STRT;Evergreen Monthly,false,QB-FLO-STRT,Evergreen Monthly;Evergreen,Default Proration Policy
+QB-API-REQT;Evergreen Monthly,false,QB-API-REQT,Evergreen Monthly;Evergreen,Default Proration Policy
+QB-AUT-CRED;Evergreen Monthly,false,QB-AUT-CRED,Evergreen Monthly;Evergreen,Default Proration Policy
+QB-FLO-STRT;Term Monthly,false,QB-FLO-STRT,Term Monthly;TermDefined,Default Proration Policy
+QB-DAT-THPT;Term Monthly,false,QB-DAT-THPT,Term Monthly;TermDefined,Default Proration Policy
+QB-API-MGMT;Term Monthly,false,QB-API-MGMT,Term Monthly;TermDefined,Default Proration Policy
+QB-COMPLETE;Term Monthly,false,QB-COMPLETE,Term Monthly;TermDefined,Default Proration Policy
+QB-MSG-STRT;Term Monthly,false,QB-MSG-STRT,Term Monthly;TermDefined,Default Proration Policy
+QB-AUT-CRED;Term Monthly,false,QB-AUT-CRED,Term Monthly;TermDefined,Default Proration Policy
+TEST-SUB;Term Annual,true,TEST-SUB,Term Annual;TermDefined,Default Proration Policy
+TEST-SUB;Evergreen Annual,false,TEST-SUB,Evergreen Annual;Evergreen,Default Proration Policy
+QB-SUPP-2000;Term Annual,true,QB-SUPP-2000,Term Annual;TermDefined,Default Proration Policy

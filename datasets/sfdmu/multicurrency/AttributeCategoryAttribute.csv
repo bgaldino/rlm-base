@@ -1,19 +1,20 @@
-$$AttributeCategory.Name$AttributeDefinition.Name,AttributeCategory.Name,AttributeDefinition.Name
-Cables;Connector_Type,Cables,Connector_Type
-Cables;Length,Cables,Length
-API Specification;API_Type,API Specification,API_Type
-Tech Specs;Base_Core_Count,Tech Specs,Base_Core_Count
-Operating System;Operating_System,Operating System,Operating_System
-Engineering Resources;Resource_Location,Engineering Resources,Resource_Location
-Hard Drive;HDD_Storage,Hard Drive,HDD_Storage
-Processor;Processor_Frequency,Processor,Processor_Frequency
-Network Adapter;NIC_Type,Network Adapter,NIC_Type
-Subscription Type;SubscriptionType,Subscription Type,SubscriptionType
-QuantumBit;Flows,QuantumBit,Flows
-QuantumBit;Data_Throughput_TB,QuantumBit,Data_Throughput_TB
-QuantumBit;Messages_Million,QuantumBit,Messages_Million
-Server;Server_Configuration,Server,Server_Configuration
-Engineering Resources;Engineering_Options,Engineering Resources,Engineering_Options
-Professional Services Bundle;Notes_and_Assumptions,Professional Services Bundle,Notes_and_Assumptions
-Memory;Memory_Capacity,Memory,Memory_Capacity
-Memory;Memory_Config,Memory,Memory_Config
+$$AttributeCategory.Name$AttributeDefinition.Code,AttributeCategory.Code,AttributeDefinition.Code
+Cables;ATTR-QB-CONNECTOR,AC-QB-CABLES,ATTR-QB-CONNECTOR
+Cables;ATTR-QB-LENGTH,AC-QB-CABLES,ATTR-QB-LENGTH
+API Specification;ATTR-QB-API,AC-QB-API,ATTR-QB-API
+Tech Specs;ATTR-QB-BASECORECNT,AC-QB-SPEC,ATTR-QB-BASECORECNT
+Operating System;ATTR-QB-OS,AC-QB-OS,ATTR-QB-OS
+Engineering Resources;ATTR-QB-PSRESOURCELOCATION,AC-QB-PS-ENGRESOURCES,ATTR-QB-PSRESOURCELOCATION
+Hard Drive;ATTR-QB-DATASTORAGE,AC-QB-STORAGE,ATTR-QB-DATASTORAGE
+Processor;ATTR-QB-CPUFRQ,AC-QB-CPU,ATTR-QB-CPUFRQ
+Network Adapter;ATTR-QB-NIC,AC-QB-NIC,ATTR-QB-NIC
+Subscription Type;ATTR-QB-SUBTYPE,AC-QB-PS-SUBTYPE,ATTR-QB-SUBTYPE
+QuantumBit;ATTR-QB-FLOWS,AC-QB,ATTR-QB-FLOWS
+QuantumBit;ATTR-QB-DATATHROUGHPUTTB,AC-QB,ATTR-QB-DATATHROUGHPUTTB
+QuantumBit;ATTR-QB-MESSAGES,AC-QB,ATTR-QB-MESSAGES
+Server;ATTR-QB-SRVCONFIG,AC-QB-SERVER,ATTR-QB-SRVCONFIG
+Engineering Resources;ATTR-QB-PS-ENGOPTIONS,AC-QB-PS-ENGRESOURCES,ATTR-QB-PS-ENGOPTIONS
+Professional Services Bundle;ATTR-QB-PS-NOTES,AC-QB-PSBUNDLE,ATTR-QB-PS-NOTES
+RAM;ATTR-QB-RAMMAX,AC-QB-RAM,ATTR-QB-RAMMAX
+RAM;ATTR-QB-RAM,AC-QB-RAM,ATTR-QB-RAM
+Utilization;AD-QB-DATAUTIL,AC-QB-UTILIZATION,ATTR-QB-DATAUTIL
