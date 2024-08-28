@@ -1,7 +1,7 @@
 $$Name$Picklist.Name,Code,DisplayValue,IsDefault,Name,Picklist.Name,Sequence,Value
-50;Data Utilization,APV-50,50,false,50,Data Utilization,,50
-20;Data Utilization,APV-20,20,false,20,Data Utilization,,20
-5;Data Utilization,APV-5,5,false,5,Data Utilization,,5
+50;Data Utilization,APV-50,50,false,50,Data Utilization,50,50
+20;Data Utilization,APV-20,20,false,20,Data Utilization,20,20
+5;Data Utilization,APV-5,5,false,5,Data Utilization,5,5
 Extended_Care;Engineering Options Picklist,Extended_Care,Extended_Care,true,Extended_Care,Engineering Options Picklist,1,Extended_Care
 Remote;Resource Location Picklist,Remote,Remote,false,Remote,Resource Location Picklist,2,Remote
 L5-20;Connector Type Picklist,L5-20,L5-20,false,L5-20,Connector Type Picklist,,L5-20
@@ -46,6 +46,6 @@ Direct_Attach;Network Adapter Type Picklist,Direct_Attach,Direct_Attach,true,Dir
 Offshore;Resource Location Picklist,Offshore,Offshore,false,Offshore,Resource Location Picklist,3,Offshore
 8TB_Self_Encrypting;Data Storage Picklist,8TB_Self_Encrypting,8TB_Self_Encrypting,false,8TB_Self_Encrypting,Data Storage Picklist,4,8TB_Self_Encrypting
 4TB;Data Storage Picklist,4TB,4TB,false,4TB,Data Storage Picklist,2,4TB
-40;Data Utilization,APV-40,40,false,40,Data Utilization,,40
-30;Data Utilization,APV-30,30,false,30,Data Utilization,,30
-10;Data Utilization,APV-10,10,false,10,Data Utilization,,10
+40;Data Utilization,APV-40,40,false,40,Data Utilization,40,40
+30;Data Utilization,APV-30,30,false,30,Data Utilization,30,30
+10;Data Utilization,APV-10,10,false,10,Data Utilization,10,10
