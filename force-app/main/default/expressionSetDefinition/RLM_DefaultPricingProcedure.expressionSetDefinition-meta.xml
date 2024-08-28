@@ -873,7 +873,7 @@
                 </parameters>
             </customElement>
             <description>Attribute-Based Price</description>
-            <label>Attribute-Based Price</label>
+            <label>Attribute Discount</label>
             <name>AttributeBasedPrice</name>
             <parentStep>ListContainer20</parentStep>
             <resultIncluded>false</resultIncluded>
@@ -1027,7 +1027,7 @@
                     <value>ItemNetTotalPrice</value>
                 </parameters>
             </customElement>
-            <label>Attribute Discount Entries</label>
+            <label>Attribute Discount</label>
             <name>AttributeDiscountEntries</name>
             <parentStep>ListContainer23</parentStep>
             <resultIncluded>false</resultIncluded>
@@ -1195,7 +1195,7 @@
                     <value>ItemNetTotalPrice</value>
                 </parameters>
             </customElement>
-            <label>Bundle Based Adjustment Entries</label>
+            <label>Bundle Discount</label>
             <name>BundleBasedAdjustmentEntries</name>
             <parentStep>ListContainer26</parentStep>
             <resultIncluded>false</resultIncluded>
