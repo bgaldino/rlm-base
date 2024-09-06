@@ -86,7 +86,7 @@ project:
 
         create_partner_community: true
 
-        tso: true
+        tso: false
 
         qb: true
 
