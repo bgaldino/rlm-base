@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExpressionSetDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
     <contextDefinitions>RLM_SalesTransactionContext</contextDefinitions>
-    <description>Default MultiCurrency Pricing Discovery Procedure</description>
-    <label>Default MultiCurrency Pricing Discovery Procedure</label>
+    <description>RLM Default MultiCurrency Pricing Discovery Procedure</description>
+    <label>RLM Default Pricing Discovery Procedure</label>
     <processType>PricingDiscovery</processType>
     <template>false</template>
     <versions>
         <fullName>RLM_DefaultPricingDiscoveryProcedure_V1</fullName>
-        <description>Default MultiCurrency Pricing Discovery Procedure</description>
+        <description>RLM Default MultiCurrency Pricing Discovery Procedure</description>
         <expressionSetDefinition>RLM_DefaultPricingDiscoveryProcedure</expressionSetDefinition>
-        <label>Default MultiCurrency Pricing Discovery Procedure</label>
+        <label>RLM Default Pricing Discovery Procedure</label>
         <processType>PricingDiscovery</processType>
+        <rank>1</rank>
         <shouldShowExplExternally>false</shouldShowExplExternally>
-        <startDate>2024-01-01T08:00:00.000Z</startDate>
-        <status>Inactive</status>
+        <startDate>2023-01-01T08:00:00.000Z</startDate>
+        <status>Draft</status>
         <steps>
             <actionType>AssetDiscovery</actionType>
             <customElement>
@@ -40,6 +41,20 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
+                    <name>StartDate</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>EffectiveFrom</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>EndDate</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>EffectiveFrom</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>CurrencyIsoCode</name>
                     <output>false</output>
                     <type>Parameter</type>
@@ -50,14 +65,21 @@
                     <name>LookUpName</name>
                     <output>false</output>
                     <type>Literal</type>
-                    <value>Asset Action Source Entries</value>
+                    <value>Asset Action Source Entries V2</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
                     <name>LookUpApiName</name>
                     <output>false</output>
                     <type>Literal</type>
-                    <value>Asset_Action_Source_Entries_Decision_Table</value>
+                    <value>Asset_Action_Source_Entries_Decision_Table_V2</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
                 </parameters>
                 <parameters>
                     <input>false</input>
@@ -165,6 +187,13 @@
                     <value>Derived_Pricing_Entries_Decision_Table</value>
                 </parameters>
                 <parameters>
+                    <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
+                </parameters>
+                <parameters>
                     <input>false</input>
                     <name>ContributorProduct</name>
                     <output>true</output>
@@ -221,8 +250,11 @@
             <actionType>MapProduct</actionType>
             <customElement>
                 <parameters>
-                    <name></name>
-                    <value></value>
+                    <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
                 </parameters>
             </customElement>
             <description>Map Product</description>

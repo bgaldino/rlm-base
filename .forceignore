@@ -24,7 +24,7 @@ force-app/main/default/relationshipGraphDefinitions
 force-app/main/default/permissionsetgroups/RLM_PCM.permissionsetgroup-meta.xml
 
 # unpackaged/pre
-unpackaged/pre/force-app/main/default/permissionsetgroups/RLM_PCM.permissionsetgroup-meta.xml
+unpackaged/pre/5_decisiontables/RLM_ProductQualification.decisionTable-meta.xml
 
 force-app/main/default/connectedApps/RLM_Postman.connectedApp-meta.xml
 
@@ -37,6 +37,9 @@ unpackaged/post_sharing/force-app/main/default/objects/PriceBookEntryDerivedPric
 unpackaged/post_sharing/force-app/main/default/objects/ProductConfigurationRule/ProductConfigurationRule.object-meta.xml
 unpackaged/post_sharing/force-app/main/default/objects/SalesTransactionType/SalesTransactionType.object-meta.xml
 unpackaged/post_sharing/force-app/main/default/objects
+
+force-app/main/default/layouts/AssetAction-RLM Asset Action Layout.layout-meta.xml
+force-app/main/default/layouts/AssetStatePeriod-RLM Asset State Period Layout.layout-meta.xml
 
 force-app/main/default/flows/F1YG.flow-meta.xml
 

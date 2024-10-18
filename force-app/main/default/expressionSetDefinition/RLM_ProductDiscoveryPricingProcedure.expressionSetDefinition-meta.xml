@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExpressionSetDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
     <contextDefinitions>RLM_ProductDiscoveryContext</contextDefinitions>
+    <description>Creates pricing procedures that get the list price of products for Product Discovery.</description>
     <interfaceSourceType>PricingProcedure</interfaceSourceType>
-    <label>RLM_ProductDiscoveryPricingProcedure</label>
+    <label>RLM Product Discovery Pricing Procedure</label>
     <processType>DefaultPricing</processType>
     <template>false</template>
     <versions>
-        <fullName>RLM_ProductDiscoveryPricingProcedure</fullName>
-        <description>RLM Default Product Discovery Pricing Procedure</description>
+        <fullName>RLM_ProductDiscoveryPricingProcedure_V1</fullName>
+        <description>Creates pricing procedures that get the list price of products for Product Discovery.</description>
         <expressionSetDefinition>RLM_ProductDiscoveryPricingProcedure</expressionSetDefinition>
         <interfaceSourceType>PricingProcedure</interfaceSourceType>
-        <label>RLM_ProductDiscoveryPricingProcedure</label>
+        <label>RLM Product Discovery Pricing Procedure</label>
         <processType>DefaultPricing</processType>
+        <rank>1</rank>
         <shouldShowExplExternally>false</shouldShowExplExternally>
-        <startDate>2024-01-01T08:00:00.000Z</startDate>
-        <status>Inactive</status>
+        <startDate>2023-01-01T08:00:00.000Z</startDate>
+        <status>Draft</status>
         <steps>
             <actionType>ListPrice</actionType>
             <customElement>
@@ -27,38 +29,10 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>Pricebook2Id</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>PricebookId</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>ProductSellingModelId</name>
                     <output>false</output>
                     <type>Parameter</type>
                     <value>ProductSellingModelId</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>CurrencyIsoCode</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>PricingCurrencyCode</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>Quantity</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ProductQuantity</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
-                    <name>ListPriceField</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>Constant_UnitPrice_Price_Book_Entry_Decision_Table_v2_LP</value>
                 </parameters>
                 <parameters>
                     <input>true</input>
@@ -69,6 +43,27 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
+                    <name>Pricebook2Id</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>PricebookId</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>Quantity</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>ProductQuantity</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>CurrencyIsoCode</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>PricingCurrencyCode</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>LookUpApiName</name>
                     <output>false</output>
                     <type>Literal</type>
@@ -76,7 +71,21 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
+                    <name>ListPriceField</name>
+                    <output>false</output>
+                    <type>Parameter</type>
+                    <value>Constant_UnitPrice_Price_Book_Entry_Decision_Table_v2_LP</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
                     <name>IsContractEnabled</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>HideWaterfall</name>
                     <output>false</output>
                     <type>Literal</type>
                     <value>false</value>
@@ -89,11 +98,18 @@
                     <value>0</value>
                 </parameters>
                 <parameters>
-                    <input>false</input>
-                    <name>Id</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>PriceBookEntryId</value>
+                    <input>true</input>
+                    <name>selectedFunction</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>Get</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
                 </parameters>
                 <parameters>
                     <input>false</input>
@@ -104,17 +120,24 @@
                 </parameters>
                 <parameters>
                     <input>false</input>
-                    <name>ListPrice</name>
-                    <output>true</output>
-                    <type>Parameter</type>
-                    <value>UnitPrice</value>
-                </parameters>
-                <parameters>
-                    <input>false</input>
                     <name>Subtotal</name>
                     <output>true</output>
                     <type>Parameter</type>
                     <value>SubTotal</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>Id</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>PriceBookEntryId</value>
+                </parameters>
+                <parameters>
+                    <input>false</input>
+                    <name>ListPrice</name>
+                    <output>true</output>
+                    <type>Parameter</type>
+                    <value>UnitPrice</value>
                 </parameters>
             </customElement>
             <label>Price Book Entries</label>
@@ -145,17 +168,24 @@
                 </parameters>
                 <parameters>
                     <input>true</input>
-                    <name>ContractId</name>
-                    <output>false</output>
-                    <type>Parameter</type>
-                    <value>ContactId</value>
-                </parameters>
-                <parameters>
-                    <input>true</input>
                     <name>sectionCount</name>
                     <output>false</output>
                     <type>Literal</type>
                     <value>0</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>selectedFunction</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>Get</value>
+                </parameters>
+                <parameters>
+                    <input>true</input>
+                    <name>IsRealTime</name>
+                    <output>false</output>
+                    <type>Literal</type>
+                    <value>false</value>
                 </parameters>
                 <parameters>
                     <input>false</input>

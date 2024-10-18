@@ -15,5 +15,6 @@
     <permissionSets>force__RevLifecycleManagementProductImportApi</permissionSets>
     <permissionSets>force__RevLifecycleManagementQuotePricesTaxes</permissionSets>
     <permissionSets>force__RevLifecycleManagementTaxConfiguration</permissionSets>
+    <permissionSets>force__RevLifecycleManagementUsageDesignUser</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>
