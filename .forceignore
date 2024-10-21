@@ -24,7 +24,7 @@ force-app/main/default/relationshipGraphDefinitions
 force-app/main/default/permissionsetgroups/RLM_PCM.permissionsetgroup-meta.xml
 
 # unpackaged/pre
-unpackaged/pre/5_decisiontables/RLM_ProductQualification.decisionTable-meta.xml
+#unpackaged/pre/5_decisiontables/RLM_ProductQualification.decisionTable-meta.xml
 
 force-app/main/default/connectedApps/RLM_Postman.connectedApp-meta.xml
 
