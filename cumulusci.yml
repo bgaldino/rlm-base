@@ -2,10 +2,10 @@ minimum_cumulusci_version: "3.84.3"
 orgs:
   scratch:
     beta:
-      config_file: orgs/dev.json
+      config_file: orgs/beta.json
       days: 30
     dev:
-      config_file: orgs/beta.json
+      config_file: orgs/dev.json
       days: 30
     dev_preview:
       config_file: orgs/dev_preview.json
